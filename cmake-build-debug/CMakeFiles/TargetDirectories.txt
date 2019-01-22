@@ -1,0 +1,3 @@
+/home/killian/TEK/3/ZiApi/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/killian/TEK/3/ZiApi/cmake-build-debug/CMakeFiles/ZiApi.dir
+/home/killian/TEK/3/ZiApi/cmake-build-debug/CMakeFiles/edit_cache.dir
