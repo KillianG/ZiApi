@@ -7,13 +7,16 @@
 #ifndef PROJECT_LOGGER_HPP
 #define PROJECT_LOGGER_HPP
 
+#include <ios>
 #include <cstddef>
 #include <iostream>
-#include <ios>
 #include <fstream>
+#include <chrono>
+#include <iomanip>
 
 namespace ZiApi {
-    struct ZiLogger {
+    class ZiLogger {
+    public:
         /**
          * Type of logs
          */
@@ -22,6 +25,7 @@ namespace ZiApi {
             DEBUG,
             WARNING,
             ERROR,
+            FATAL,
             ABORT_MISSION
         };
 
@@ -32,61 +36,108 @@ namespace ZiApi {
             VITAL
         };
 
+        enum class OutputStream {
+            COUT,
+            CERR,
+            FILE
+        };
+
         static inline void setMinSeverity(Severity s) { minSeverity = s; }
 
+        static inline void setStreamFile(const std::string &filePath = "./log.txt") { fileStream.open(filePath); }
+
+        static inline void setCurrentStream(OutputStream stream) { currentStream = stream; }
+
+        template<typename T>
+        friend std::ostream &operator<<(Severity s, const T &m) {
+            std::ostream &os = ZiApi::ZiLogger::getOstream();
+            if (ZiApi::ZiLogger::currentSeverity >= ZiApi::ZiLogger::minSeverity) {
+                return os << m;
+            }
+            return os;
+        }
+
+        template<typename T>
+        friend std::ostream &operator<<(Type type, const T &m) {
+            ZiApi::ZiLogger::currentType = type;
+            std::ostream &os = ZiApi::ZiLogger::getOstream();
+            if (ZiApi::ZiLogger::currentSeverity >= ZiApi::ZiLogger::minSeverity) {
+                printPrefix(os);
+                return os << m;
+            }
+            return os;
+        }
+
+        friend Severity operator<<(const Type &type, const Severity severity) {
+            ZiApi::ZiLogger::currentType = type;
+            ZiApi::ZiLogger::currentSeverity = severity;
+            printPrefix(getOstream());
+            return severity;
+        }
+
+        friend Severity operator<<(std::ostream &os, const Severity severity) {
+            ZiApi::ZiLogger::currentSeverity = severity;
+            return severity;
+        }
+
+    private:
+        static inline std::ofstream fileStream;
+        static inline Type currentType = Type::INFO;
         static inline Severity minSeverity = Severity::USELESS;
         static inline Severity currentSeverity = Severity::USELESS;
-        static inline Type currentType = Type::INFO;
+        static inline OutputStream currentStream = OutputStream::COUT;
+
+        static std::ostream &getOstream() {
+            switch (currentStream) {
+                case OutputStream::COUT:
+                    return std::cout;
+                case OutputStream::CERR:
+                    return std::cerr;
+                case OutputStream::FILE:
+                    return fileStream;
+            }
+            return std::cout;
+        }
+
+        static void printPrefix(std::ostream &os) {
+        #ifdef __unix__
+            os << "[" << getTime() << "] ";
+        #endif
+
+            switch (ZiApi::ZiLogger::currentType) {
+                case Type::INFO:
+                    os << "[INFO] ";
+                    break;
+                case Type::WARNING:
+                    os << "[WARNING] ";
+                    break;
+                case Type::DEBUG:
+                    os << "[DEBUG] ";
+                    break;
+                case Type::ABORT_MISSION:
+                    os << "[RIP] " << std::endl;
+                    std::_Exit(84);
+                case Type::ERROR:
+                    os << "[ERROR] ";
+                    break;
+                case Type::FATAL:
+                    os << "[FATAL] ";
+                    break;
+            }
+        }
+#ifdef __unix__
+        static std::_Put_time<char> getTime() {
+            std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+            std::time_t now_c = std::chrono::system_clock::to_time_t(now - std::chrono::hours(24));
+            auto currentTime = std::put_time(std::localtime(&now_c), "%T");
+            return (currentTime);
+        }
+#endif
     };
 }
 
 using LogType = ZiApi::ZiLogger::Type;
 using LogSeverity = ZiApi::ZiLogger::Severity;
-
-/**
- * << operator overloads
- */
-
-std::ostream &operator<<(LogSeverity s, const std::string &m) {
-    std::ostream &os = std::cout;
-    if (ZiApi::ZiLogger::currentSeverity >= ZiApi::ZiLogger::minSeverity) {
-        return os << m;
-    }
-    return os;
-}
-
-LogSeverity operator <<(const LogType &log, const LogSeverity severity) {
-    ZiApi::ZiLogger::currentType = log;
-    ZiApi::ZiLogger::currentSeverity = severity;
-
-    std::ostream &os = std::cout;
-    switch (ZiApi::ZiLogger::currentType) {
-        case LogType::INFO:
-            os << "[INFO] ";
-            break;
-        case LogType::WARNING:
-            os << "[WARNING] ";
-            break;
-        case LogType::DEBUG:
-            os << "[DEBUG] ";
-            break;
-        case LogType::ABORT_MISSION:
-            os << "[RIP] " << std::endl;
-            std::_Exit(84);
-        case LogType::ERROR:
-            os << "[ERROR] ";
-            break;
-    }
-    return severity;
-}
-
-LogSeverity operator <<(std::ostream &os, const LogSeverity severity) {
-    ZiApi::ZiLogger::currentSeverity = severity;
-    return severity;
-}
-
-std::ostream &operator<<(LogType type, const std::string &m) {
-    std::cout << m;
-}
+using LogStream = ZiApi::ZiLogger::OutputStream;
 
 #endif //PROJECT_LOGGER_HPP

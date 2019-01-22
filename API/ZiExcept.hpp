@@ -8,9 +8,22 @@
 #define PROJECT_ZIEXCEPT_HPP
 
 #include <exception>
+#include "ZiLogger.hpp"
 
 namespace ZiApi {
     class ZiExcept : public std::exception {
+    public:
+        explicit ZiExcept(std::string msg);
+
+        virtual ~ZiExcept() = default;
+
+        const std::string getErrorMsg() const;
+
+        const char* what() const noexcept;
+
+    private:
+        std::string errorMsg;
+
     };
 }
 
