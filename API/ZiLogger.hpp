@@ -85,4 +85,8 @@ LogSeverity operator <<(std::ostream &os, const LogSeverity severity) {
     return severity;
 }
 
+std::ostream &operator<<(LogType type, const std::string &m) {
+    std::cout << m;
+}
+
 #endif //PROJECT_LOGGER_HPP
