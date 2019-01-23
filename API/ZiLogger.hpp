@@ -17,6 +17,12 @@
 namespace ZiApi {
     class ZiLogger {
     public:
+
+        /**
+         * Delete constructor to avoid instantiation
+         */
+         ZiLogger() = delete;
+
         /**
          * Type of logs
          */

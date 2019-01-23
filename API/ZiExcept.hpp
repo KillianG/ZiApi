@@ -13,13 +13,12 @@
 namespace ZiApi {
     class ZiExcept : public std::exception {
     public:
-        explicit ZiExcept(std::string msg);
+        explicit ZiExcept(const std::string &msg) : std::exception(), errorMsg(msg) {
+            ZiApi::ZiLogger::Type::ERROR << ZiApi::ZiLogger::Severity::IMPORTANT << msg << std::endl;
+        }
+        ~ZiExcept() final = default;
 
-        virtual ~ZiExcept() = default;
-
-        const std::string getErrorMsg() const;
-
-        const char* what() const noexcept;
+        const char* what() const noexcept override { return errorMsg.c_str(); }
 
     private:
         std::string errorMsg;
