@@ -4,8 +4,7 @@
 
 int main() {
     ZiApi::ZiLogger::setMinSeverity(LogSeverity::NORMAL);
-    ZiApi::ZiLogger::setStreamFile();
-    ZiApi::ZiLogger::setCurrentStream(LogStream::COUT);
+    ZiApi::ZiLogger::setCurrentStream(LogStream::FILE);
 
     LogType::INFO <<
     LogSeverity::USELESS << "ptite pute " <<
@@ -15,4 +14,6 @@ int main() {
 
     LogType::WARNING << "Test" << std::endl;
     LogType::WARNING << 3 << std::endl;
+
+    LogType::ERROR << "Salut" << "Quentin" << std::endl;
 }

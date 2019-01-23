@@ -94,15 +94,17 @@ namespace ZiApi {
                 case OutputStream::CERR:
                     return std::cerr;
                 case OutputStream::FILE:
+                    if (!fileStream.is_open())
+                        ZiApi::ZiLogger::setStreamFile();
                     return fileStream;
             }
             return std::cout;
         }
 
         static void printPrefix(std::ostream &os) {
-        #ifdef __unix__
+#ifdef __unix__
             os << "[" << getTime() << "] ";
-        #endif
+#endif
 
             switch (ZiApi::ZiLogger::currentType) {
                 case Type::INFO:
@@ -125,13 +127,16 @@ namespace ZiApi {
                     break;
             }
         }
+
 #ifdef __unix__
+
         static std::_Put_time<char> getTime() {
             std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
             std::time_t now_c = std::chrono::system_clock::to_time_t(now - std::chrono::hours(24));
             auto currentTime = std::put_time(std::localtime(&now_c), "%T");
             return (currentTime);
         }
+
 #endif
     };
 }
