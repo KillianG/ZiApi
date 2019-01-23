@@ -1,12 +1,7 @@
 #include <iostream>
 
-
-#include <ZiExcept.hpp>
+#include <ZiLogger.hpp>
+#include "IHttpResponse.hpp"
 
 int main() {
-    try {
-        throw (ZiApi::ZiExcept("wsh renaud"));
-    } catch (ZiApi::ZiExcept &e) {
-        std::cout << e.what() << std::endl;
-    }
 }
