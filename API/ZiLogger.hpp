@@ -21,7 +21,7 @@ namespace ZiApi {
         /**
          * Delete constructor to avoid instantiation
          */
-         ZiLogger() = delete;
+        ZiLogger() = delete;
 
         /**
          * Type of logs
@@ -35,7 +35,7 @@ namespace ZiApi {
             ABORT_MISSION
         };
 
-        enum Severity {
+        enum class Severity : int {
             USELESS = 0,
             NORMAL,
             IMPORTANT,
@@ -45,7 +45,11 @@ namespace ZiApi {
         enum class OutputStream {
             COUT,
             CERR,
-            FILE
+            FILE,
+        };
+
+        enum Endl {
+            endl
         };
 
         static inline void setMinSeverity(Severity s) { minSeverity = s; }
@@ -54,36 +58,44 @@ namespace ZiApi {
 
         static inline void setCurrentStream(OutputStream stream) { currentStream = stream; }
 
-        template<typename T>
-        friend std::ostream &operator<<(Severity s, const T &m) {
-            std::ostream &os = ZiApi::ZiLogger::getOstream();
+
+
+        template <typename T>
+        friend Severity operator<<(Severity s, const T &m) {
+            if (s >= ZiApi::ZiLogger::minSeverity)
+                ZiApi::ZiLogger::getOstream() << m;
+            return s;
+        }
+
+        friend Severity operator<<(Severity s, const Endl &m) {
+            if (s >= ZiApi::ZiLogger::minSeverity)
+                ZiApi::ZiLogger::getOstream() << std::endl;
+            return s;
+        }
+
+        friend Severity operator<<(Type type, Severity severity) {
+            ZiApi::ZiLogger::currentType = type;
+            ZiApi::ZiLogger::currentSeverity = severity;
             if (ZiApi::ZiLogger::currentSeverity >= ZiApi::ZiLogger::minSeverity) {
-                return os << m;
+                printPrefix(getOstream());
             }
-            return os;
+            return severity;
         }
 
         template<typename T>
-        friend std::ostream &operator<<(Type type, const T &m) {
+        friend Severity operator<<(Type type, const T &m) {
             ZiApi::ZiLogger::currentType = type;
-            std::ostream &os = ZiApi::ZiLogger::getOstream();
             if (ZiApi::ZiLogger::currentSeverity >= ZiApi::ZiLogger::minSeverity) {
+                std::ostream &os = ZiApi::ZiLogger::getOstream();
                 printPrefix(os);
-                return os << m;
+                os << m;
             }
-            return os;
+            return ZiApi::ZiLogger::currentSeverity;
         }
 
-        friend Severity operator<<(const Type &type, const Severity severity) {
-            ZiApi::ZiLogger::currentType = type;
-            ZiApi::ZiLogger::currentSeverity = severity;
-            printPrefix(getOstream());
-            return severity;
-        }
-
-        friend Severity operator<<(std::ostream &os, const Severity severity) {
-            ZiApi::ZiLogger::currentSeverity = severity;
-            return severity;
+        friend Severity operator<<(Severity actualSeverity, Severity newSeverity) {
+            ZiApi::ZiLogger::currentSeverity = newSeverity;
+            return newSeverity;
         }
 
     private:
@@ -108,10 +120,6 @@ namespace ZiApi {
         }
 
         static void printPrefix(std::ostream &os) {
-#ifdef __unix__
-            os << "[" << getTime() << "] ";
-#endif
-
             switch (ZiApi::ZiLogger::currentType) {
                 case Type::INFO:
                     os << "[INFO] ";
@@ -133,18 +141,13 @@ namespace ZiApi {
                     break;
             }
         }
+    };
 
 #ifdef __unix__
-
-        static std::_Put_time<char> getTime() {
-            std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
-            std::time_t now_c = std::chrono::system_clock::to_time_t(now - std::chrono::hours(24));
-            auto currentTime = std::put_time(std::localtime(&now_c), "%T");
-            return (currentTime);
-        }
-
+#define Log(logType) logType << __FILE__ << ":" << __LINE__ << " : "
+#else
+#define Log(logType) logType
 #endif
-    };
 }
 
 using LogType = ZiApi::ZiLogger::Type;
