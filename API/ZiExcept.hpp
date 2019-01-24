@@ -14,7 +14,7 @@ namespace ZiApi {
     class ZiExcept : public std::exception {
     public:
         explicit ZiExcept(const std::string &msg) : std::exception(), errorMsg(msg) {
-            ZiApi::ZiLogger::Type::ERROR << ZiApi::ZiLogger::Severity::IMPORTANT << msg << std::endl;
+            ZiApi::ZiLogger::Type::ERROR << ZiApi::ZiLogger::Severity::IMPORTANT << msg << ZiApi::ZiLogger::Endl::endl;
         }
         ~ZiExcept() final = default;
 

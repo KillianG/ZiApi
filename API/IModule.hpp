@@ -8,6 +8,7 @@
 #define ZIAPI_IMODULE_HPP
 
 #include <string>
+#include <memory>
 
 namespace ZiApi {
     class IModule {
@@ -15,9 +16,13 @@ namespace ZiApi {
         virtual ~IModule() = default;
 
         virtual bool isLoaded() = 0;
-        virtual void load() = 0;
         virtual void unLoad() = 0;
-        virtual std::string getName() = 0;
+        virtual std::string getName() const = 0;
     };
+}
+
+#else
+namespace ZiApi {
+    class IModule;
 }
 #endif //ZIAPI_IMODULE_HPP

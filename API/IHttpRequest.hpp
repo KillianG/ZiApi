@@ -9,6 +9,9 @@
 
 namespace ZiApi {
     class IHttpRequest {
+        enum Type {
+            Unknown, Options, Get, Head, Post, Put, Delete, Trace, Connect
+        };
 
     };
 }

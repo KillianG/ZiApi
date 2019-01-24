@@ -1,11 +1,12 @@
 #include <iostream>
 
 #include <ZiLogger.hpp>
+#include <AModule.hpp>
 #include "IHttpResponse.hpp"
 
 int main() {
-    ZiApi::ZiLogger::setMinSeverity(ZiApi::ZiLogger::Severity::IMPORTANT);
+    ZiApi::AModule A("/home","A");
 
-    LogType::INFO << LogSeverity::IMPORTANT << "Salut " << LogSeverity::USELESS << "Killian" << LogSeverity::IMPORTANT << "Renaud" << ZiApi::ZiLogger::endl;
-    Log(LogType::WARNING) << LogSeverity::IMPORTANT << "Salut " << LogSeverity::USELESS << "Killian" << LogSeverity::IMPORTANT << "Renaud" << ZiApi::ZiLogger::endl;
+    ZiApi::AModule B("/home", "B", 1, &A);
+    ZiApi::AModule C("/home", "C", 3, &A, &B);
 }
