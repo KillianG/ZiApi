@@ -4,16 +4,16 @@
 // See http://github.com/KillianG
 //
 
-#ifndef PROJECT_IHTTPREQUEST_HPP
-#define PROJECT_IHTTPREQUEST_HPP
+#pragma once
+
+#include "HttpHeader.hpp"
 
 namespace ZiApi {
-    class IHttpRequest {
-        enum Type {
+    struct HttpRequest {
+        enum class Type {
             Unknown, Options, Get, Head, Post, Put, Delete, Trace, Connect
         };
 
+        HttpHeader header;
     };
 }
-
-#endif //PROJECT_IHTTPREQUEST_HPP

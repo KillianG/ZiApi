@@ -4,73 +4,119 @@
 // See http://github.com/KillianG
 //
 
-#ifndef PROJECT_LOGGER_HPP
-#define PROJECT_LOGGER_HPP
+#pragma once
 
-#include <ios>
 #include <cstddef>
 #include <iostream>
 #include <fstream>
-#include <chrono>
-#include <iomanip>
 
 namespace ZiApi {
+    /**
+     * @brief ZiApi logger
+     *
+     * Usage example:
+     * @code
+     * using LogType = ZiApi::ZiLogger::Type;
+     * using LogSeverity = ZiApi::ZiLogger::Severity;
+     *
+     * ZiApi::ZiLogger::setMinSeverity(LogSeverity::NORMAL);                                                    //sets the severity at normal
+     * ZiApi::ZiLogger::setCurrentStream(ZiApi::ZiLogger::OutputStream::COUT);                                  //sets the logger output on the standard output
+     *
+     * Log(LogType::INFO, LogSeverity::NORMAL) << "Program started" << ZiApi::ZiLogger::endl;                   //[INFO] ~/main.cpp:7 : Program started
+     *
+     * ...
+     *
+     * LogType::DEBUG << "init resources" << ZiApi::ZiLogger::endl;                                             //[DEBUG] init resources
+     * ZiApi::ZiLogger::setMinSeverity(LogSeverity::IMPORTANT);                                                 //sets the severity at important
+     *
+     * ...
+     *
+     * LogType::INFO << LogSeverity::NORMAL << "Open assets folder" << ZiApi::ZiLogger::endl;                   //not showed because normal < important
+     *
+     * ...
+     *
+     * Log(LogType::ERROR, LogSeverity::VITAL) << "File: \"logo.png\" not found" << ZiApi::ZiLogger::endl;      //[ERROR] ~/main.cpp:30 : File: "logo.png" not found
+     *
+     * ...
+     *
+     * LogType::WARNING << LogSeverity::NORMAL << "Enter error handler "
+     * << LogSeverity::IMPORTANT << ": " << 3  << " warnings generated"<< ZiApi::ZiLogger::endl;                //[WARNING] : 3 warnings generated
+     * @endcode
+     */
     class ZiLogger {
     public:
-
-        /**
-         * Delete constructor to avoid instantiation
-         */
         ZiLogger() = delete;
 
         /**
-         * Type of logs
+         * Types of logs
          */
         enum class Type {
-            INFO,
-            DEBUG,
-            WARNING,
-            ERROR,
-            FATAL,
-            ABORT_MISSION
+            INFO,         ///< Useful information
+            DEBUG,        ///< Debug information mainly for developers
+            WARNING,      ///< Warning
+            ERROR,        ///< Error
+            FATAL,        ///< An Fatal error that cause the program to stop
+            ABORT_MISSION ///< Exit the program
         };
 
-        enum class Severity : int {
-            USELESS = 0,
-            NORMAL,
-            IMPORTANT,
-            VITAL
+        /**
+         * Types of severity
+         */
+        enum class Severity {
+            USELESS,      ///< useless
+            NORMAL,       ///< normal
+            IMPORTANT,    ///< important
+            VITAL         ///< vital
         };
 
+        /**
+         * Types of outputs
+         */
         enum class OutputStream {
-            COUT,
-            CERR,
-            FILE,
+            COUT,         ///< standard output
+            CERR,         ///< error output
+            FILE          ///< file output
         };
 
         enum Endl {
             endl
         };
 
-        static inline void setMinSeverity(Severity s) { minSeverity = s; }
+        /**
+         * @brief Set minimal severity
+         *
+         * Default is at Severity::USELESS
+         * @param[in] sev New severity
+         */
+        static inline void setMinSeverity(Severity sev) noexcept { minSeverity = sev; }
 
+        /**
+         * @brief Set logFile's path
+         *
+         * Default is "./log.txt"
+         * @param[in] filePath New logFile's path
+         */
         static inline void setStreamFile(const std::string &filePath = "./log.txt") { fileStream.open(filePath); }
 
-        static inline void setCurrentStream(OutputStream stream) { currentStream = stream; }
+        /**
+         * @brief Set logs outputs
+         *
+         * Default is OutputStream::COUT
+         * @param[in] stream New output stream
+         */
+        static inline void setCurrentStream(OutputStream stream) noexcept { currentStream = stream; }
 
-
-
-        template <typename T>
-        friend Severity operator<<(Severity s, const T &m) {
-            if (s >= ZiApi::ZiLogger::minSeverity)
+        template<typename T>
+        friend Severity operator<<(Severity sev, const T &m) {
+            if (sev >= ZiApi::ZiLogger::minSeverity)
                 ZiApi::ZiLogger::getOstream() << m;
-            return s;
+            return sev;
         }
 
-        friend Severity operator<<(Severity s, const Endl &m) {
-            if (s >= ZiApi::ZiLogger::minSeverity)
+        friend Severity operator<<(Severity sev, const Endl &) {
+            if (sev >= ZiApi::ZiLogger::minSeverity)
                 ZiApi::ZiLogger::getOstream() << std::endl;
-            return s;
+            return sev;
         }
 
         friend Severity operator<<(Type type, Severity severity) {
@@ -93,7 +139,10 @@ namespace ZiApi {
             return ZiApi::ZiLogger::currentSeverity;
         }
 
-        friend Severity operator<<(Severity actualSeverity, Severity newSeverity) {
+        friend Severity operator<<(Severity, Severity newSeverity) {
+            if (ZiApi::ZiLogger::currentSeverity < ZiApi::ZiLogger::minSeverity && newSeverity >= ZiApi::ZiLogger::minSeverity) {
+                printPrefix(ZiApi::ZiLogger::getOstream());
+            }
             ZiApi::ZiLogger::currentSeverity = newSeverity;
             return newSeverity;
         }
@@ -121,37 +170,26 @@ namespace ZiApi {
 
         static void printPrefix(std::ostream &os) {
             switch (ZiApi::ZiLogger::currentType) {
-                case Type::INFO:
-                    os << "[INFO] ";
+                case Type::INFO: os << "[INFO] ";
                     break;
-                case Type::WARNING:
-                    os << "[WARNING] ";
+                case Type::DEBUG: os << "[DEBUG] ";
                     break;
-                case Type::DEBUG:
-                    os << "[DEBUG] ";
+                case Type::WARNING: os << "[WARNING] ";
                     break;
-                case Type::ABORT_MISSION:
-                    os << "[RIP] " << std::endl;
+                case Type::ERROR: os << "[ERROR] ";
+                    break;
+                case Type::FATAL: os << "[FATAL] ";
+                    break;
+                case Type::ABORT_MISSION: os << "[RIP] " << std::endl;
                     std::_Exit(84);
-                case Type::ERROR:
-                    os << "[ERROR] ";
-                    break;
-                case Type::FATAL:
-                    os << "[FATAL] ";
                     break;
             }
         }
     };
-
-#ifdef __unix__
-#define Log(logType) logType << __FILE__ << ":" << __LINE__ << " : "
-#else
-#define Log(logType) logType
-#endif
 }
 
-using LogType = ZiApi::ZiLogger::Type;
-using LogSeverity = ZiApi::ZiLogger::Severity;
-using LogStream = ZiApi::ZiLogger::OutputStream;
-
-#endif //PROJECT_LOGGER_HPP
+#ifdef __unix__
+#define Log(logType, sev) logType << sev << __FILE__ << ":" << __LINE__ << " : "
+#else
+#define Log(logType, sev) logType << sev
+#endif

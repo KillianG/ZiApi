@@ -7,46 +7,29 @@
 #ifndef PROJECT_AMODULE_HPP
 #define PROJECT_AMODULE_HPP
 
-#include <unordered_map>
-#include <cstdarg>
-#include "IModule.hpp"
-#include "ZiExcept.hpp"
+#include <memory>
 
 namespace ZiApi {
-    class AModule: public IModule {
+    class AModule {
     public:
+        AModule(std::string name, float priority = 0) : _name(std::move(name)), _pipelinePriority(priority) {}
 
-        AModule(std::string path, std::string name, size_t nbModules, AModule *A...) : _isLoaded(false), name(std::move(name)) {
-            va_list args;
-            va_start(args, A);
+        const std::string &getName() const noexcept { return _name; }
 
-            linkedModules.insert(std::make_pair<const std::string, AModule*>(A->getName(), std::move(A)));
-
-            for (auto i = 0; i < nbModules-1; i++) {
-                auto mod = va_arg(args, AModule*);
-                linkedModules.insert(std::make_pair<const std::string, AModule*>(mod->getName(), std::move(mod)));
-            }
-            va_end(args);
-        }
-
-        virtual ~AModule() = default;
-
-        AModule(std::string path, std::string name) : _isLoaded(false), name(std::move(name)) {}
-
-        void unLoad() override { _isLoaded = false; }
-        bool isLoaded() final { return _isLoaded; }
-        std::string getName() const override { return name; }
+        float getPipelinePriority() const noexcept { return  _pipelinePriority; }
 
     protected:
-        bool _isLoaded;
-        std::string name;
-        std::unordered_map<std::string, AModule*> linkedModules;
+        std::string _name;
+
+    private:
+        float _pipelinePriority;
     };
+
 }
 
-#else
-namespace ZiApi {
-    class AModule;
+extern "C" {
+    std::unique_ptr<ZiApi::AModule> createModule();
 }
+
 
 #endif //PROJECT_AMODULE_HPP

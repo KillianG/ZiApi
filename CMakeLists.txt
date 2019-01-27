@@ -6,7 +6,13 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ZiApiTest main.cpp API/IModule.hpp API/IHttpRequest.hpp API/IHttpResponse.hpp API/ZiLogger.hpp API/ZiExcept.hpp API/AModule.hpp)
+set(CMAKE_CXX_FLAGS "-Wextra -Wall -O3 -Woverloaded-virtual -Wlogical-op")
+
+add_executable(ZiApiTest main.cpp)
+
+include_directories(API/)
+include_directories(API/http)
+include_directories(API/utils)
 
 target_include_directories(ZiApiTest PRIVATE "API")
 

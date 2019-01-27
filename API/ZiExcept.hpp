@@ -4,26 +4,26 @@
 // See http://github.com/KillianG
 //
 
-#ifndef PROJECT_ZIEXCEPT_HPP
-#define PROJECT_ZIEXCEPT_HPP
+#pragma once
 
 #include <exception>
 #include "ZiLogger.hpp"
 
 namespace ZiApi {
+    /**
+     * @brief ZiApi Exception
+     */
     class ZiExcept : public std::exception {
     public:
         explicit ZiExcept(const std::string &msg) : std::exception(), errorMsg(msg) {
-            ZiApi::ZiLogger::Type::ERROR << ZiApi::ZiLogger::Severity::IMPORTANT << msg << ZiApi::ZiLogger::Endl::endl;
+            ZiLogger::Type::ERROR << ZiLogger::Severity::IMPORTANT << msg << ZiLogger::endl;
         }
+
         ~ZiExcept() final = default;
 
-        const char* what() const noexcept override { return errorMsg.c_str(); }
+        const char *what() const noexcept override { return errorMsg.c_str(); }
 
     private:
         std::string errorMsg;
-
     };
 }
-
-#endif //PROJECT_ZIEXCEPT_HPP
