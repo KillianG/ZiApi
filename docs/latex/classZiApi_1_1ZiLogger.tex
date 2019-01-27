@@ -1,0 +1,231 @@
+\hypertarget{classZiApi_1_1ZiLogger}{}\section{Zi\+Api\+::Zi\+Logger Class Reference}
+\label{classZiApi_1_1ZiLogger}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+
+
+Zi\+Api logger.  
+
+
+
+
+{\ttfamily \#include $<$Zi\+Logger.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}{Type}} \{ \newline
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a551b723eafd6a31d444fcb2f5920fbd3}{Type\+::\+I\+N\+FO}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424adc30ec20708ef7b0f641ef78b7880a15}{Type\+::\+D\+E\+B\+UG}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a059e9861e0400dfbe05c98a841f3f96b}{Type\+::\+W\+A\+R\+N\+I\+NG}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424abb1ca97ec761fc37101737ba0aa2e7c5}{Type\+::\+E\+R\+R\+OR}}, 
+\newline
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a19da7170bea36556dde582519795f3fc}{Type\+::\+F\+A\+T\+AL}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a94668888264efde6cbdf61c98181438a}{Type\+::\+A\+B\+O\+R\+T\+\_\+\+M\+I\+S\+S\+I\+ON}}
+ \}
+\item 
+enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} \{ \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225aa85f1b757c08be14396a953d5faa53d8}{Severity\+::\+U\+S\+E\+L\+E\+SS}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a1e23852820b9154316c7c06e2b7ba051}{Severity\+::\+N\+O\+R\+M\+AL}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a279ac5dd73c3a5783ebeb10e172c4f38}{Severity\+::\+I\+M\+P\+O\+R\+T\+A\+NT}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a9aae234ac22c4866ee4f69601e3c4fa6}{Severity\+::\+V\+I\+T\+AL}}
+ \}
+\item 
+enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}{Output\+Stream}} \{ \mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a5822f620df7e1c3829eabe17ea69afbf}{Output\+Stream\+::\+C\+O\+UT}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2ac3d976eb96cea3825a4e403d164e50d4}{Output\+Stream\+::\+C\+E\+RR}}, 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a9fc5887c030f7a3e19821ebec457e719}{Output\+Stream\+::\+F\+I\+LE}}
+ \}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a622fde9aa8b9f9e178b5e6c5f84aa273}\label{classZiApi_1_1ZiLogger_a622fde9aa8b9f9e178b5e6c5f84aa273}} 
+enum {\bfseries Endl} \{ {\bfseries endl}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classZiApi_1_1ZiLogger_a218a9e2df01c0984b4f9721e977dbb75}{set\+Min\+Severity}} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} sev) noexcept
+\begin{DoxyCompactList}\small\item\em Set minimal severity. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classZiApi_1_1ZiLogger_a38ec94a0c7bbcb8ffbb0b76bd255c748}{set\+Stream\+File}} (const std\+::string \&file\+Path=\char`\"{}./log.\+txt\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set log\+File\textquotesingle{}s path. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classZiApi_1_1ZiLogger_a210348e6fe7c30a1f52a2bd9414b0f66}{set\+Current\+Stream}} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}{Output\+Stream}} stream) noexcept
+\begin{DoxyCompactList}\small\item\em Set logs outputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a7f4188edd5552eea1c102cc5e882f950}\label{classZiApi_1_1ZiLogger_a7f4188edd5552eea1c102cc5e882f950}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} {\bfseries operator$<$$<$} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} sev, const T \&m)
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_afc59a8ad66461ee68e9e72b2deb59a29}\label{classZiApi_1_1ZiLogger_afc59a8ad66461ee68e9e72b2deb59a29}} 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} {\bfseries operator$<$$<$} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} sev, const Endl \&)
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a6abe13c258fe5549672ba04769777d0f}\label{classZiApi_1_1ZiLogger_a6abe13c258fe5549672ba04769777d0f}} 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} {\bfseries operator$<$$<$} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}{Type}} type, \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} severity)
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_abc8cede93cb1c290eb4f0da901babc81}\label{classZiApi_1_1ZiLogger_abc8cede93cb1c290eb4f0da901babc81}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} {\bfseries operator$<$$<$} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}{Type}} type, const T \&m)
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a325903a3f9081940af71b0b96d41171d}\label{classZiApi_1_1ZiLogger_a325903a3f9081940af71b0b96d41171d}} 
+\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} {\bfseries operator$<$$<$} (\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}}, \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}} new\+Severity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Zi\+Api logger. 
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using} LogType = \mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}{ZiApi::ZiLogger::Type}};}
+\DoxyCodeLine{\textcolor{keyword}{using} LogSeverity = \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{ZiApi::ZiLogger::Severity}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1ZiLogger_a218a9e2df01c0984b4f9721e977dbb75}{ZiApi::ZiLogger::setMinSeverity}}(LogSeverity::NORMAL);                                                    \textcolor{comment}{//sets the severity at normal}}
+\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1ZiLogger_a210348e6fe7c30a1f52a2bd9414b0f66}{ZiApi::ZiLogger::setCurrentStream}}(\mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a5822f620df7e1c3829eabe17ea69afbf}{ZiApi::ZiLogger::OutputStream::COUT}});                                  \textcolor{comment}{//sets the logger output on the standard output}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Log(LogType::INFO, LogSeverity::NORMAL) << \textcolor{stringliteral}{"Program started"} << ZiApi::ZiLogger::endl;                   \textcolor{comment}{//[INFO] ~/main.cpp:7 : Program started}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{LogType::DEBUG << \textcolor{stringliteral}{"init resources"} << ZiApi::ZiLogger::endl;                                             \textcolor{comment}{//[DEBUG] init resources}}
+\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1ZiLogger_a218a9e2df01c0984b4f9721e977dbb75}{ZiApi::ZiLogger::setMinSeverity}}(LogSeverity::IMPORTANT);                                                 \textcolor{comment}{//sets the severity at important}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{LogType::INFO << LogSeverity::NORMAL << \textcolor{stringliteral}{"Open assets folder"} << ZiApi::ZiLogger::endl;                   \textcolor{comment}{//not showed because normal < important}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{Log(LogType::ERROR, LogSeverity::VITAL) << \textcolor{stringliteral}{"File: \(\backslash\)"logo.png\(\backslash\)" not found"} << ZiApi::ZiLogger::endl;      \textcolor{comment}{//[ERROR] ~/main.cpp:30 : File: "logo.png" not found}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{LogType::WARNING << LogSeverity::NORMAL << \textcolor{stringliteral}{"Enter error handler "}}
+\DoxyCodeLine{<< LogSeverity::IMPORTANT << \textcolor{stringliteral}{": "} << 3  << \textcolor{stringliteral}{" warnings generated"}<< ZiApi::ZiLogger::endl;                \textcolor{comment}{//[WARNING] : 3 warnings generated}}
+\end{DoxyCode}
+ 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}\label{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!OutputStream@{OutputStream}}
+\index{OutputStream@{OutputStream}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{OutputStream}{OutputStream}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}{Zi\+Api\+::\+Zi\+Logger\+::\+Output\+Stream}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Types of outputs \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COUT@{COUT}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!COUT@{COUT}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a5822f620df7e1c3829eabe17ea69afbf}\label{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a5822f620df7e1c3829eabe17ea69afbf}} 
+C\+O\+UT&standard output \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CERR@{CERR}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!CERR@{CERR}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2ac3d976eb96cea3825a4e403d164e50d4}\label{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2ac3d976eb96cea3825a4e403d164e50d4}} 
+C\+E\+RR&error output \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE@{FILE}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!FILE@{FILE}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a9fc5887c030f7a3e19821ebec457e719}\label{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a9fc5887c030f7a3e19821ebec457e719}} 
+F\+I\+LE&file output \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}\label{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!Severity@{Severity}}
+\index{Severity@{Severity}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{Severity}{Severity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Zi\+Api\+::\+Zi\+Logger\+::\+Severity}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Types of severity \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USELESS@{USELESS}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!USELESS@{USELESS}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225aa85f1b757c08be14396a953d5faa53d8}\label{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225aa85f1b757c08be14396a953d5faa53d8}} 
+U\+S\+E\+L\+E\+SS&useless \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a1e23852820b9154316c7c06e2b7ba051}\label{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a1e23852820b9154316c7c06e2b7ba051}} 
+N\+O\+R\+M\+AL&normal \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMPORTANT@{IMPORTANT}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!IMPORTANT@{IMPORTANT}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a279ac5dd73c3a5783ebeb10e172c4f38}\label{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a279ac5dd73c3a5783ebeb10e172c4f38}} 
+I\+M\+P\+O\+R\+T\+A\+NT&important \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VITAL@{VITAL}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!VITAL@{VITAL}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a9aae234ac22c4866ee4f69601e3c4fa6}\label{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225a9aae234ac22c4866ee4f69601e3c4fa6}} 
+V\+I\+T\+AL&vital \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!Type@{Type}}
+\index{Type@{Type}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424}{Zi\+Api\+::\+Zi\+Logger\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Types of logs \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!INFO@{INFO}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a551b723eafd6a31d444fcb2f5920fbd3}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a551b723eafd6a31d444fcb2f5920fbd3}} 
+I\+N\+FO&Useful information. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!DEBUG@{DEBUG}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424adc30ec20708ef7b0f641ef78b7880a15}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424adc30ec20708ef7b0f641ef78b7880a15}} 
+D\+E\+B\+UG&Debug information mainly for developers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!WARNING@{WARNING}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a059e9861e0400dfbe05c98a841f3f96b}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a059e9861e0400dfbe05c98a841f3f96b}} 
+W\+A\+R\+N\+I\+NG&Warning. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!ERROR@{ERROR}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424abb1ca97ec761fc37101737ba0aa2e7c5}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424abb1ca97ec761fc37101737ba0aa2e7c5}} 
+E\+R\+R\+OR&Error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FATAL@{FATAL}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!FATAL@{FATAL}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a19da7170bea36556dde582519795f3fc}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a19da7170bea36556dde582519795f3fc}} 
+F\+A\+T\+AL&An Fatal error that cause the program to stop. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ABORT\_MISSION@{ABORT\_MISSION}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!ABORT\_MISSION@{ABORT\_MISSION}}}\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a94668888264efde6cbdf61c98181438a}\label{classZiApi_1_1ZiLogger_a2344ef7fcc5f37cac04a3efc8f993424a94668888264efde6cbdf61c98181438a}} 
+A\+B\+O\+R\+T\+\_\+\+M\+I\+S\+S\+I\+ON&Exit the program. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a210348e6fe7c30a1f52a2bd9414b0f66}\label{classZiApi_1_1ZiLogger_a210348e6fe7c30a1f52a2bd9414b0f66}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!setCurrentStream@{setCurrentStream}}
+\index{setCurrentStream@{setCurrentStream}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{setCurrentStream()}{setCurrentStream()}}
+{\footnotesize\ttfamily static void Zi\+Api\+::\+Zi\+Logger\+::set\+Current\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2}{Output\+Stream}}}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Set logs outputs. 
+
+Default is \mbox{\hyperlink{classZiApi_1_1ZiLogger_a0c544845c83a82d59454407e154634c2a5822f620df7e1c3829eabe17ea69afbf}{Output\+Stream\+::\+C\+O\+UT}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em stream} & New output stream \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a218a9e2df01c0984b4f9721e977dbb75}\label{classZiApi_1_1ZiLogger_a218a9e2df01c0984b4f9721e977dbb75}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!setMinSeverity@{setMinSeverity}}
+\index{setMinSeverity@{setMinSeverity}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{setMinSeverity()}{setMinSeverity()}}
+{\footnotesize\ttfamily static void Zi\+Api\+::\+Zi\+Logger\+::set\+Min\+Severity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225}{Severity}}}]{sev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Set minimal severity. 
+
+Default is at \mbox{\hyperlink{classZiApi_1_1ZiLogger_a483a2cb1e6000a67acba1c903f780225aa85f1b757c08be14396a953d5faa53d8}{Severity\+::\+U\+S\+E\+L\+E\+SS}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sev} & New severity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZiApi_1_1ZiLogger_a38ec94a0c7bbcb8ffbb0b76bd255c748}\label{classZiApi_1_1ZiLogger_a38ec94a0c7bbcb8ffbb0b76bd255c748}} 
+\index{ZiApi::ZiLogger@{ZiApi::ZiLogger}!setStreamFile@{setStreamFile}}
+\index{setStreamFile@{setStreamFile}!ZiApi::ZiLogger@{ZiApi::ZiLogger}}
+\subsubsection{\texorpdfstring{setStreamFile()}{setStreamFile()}}
+{\footnotesize\ttfamily static void Zi\+Api\+::\+Zi\+Logger\+::set\+Stream\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path = {\ttfamily \char`\"{}./log.txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set log\+File\textquotesingle{}s path. 
+
+Default is \char`\"{}./log.\+txt\char`\"{} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Path} & New log\+File\textquotesingle{}s path \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zi\+Logger.\+hpp\end{DoxyCompactItemize}

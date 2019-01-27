@@ -188,7 +188,13 @@ namespace ZiApi {
     };
 }
 
+/**
+ * @brief test
+ */
 #ifdef __unix__
+/**
+ * @brief test2
+ */
 #define Log(logType, sev) logType << sev << __FILE__ << ":" << __LINE__ << " : "
 #else
 #define Log(logType, sev) logType << sev
