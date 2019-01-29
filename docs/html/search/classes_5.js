@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['valuetype',['ValueType',['../unionZiApi_1_1FieldValue_1_1ValueType.html',1,'ZiApi::FieldValue']]]
+  ['ziexcept',['ZiExcept',['../classZiApi_1_1ZiExcept.html',1,'ZiApi']]],
+  ['zilogger',['ZiLogger',['../classZiApi_1_1ZiLogger.html',1,'ZiApi']]]
 ];

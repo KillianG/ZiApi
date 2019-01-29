@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: ZiApi::HttpRequest Struct Reference</title>
+<title>ZiApi: ZiApi::HttpRequest Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">ZiApi
    </div>
+   <div id="projectbrief">Epitech 2021 Zia api</div>
   </td>
  </tr>
  </tbody>
@@ -67,37 +68,156 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="structZiApi_1_1HttpRequest-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ZiApi::HttpRequest Struct Reference</div>  </div>
+<div class="title">ZiApi::HttpRequest Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Http request container.  
+ <a href="structZiApi_1_1HttpRequest.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="HttpRequest_8hpp_source.html">HttpRequest.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ZiApi::HttpRequest:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="structZiApi_1_1HttpRequest.png" usemap="#ZiApi::HttpRequest_map" alt=""/>
+  <map id="ZiApi::HttpRequest_map" name="ZiApi::HttpRequest_map">
+<area href="classZiApi_1_1HttpMessage.html" alt="ZiApi::HttpMessage" shape="rect" coords="0,0,122,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aff2444b7a152e8e1038cd84ce67e7238"><td class="memItemLeft" align="right" valign="top"><a id="aff2444b7a152e8e1038cd84ce67e7238"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <br />
-&#160;&#160;<b>Unknown</b>, 
-<b>Options</b>, 
-<b>Get</b>, 
-<b>Head</b>, 
+<tr class="memitem:a8592cff867cbbc5cc43bd3a4d6053a1b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1b">MethodType</a> { <br />
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba7528035a93ee69cedb1dbddb2f0bfcc8">MethodType::GET</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1bae15e216fc1c639f787b1231ecdfa1bf8">MethodType::HEAD</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1baa02439ec229d8be0e74b0c1602392310">MethodType::POST</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba3e75383a5992a6d15fb81e872e46e256">MethodType::PUT</a>, 
 <br />
-&#160;&#160;<b>Post</b>, 
-<b>Put</b>, 
-<b>Delete</b>, 
-<b>Trace</b>, 
-<br />
-&#160;&#160;<b>Connect</b>
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba32f68a60cef40faedbc6af20298c1a1e">MethodType::DELETE</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1bab57e2519e26151feacdbe52076bc39ec">MethodType::CONNECT</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba164dd62adb30ca051b5289672a572f9b">MethodType::OPTIONS</a>, 
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba2d3e4144aa384b18849ab9a8abad74d6">MethodType::TRACE</a>
 <br />
  }</td></tr>
-<tr class="separator:aff2444b7a152e8e1038cd84ce67e7238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a8592cff867cbbc5cc43bd3a4d6053a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:acfc8377e4549921b49f68f3c2f05bc03"><td class="memItemLeft" align="right" valign="top"><a id="acfc8377e4549921b49f68f3c2f05bc03"></a>
-HttpHeader&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
-<tr class="separator:acfc8377e4549921b49f68f3c2f05bc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0a6e036d520b4c43a7350f465c429b20"><td class="memItemLeft" align="right" valign="top"><a id="a0a6e036d520b4c43a7350f465c429b20"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#a0a6e036d520b4c43a7350f465c429b20">setUri</a> (const std::string &amp;newUri) noexcept=0</td></tr>
+<tr class="memdesc:a0a6e036d520b4c43a7350f465c429b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request's uri. <br /></td></tr>
+<tr class="separator:a0a6e036d520b4c43a7350f465c429b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2830d65539c10f3441d2988eff2f3b8"><td class="memItemLeft" align="right" valign="top"><a id="aa2830d65539c10f3441d2988eff2f3b8"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#aa2830d65539c10f3441d2988eff2f3b8">getUri</a> () const noexcept=0</td></tr>
+<tr class="memdesc:aa2830d65539c10f3441d2988eff2f3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request's uri. <br /></td></tr>
+<tr class="separator:aa2830d65539c10f3441d2988eff2f3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f2f16405c9572dcd3acf70eb1a9dd1"><td class="memItemLeft" align="right" valign="top"><a id="a45f2f16405c9572dcd3acf70eb1a9dd1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#a45f2f16405c9572dcd3acf70eb1a9dd1">setMethod</a> (<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1b">MethodType</a> newMethod) noexcept=0</td></tr>
+<tr class="memdesc:a45f2f16405c9572dcd3acf70eb1a9dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request's method. <br /></td></tr>
+<tr class="separator:a45f2f16405c9572dcd3acf70eb1a9dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783653b01833477dd2ce7a9d6ba306c6"><td class="memItemLeft" align="right" valign="top"><a id="a783653b01833477dd2ce7a9d6ba306c6"></a>
+virtual <a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1b">MethodType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#a783653b01833477dd2ce7a9d6ba306c6">getMethod</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a783653b01833477dd2ce7a9d6ba306c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the request's method. <br /></td></tr>
+<tr class="separator:a783653b01833477dd2ce7a9d6ba306c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZiApi_1_1HttpMessage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZiApi_1_1HttpMessage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td></tr>
+<tr class="memitem:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a0d6c5c02bf8b4ec509b118199f7dbf88"></a>
+virtual const HttpHeader &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a0d6c5c02bf8b4ec509b118199f7dbf88">getHeader</a> () noexcept=0</td></tr>
+<tr class="memdesc:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's header. <br /></td></tr>
+<tr class="separator:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a12c1c080067de6727b98adbcce1ed79d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a12c1c080067de6727b98adbcce1ed79d">setBody</a> (const std::string &amp;newBody) noexcept=0</td></tr>
+<tr class="memdesc:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the message's body. <br /></td></tr>
+<tr class="separator:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a92e27ef64abcdcbf18519efe65434807"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a92e27ef64abcdcbf18519efe65434807">getBody</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's body. <br /></td></tr>
+<tr class="separator:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="aa777191d2f0c8cfc3579c8dfc1b455d4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#aa777191d2f0c8cfc3579c8dfc1b455d4">setHttpVersion</a> (uint8_t major, uint8_t minor) noexcept=0</td></tr>
+<tr class="memdesc:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the message's Http version. <br /></td></tr>
+<tr class="separator:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a5b8b70f012a623dd79dcbd6a49ec4704">getHttpVersion</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's Http version.  <a href="classZiApi_1_1HttpMessage.html#a5b8b70f012a623dd79dcbd6a49ec4704">More...</a><br /></td></tr>
+<tr class="separator:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a30de96436841e7f49ce9d9f6a69f751e"><td class="memItemLeft" align="right" valign="top"><a id="a30de96436841e7f49ce9d9f6a69f751e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#a30de96436841e7f49ce9d9f6a69f751e">_uri</a></td></tr>
+<tr class="memdesc:a30de96436841e7f49ce9d9f6a69f751e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request's uri. <br /></td></tr>
+<tr class="separator:a30de96436841e7f49ce9d9f6a69f751e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e4fe2662f4699ad6715fc11bf454df"><td class="memItemLeft" align="right" valign="top"><a id="ad4e4fe2662f4699ad6715fc11bf454df"></a>
+<a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1b">MethodType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpRequest.html#ad4e4fe2662f4699ad6715fc11bf454df">_method</a></td></tr>
+<tr class="memdesc:ad4e4fe2662f4699ad6715fc11bf454df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request's method. <br /></td></tr>
+<tr class="separator:ad4e4fe2662f4699ad6715fc11bf454df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classZiApi_1_1HttpMessage"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classZiApi_1_1HttpMessage')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td></tr>
+<tr class="memitem:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a980cd22bd442a6b3a01e66e9117d4c35"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a980cd22bd442a6b3a01e66e9117d4c35">_versionMajor</a></td></tr>
+<tr class="memdesc:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's major version. <br /></td></tr>
+<tr class="separator:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a36161a0628e2bd17d5cd1bc2da8a1448"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a36161a0628e2bd17d5cd1bc2da8a1448">_versionMinor</a></td></tr>
+<tr class="memdesc:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's minor version. <br /></td></tr>
+<tr class="separator:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a649867b80ecf41e6c32170ebe206be26"></a>
+HttpHeader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a649867b80ecf41e6c32170ebe206be26">_header</a></td></tr>
+<tr class="memdesc:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's header. <br /></td></tr>
+<tr class="separator:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a3fa98de77c767e106b0579d43ea62c33"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a3fa98de77c767e106b0579d43ea62c33">_body</a></td></tr>
+<tr class="memdesc:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's content. <br /></td></tr>
+<tr class="separator:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Http request container. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classZiApi_1_1HttpMessage.html">HttpMessage</a>, <a class="el" href="structZiApi_1_1HttpResponse.html" title="Http response container.">HttpResponse</a> </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a8592cff867cbbc5cc43bd3a4d6053a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8592cff867cbbc5cc43bd3a4d6053a1b">&#9670;&nbsp;</a></span>MethodType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1b">ZiApi::HttpRequest::MethodType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Methods list </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1ba7528035a93ee69cedb1dbddb2f0bfcc8"></a>GET&#160;</td><td class="fielddoc"><p>Retrieves whatever information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1bae15e216fc1c639f787b1231ecdfa1bf8"></a>HEAD&#160;</td><td class="fielddoc"><p>Identical to GET except that the server must not return a message-body in the response. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1baa02439ec229d8be0e74b0c1602392310"></a>POST&#160;</td><td class="fielddoc"><p>Sends data to the server. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1ba3e75383a5992a6d15fb81e872e46e256"></a>PUT&#160;</td><td class="fielddoc"><p>Replaces all current representations of the target resource with the uploaded content. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1ba32f68a60cef40faedbc6af20298c1a1e"></a>DELETE&#160;</td><td class="fielddoc"><p>Removes all current representations of the target resource given by a uri. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1bab57e2519e26151feacdbe52076bc39ec"></a>CONNECT&#160;</td><td class="fielddoc"><p>Establishes a tunnel to the server identified by a given uri. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1ba164dd62adb30ca051b5289672a572f9b"></a>OPTIONS&#160;</td><td class="fielddoc"><p>Describes the communication options for the target resource. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8592cff867cbbc5cc43bd3a4d6053a1ba2d3e4144aa384b18849ab9a8abad74d6"></a>TRACE&#160;</td><td class="fielddoc"><p>Performs a message loop-back test along the path to the target resource. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="HttpRequest_8hpp_source.html">HttpRequest.hpp</a></li>
 </ul>

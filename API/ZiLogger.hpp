@@ -1,8 +1,10 @@
-//
-// Created by killian on 22/01/19.
-// Epitech 3 years remaining
-// See http://github.com/KillianG
-//
+/**
+ * @file   Zilogger.hpp
+ * @author nhyarlathotep
+ * @date   25/01/19.
+ *
+ * @brief  FieldVValue declaration.
+ */
 
 #pragma once
 
@@ -188,14 +190,8 @@ namespace ZiApi {
     };
 }
 
-/**
- * @brief test
- */
 #ifdef __unix__
-/**
- * @brief test2
- */
-#define Log(logType, sev) logType << sev << __FILE__ << ":" << __LINE__ << " : "
+#define LOG(logType, sev) logType << sev << __FILE__ << ":" << __LINE__ << " : "
 #else
-#define Log(logType, sev) logType << sev
+#define LOG(logType, sev) logType << sev
 #endif

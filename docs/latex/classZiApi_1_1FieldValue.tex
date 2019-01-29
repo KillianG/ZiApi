@@ -2,186 +2,44 @@
 \label{classZiApi_1_1FieldValue}\index{ZiApi::FieldValue@{ZiApi::FieldValue}}
 
 
-Contains a generic value.  
+Contains a generic type.  
 
 
 
 
 {\ttfamily \#include $<$Field\+Value.\+hpp$>$}
 
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-union \mbox{\hyperlink{unionZiApi_1_1FieldValue_1_1ValueType}{Value\+Type}}
-\begin{DoxyCompactList}\small\item\em The contained value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7}{Type}} \{ \newline
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a53f93baa3057821107c750323892fa92}{Type\+::\+I\+NT}}, 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7aa97b2c144243b2b9d2c593ec268b62f5}{Type\+::\+B\+O\+OL}}, 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7afd3e4ece78a7d422280d5ed379482229}{Type\+::\+D\+O\+U\+B\+LE}}, 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a63b588d5559f64f89a416e656880b949}{Type\+::\+S\+T\+R\+I\+NG}}, 
-\newline
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a298cb25408234de02baf2085803a464a}{Type\+::\+L\+I\+ST}}, 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7acb4fb1757fb37c43cded35d3eb857c43}{Type\+::\+A\+R\+R\+AY}}, 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7ab50339a10e1de285ac99d4c3990b8693}{Type\+::\+N\+O\+NE}}
- \}
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}\label{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}} 
-using \mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{Value\+List}} = std\+::vector$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$
-\begin{DoxyCompactList}\small\item\em Defines a list of \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}\label{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}} 
-using \mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{Value\+Array}} = std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$
-\begin{DoxyCompactList}\small\item\em Defines a map of \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}\label{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}} = std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Defines a list of Field\+Values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}\label{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Defines a map of Field\+Values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}\label{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} = std\+::variant$<$ int, bool, double, std\+::string, \mbox{\hyperlink{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}}, \mbox{\hyperlink{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} $>$
+\begin{DoxyCompactList}\small\item\em Defines the possibles types of \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_af642f53e1c7bb6d78db1d52cb601c315}\label{classZiApi_1_1FieldValue_af642f53e1c7bb6d78db1d52cb601c315}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_af642f53e1c7bb6d78db1d52cb601c315}{Field\+Value}} ()
-\begin{DoxyCompactList}\small\item\em Default ctor, build a N\+O\+NE type. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a278890459a854cd3ef4c7637c259b597}\label{classZiApi_1_1FieldValue_a278890459a854cd3ef4c7637c259b597}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a278890459a854cd3ef4c7637c259b597}{Field\+Value}} (int value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with an integer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a47fce7bf08038e701e6b9ecf937d96b6}\label{classZiApi_1_1FieldValue_a47fce7bf08038e701e6b9ecf937d96b6}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a47fce7bf08038e701e6b9ecf937d96b6}{Field\+Value}} (bool value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with a boolean. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ac7c40d57848a5470d1275d17ee24b3dd}\label{classZiApi_1_1FieldValue_ac7c40d57848a5470d1275d17ee24b3dd}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ac7c40d57848a5470d1275d17ee24b3dd}{Field\+Value}} (double value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with a double. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ae33f2795f9a16adb872815faf9cea5c5}\label{classZiApi_1_1FieldValue_ae33f2795f9a16adb872815faf9cea5c5}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ae33f2795f9a16adb872815faf9cea5c5}{Field\+Value}} (const char $\ast$value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with a string. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab8f0d9e65be6be0fc25ebcc61c690713}\label{classZiApi_1_1FieldValue_ab8f0d9e65be6be0fc25ebcc61c690713}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab8f0d9e65be6be0fc25ebcc61c690713}{Field\+Value}} (const std\+::string \&value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with a string. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a8440cc8ba24a299e678aef8f358d0ddc}\label{classZiApi_1_1FieldValue_a8440cc8ba24a299e678aef8f358d0ddc}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a8440cc8ba24a299e678aef8f358d0ddc}{Field\+Value}} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{Value\+List}} \&value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with a list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a1e61bd82b4479afe8b6ab780e2fdab86}\label{classZiApi_1_1FieldValue_a1e61bd82b4479afe8b6ab780e2fdab86}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a1e61bd82b4479afe8b6ab780e2fdab86}{Field\+Value}} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{Value\+Array}} \&value)
-\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with an array. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1ed7a49dcf5c257cfe7b00252920e28}\label{classZiApi_1_1FieldValue_ab1ed7a49dcf5c257cfe7b00252920e28}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1ed7a49dcf5c257cfe7b00252920e28}{Field\+Value}} (const \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \&other)
-\begin{DoxyCompactList}\small\item\em Copy ctor, build a \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} with an other. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a7da619e47de179fd35b9311b08a66d22}\label{classZiApi_1_1FieldValue_a7da619e47de179fd35b9311b08a66d22}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (int value)
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}\label{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}} 
+virtual const \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}{get\+Value}} () const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the contained value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}\label{classZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}} 
+virtual \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \&) noexcept=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a321de39e584521465afec28f32ae1f08}\label{classZiApi_1_1FieldValue_a321de39e584521465afec28f32ae1f08}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (bool value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a193c51d0f2fd1fed7e55d7e867d9c4e9}\label{classZiApi_1_1FieldValue_a193c51d0f2fd1fed7e55d7e867d9c4e9}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (double value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a6c30cb75df4b9d5316a8481f55ee3012}\label{classZiApi_1_1FieldValue_a6c30cb75df4b9d5316a8481f55ee3012}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const char $\ast$value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ac1fe393bd0627948e72382f626d21665}\label{classZiApi_1_1FieldValue_ac1fe393bd0627948e72382f626d21665}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const std\+::string \&value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a73f5b14c961da220cbdba9f95ffb442d}\label{classZiApi_1_1FieldValue_a73f5b14c961da220cbdba9f95ffb442d}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{Value\+List}} \&value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a4039ea8c880c0cfce732b9ce86591bed}\label{classZiApi_1_1FieldValue_a4039ea8c880c0cfce732b9ce86591bed}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{Value\+Array}} \&value)
-\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ae0c786dd8f01b4eeb2fd228cebd9b134}\label{classZiApi_1_1FieldValue_ae0c786dd8f01b4eeb2fd228cebd9b134}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7}{Type}} \mbox{\hyperlink{classZiApi_1_1FieldValue_ae0c786dd8f01b4eeb2fd228cebd9b134}{get\+Value\+Type}} () const noexcept
-\begin{DoxyCompactList}\small\item\em Gets the contained value\textquotesingle{}s type. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a4e978dc7d150ac4be07cebe86687ffa5}\label{classZiApi_1_1FieldValue_a4e978dc7d150ac4be07cebe86687ffa5}} 
-int \& \mbox{\hyperlink{classZiApi_1_1FieldValue_a4e978dc7d150ac4be07cebe86687ffa5}{get\+Int}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as an integer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a962df28f86dfae01f48ab3edd40186be}\label{classZiApi_1_1FieldValue_a962df28f86dfae01f48ab3edd40186be}} 
-bool \& \mbox{\hyperlink{classZiApi_1_1FieldValue_a962df28f86dfae01f48ab3edd40186be}{get\+Bool}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as a boolean. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a642c5b48a2fc94a1ed5a866e95b9e135}\label{classZiApi_1_1FieldValue_a642c5b48a2fc94a1ed5a866e95b9e135}} 
-double \& \mbox{\hyperlink{classZiApi_1_1FieldValue_a642c5b48a2fc94a1ed5a866e95b9e135}{get\+Double}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as a double. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_af6616f19675061921a42a937675aedd0}\label{classZiApi_1_1FieldValue_af6616f19675061921a42a937675aedd0}} 
-std\+::string \& \mbox{\hyperlink{classZiApi_1_1FieldValue_af6616f19675061921a42a937675aedd0}{get\+String}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as a string. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a4d0a72887b483f6fe4d314b84dd7c09c}\label{classZiApi_1_1FieldValue_a4d0a72887b483f6fe4d314b84dd7c09c}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{Value\+List}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_a4d0a72887b483f6fe4d314b84dd7c09c}{get\+List}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as a list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a52df6ed05138b911d3f79ae46775265f}\label{classZiApi_1_1FieldValue_a52df6ed05138b911d3f79ae46775265f}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{Value\+Array}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_a52df6ed05138b911d3f79ae46775265f}{get\+Array}} ()
-\begin{DoxyCompactList}\small\item\em Gets the contained value as an array. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a704771df964e4cc9232c78af6c3bc928}\label{classZiApi_1_1FieldValue_a704771df964e4cc9232c78af6c3bc928}} 
-std\+::string \mbox{\hyperlink{classZiApi_1_1FieldValue_a704771df964e4cc9232c78af6c3bc928}{to\+String}} () const
-\begin{DoxyCompactList}\small\item\em Serializes the contained value as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}\label{classZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}} 
+\mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} {\bfseries \+\_\+value}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Contains a generic value. 
-
-Usage example\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{ZiApi::FieldValue::ValueList}} list;                               \textcolor{comment}{//a list}}
-\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{ZiApi::FieldValue::ValueArray}} array;                             \textcolor{comment}{//an array}}
-\DoxyCodeLine{}
-\DoxyCodeLine{array[\textcolor{stringliteral}{"key"}] = \textcolor{stringliteral}{"Wololo"};                                         \textcolor{comment}{//a string}}
-\DoxyCodeLine{array[\textcolor{stringliteral}{"bread"}] = 666;                                            \textcolor{comment}{//an integer}}
-\DoxyCodeLine{}
-\DoxyCodeLine{list.emplace\_back(\textcolor{stringliteral}{"Hello"});                                      \textcolor{comment}{//emplace a string}}
-\DoxyCodeLine{list.emplace\_back(array);                                        \textcolor{comment}{//emplace the array in the list}}
-\DoxyCodeLine{list.emplace\_back(\textcolor{keyword}{true});                                         \textcolor{comment}{//emplace a boolean}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1FieldValue}{ZiApi::FieldValue}} value(list);                                   \textcolor{comment}{//set the list as value}}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{std::cout << value.toString() << std::endl;                      \textcolor{comment}{//[Hello, [bread:666, key:Wololo], true]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordflow}{if} (value.getValueType() == \mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a298cb25408234de02baf2085803a464a}{ZiApi::FieldValue::Type::LIST}}) \{}
-\DoxyCodeLine{    value.getList()[0] = 42.42;}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{}
-\DoxyCodeLine{std::cout << value.toString() << std::endl;                      \textcolor{comment}{//[42.42, [bread:666, key:Wololo], true]}}
-\end{DoxyCode}
- \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a80ee7fc5fc9c95e80ef61929b277c5e5}{Value\+List}} 
-
-\mbox{\hyperlink{classZiApi_1_1FieldValue_a879443efd90b1669535916854847a239}{Value\+Array}} 
-\end{DoxySeeAlso}
-
-
-\subsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7}} 
-\index{ZiApi::FieldValue@{ZiApi::FieldValue}!Type@{Type}}
-\index{Type@{Type}!ZiApi::FieldValue@{ZiApi::FieldValue}}
-\subsubsection{\texorpdfstring{Type}{Type}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7}{Zi\+Api\+::\+Field\+Value\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-Value types \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INT@{INT}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!INT@{INT}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a53f93baa3057821107c750323892fa92}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a53f93baa3057821107c750323892fa92}} 
-I\+NT&The value is an integer. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BOOL@{BOOL}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!BOOL@{BOOL}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7aa97b2c144243b2b9d2c593ec268b62f5}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7aa97b2c144243b2b9d2c593ec268b62f5}} 
-B\+O\+OL&The value is a boolean. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLE@{DOUBLE}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!DOUBLE@{DOUBLE}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7afd3e4ece78a7d422280d5ed379482229}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7afd3e4ece78a7d422280d5ed379482229}} 
-D\+O\+U\+B\+LE&The value is a double. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!STRING@{STRING}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a63b588d5559f64f89a416e656880b949}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a63b588d5559f64f89a416e656880b949}} 
-S\+T\+R\+I\+NG&The value is a string. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{LIST@{LIST}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!LIST@{LIST}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a298cb25408234de02baf2085803a464a}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7a298cb25408234de02baf2085803a464a}} 
-L\+I\+ST&The value is a list. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ARRAY@{ARRAY}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!ARRAY@{ARRAY}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7acb4fb1757fb37c43cded35d3eb857c43}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7acb4fb1757fb37c43cded35d3eb857c43}} 
-A\+R\+R\+AY&The value is an array. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!ZiApi::FieldValue@{ZiApi::FieldValue}}\index{ZiApi::FieldValue@{ZiApi::FieldValue}!NONE@{NONE}}}\mbox{\Hypertarget{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7ab50339a10e1de285ac99d4c3990b8693}\label{classZiApi_1_1FieldValue_ab1c22868954a17fa7a1f486d91830dd7ab50339a10e1de285ac99d4c3990b8693}} 
-N\+O\+NE&The value is unknown. \\
-\hline
-
-\end{DoxyEnumFields}
-
+Contains a generic type. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['getarray',['getArray',['../classZiApi_1_1FieldValue.html#a52df6ed05138b911d3f79ae46775265f',1,'ZiApi::FieldValue']]],
-  ['getbool',['getBool',['../classZiApi_1_1FieldValue.html#a962df28f86dfae01f48ab3edd40186be',1,'ZiApi::FieldValue']]],
-  ['getdouble',['getDouble',['../classZiApi_1_1FieldValue.html#a642c5b48a2fc94a1ed5a866e95b9e135',1,'ZiApi::FieldValue']]],
-  ['getint',['getInt',['../classZiApi_1_1FieldValue.html#a4e978dc7d150ac4be07cebe86687ffa5',1,'ZiApi::FieldValue']]],
-  ['getlist',['getList',['../classZiApi_1_1FieldValue.html#a4d0a72887b483f6fe4d314b84dd7c09c',1,'ZiApi::FieldValue']]],
-  ['getstring',['getString',['../classZiApi_1_1FieldValue.html#af6616f19675061921a42a937675aedd0',1,'ZiApi::FieldValue']]],
-  ['getvaluetype',['getValueType',['../classZiApi_1_1FieldValue.html#ae0c786dd8f01b4eeb2fd228cebd9b134',1,'ZiApi::FieldValue']]]
+  ['setbody',['setBody',['../classZiApi_1_1HttpMessage.html#a12c1c080067de6727b98adbcce1ed79d',1,'ZiApi::HttpMessage']]],
+  ['setcurrentstream',['setCurrentStream',['../classZiApi_1_1ZiLogger.html#a210348e6fe7c30a1f52a2bd9414b0f66',1,'ZiApi::ZiLogger']]],
+  ['sethttpversion',['setHttpVersion',['../classZiApi_1_1HttpMessage.html#aa777191d2f0c8cfc3579c8dfc1b455d4',1,'ZiApi::HttpMessage']]],
+  ['setmethod',['setMethod',['../classZiApi_1_1HttpRequest.html#a45f2f16405c9572dcd3acf70eb1a9dd1',1,'ZiApi::HttpRequest']]],
+  ['setminseverity',['setMinSeverity',['../classZiApi_1_1ZiLogger.html#a218a9e2df01c0984b4f9721e977dbb75',1,'ZiApi::ZiLogger']]],
+  ['setstatuscode',['setStatusCode',['../classZiApi_1_1HttpResponse.html#af53d325be33189af4790651b61111818',1,'ZiApi::HttpResponse']]],
+  ['setstatusmessage',['setStatusMessage',['../classZiApi_1_1HttpResponse.html#ad119abffde3ba955cc952d04676f5c57',1,'ZiApi::HttpResponse']]],
+  ['setstreamfile',['setStreamFile',['../classZiApi_1_1ZiLogger.html#a38ec94a0c7bbcb8ffbb0b76bd255c748',1,'ZiApi::ZiLogger']]],
+  ['seturi',['setUri',['../classZiApi_1_1HttpRequest.html#a0a6e036d520b4c43a7350f465c429b20',1,'ZiApi::HttpRequest']]]
 ];

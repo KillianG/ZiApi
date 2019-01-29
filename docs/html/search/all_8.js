@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['important',['IMPORTANT',['../classZiApi_1_1ZiLogger.html#a483a2cb1e6000a67acba1c903f780225a279ac5dd73c3a5783ebeb10e172c4f38',1,'ZiApi::ZiLogger']]],
-  ['info',['INFO',['../classZiApi_1_1ZiLogger.html#a2344ef7fcc5f37cac04a3efc8f993424a551b723eafd6a31d444fcb2f5920fbd3',1,'ZiApi::ZiLogger']]],
-  ['int',['INT',['../classZiApi_1_1FieldValue.html#ab1c22868954a17fa7a1f486d91830dd7a53f93baa3057821107c750323892fa92',1,'ZiApi::FieldValue']]]
+  ['head',['HEAD',['../classZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1bae15e216fc1c639f787b1231ecdfa1bf8',1,'ZiApi::HttpRequest']]],
+  ['httpmessage',['HttpMessage',['../classZiApi_1_1HttpMessage.html',1,'ZiApi']]],
+  ['httprequest',['HttpRequest',['../classZiApi_1_1HttpRequest.html',1,'ZiApi']]],
+  ['httpresponse',['HttpResponse',['../classZiApi_1_1HttpResponse.html',1,'ZiApi']]],
+  ['httpversionnotsupported',['HTTPVersionNotSupported',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a036c4283fc4ecb1686f44462f75208e5',1,'ZiApi::HttpResponse']]]
 ];

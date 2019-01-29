@@ -1,0 +1,65 @@
+\hypertarget{classZiApi_1_1HttpMessage}{}\section{Zi\+Api\+::Http\+Message Class Reference}
+\label{classZiApi_1_1HttpMessage}\index{ZiApi::HttpMessage@{ZiApi::HttpMessage}}
+Inheritance diagram for Zi\+Api\+::Http\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classZiApi_1_1HttpMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a8d6cc71afdd4ac5b3e47bb8b17583eac}\label{classZiApi_1_1HttpMessage_a8d6cc71afdd4ac5b3e47bb8b17583eac}} 
+virtual Http\+Header \& \mbox{\hyperlink{classZiApi_1_1HttpMessage_a8d6cc71afdd4ac5b3e47bb8b17583eac}{get\+Header}} () noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a12c1c080067de6727b98adbcce1ed79d}\label{classZiApi_1_1HttpMessage_a12c1c080067de6727b98adbcce1ed79d}} 
+virtual void \mbox{\hyperlink{classZiApi_1_1HttpMessage_a12c1c080067de6727b98adbcce1ed79d}{set\+Body}} (const std\+::string \&new\+Body) noexcept=0
+\begin{DoxyCompactList}\small\item\em Sets the message\textquotesingle{}s body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a92e27ef64abcdcbf18519efe65434807}\label{classZiApi_1_1HttpMessage_a92e27ef64abcdcbf18519efe65434807}} 
+virtual const std\+::string \& \mbox{\hyperlink{classZiApi_1_1HttpMessage_a92e27ef64abcdcbf18519efe65434807}{get\+Body}} () const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_aa777191d2f0c8cfc3579c8dfc1b455d4}\label{classZiApi_1_1HttpMessage_aa777191d2f0c8cfc3579c8dfc1b455d4}} 
+virtual void \mbox{\hyperlink{classZiApi_1_1HttpMessage_aa777191d2f0c8cfc3579c8dfc1b455d4}{set\+Http\+Version}} (uint8\+\_\+t major, uint8\+\_\+t minor) noexcept=0
+\begin{DoxyCompactList}\small\item\em Sets the message\textquotesingle{}s Http version. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classZiApi_1_1HttpMessage_a5b8b70f012a623dd79dcbd6a49ec4704}{get\+Http\+Version}} () const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s Http version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a980cd22bd442a6b3a01e66e9117d4c35}\label{classZiApi_1_1HttpMessage_a980cd22bd442a6b3a01e66e9117d4c35}} 
+uint8\+\_\+t \mbox{\hyperlink{classZiApi_1_1HttpMessage_a980cd22bd442a6b3a01e66e9117d4c35}{\+\_\+version\+Major}}
+\begin{DoxyCompactList}\small\item\em Message\textquotesingle{}s major version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a36161a0628e2bd17d5cd1bc2da8a1448}\label{classZiApi_1_1HttpMessage_a36161a0628e2bd17d5cd1bc2da8a1448}} 
+uint8\+\_\+t \mbox{\hyperlink{classZiApi_1_1HttpMessage_a36161a0628e2bd17d5cd1bc2da8a1448}{\+\_\+version\+Minor}}
+\begin{DoxyCompactList}\small\item\em Message\textquotesingle{}s minor version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a649867b80ecf41e6c32170ebe206be26}\label{classZiApi_1_1HttpMessage_a649867b80ecf41e6c32170ebe206be26}} 
+Http\+Header \mbox{\hyperlink{classZiApi_1_1HttpMessage_a649867b80ecf41e6c32170ebe206be26}{\+\_\+header}}
+\begin{DoxyCompactList}\small\item\em Message\textquotesingle{}s header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a3fa98de77c767e106b0579d43ea62c33}\label{classZiApi_1_1HttpMessage_a3fa98de77c767e106b0579d43ea62c33}} 
+std\+::string \mbox{\hyperlink{classZiApi_1_1HttpMessage_a3fa98de77c767e106b0579d43ea62c33}{\+\_\+body}}
+\begin{DoxyCompactList}\small\item\em Message\textquotesingle{}s content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classZiApi_1_1HttpMessage_a5b8b70f012a623dd79dcbd6a49ec4704}\label{classZiApi_1_1HttpMessage_a5b8b70f012a623dd79dcbd6a49ec4704}} 
+\index{ZiApi::HttpMessage@{ZiApi::HttpMessage}!getHttpVersion@{getHttpVersion}}
+\index{getHttpVersion@{getHttpVersion}!ZiApi::HttpMessage@{ZiApi::HttpMessage}}
+\subsubsection{\texorpdfstring{getHttpVersion()}{getHttpVersion()}}
+{\footnotesize\ttfamily virtual std\+::string Zi\+Api\+::\+Http\+Message\+::get\+Http\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the message\textquotesingle{}s Http version. 
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"HTTP/major.minor"} }
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http\+Message.\+hpp\end{DoxyCompactItemize}

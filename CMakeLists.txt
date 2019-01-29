@@ -11,7 +11,7 @@ set(CMAKE_CXX_FLAGS "-Wextra -Wall -O3 -Woverloaded-virtual -Wlogical-op")
 add_executable(ZiApiTest main.cpp)
 
 include_directories(API/)
-include_directories(API/http)
+include_directories(API/HTTP)
 include_directories(API/utils)
 
 target_include_directories(ZiApiTest PRIVATE "API")

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['tostring',['toString',['../classZiApi_1_1FieldValue.html#a704771df964e4cc9232c78af6c3bc928',1,'ZiApi::FieldValue']]],
-  ['type',['Type',['../classZiApi_1_1FieldValue.html#ab1c22868954a17fa7a1f486d91830dd7',1,'ZiApi::FieldValue::Type()'],['../classZiApi_1_1ZiLogger.html#a2344ef7fcc5f37cac04a3efc8f993424',1,'ZiApi::ZiLogger::Type()']]]
+  ['partialcontent',['PartialContent',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a750de7eda10d780b3bbaefb57128c24b',1,'ZiApi::HttpResponse']]],
+  ['paymentrequired',['PaymentRequired',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a4c99006c75b53fe48865cdfa0ac065ba',1,'ZiApi::HttpResponse']]],
+  ['pipeline',['Pipeline',['../classZiApi_1_1Pipeline.html',1,'ZiApi']]],
+  ['post',['POST',['../classZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1baa02439ec229d8be0e74b0c1602392310',1,'ZiApi::HttpRequest']]],
+  ['preconditionfailed',['PreconditionFailed',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a3542a02d18f11f46d53990d91752a6d4',1,'ZiApi::HttpResponse']]],
+  ['proxyauthenticationrequired',['ProxyAuthenticationRequired',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a59a2898a8bf9da75a5855e76110f06f2',1,'ZiApi::HttpResponse']]],
+  ['put',['PUT',['../classZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba3e75383a5992a6d15fb81e872e46e256',1,'ZiApi::HttpRequest']]]
 ];

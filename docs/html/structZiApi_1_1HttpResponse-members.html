@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Member List</title>
+<title>ZiApi: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">ZiApi
    </div>
+   <div id="projectbrief">Epitech 2021 Zia api</div>
   </td>
  </tr>
  </tbody>
@@ -72,8 +73,22 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator&lt;&lt;</b> (defined in <a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a>)</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>StatusCode</b> enum name (defined in <a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a>)</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a3fa98de77c767e106b0579d43ea62c33">_body</a></td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a649867b80ecf41e6c32170ebe206be26">_header</a></td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#a0e4b24ee46576f8603a1d148ee5243c0">_statusCode</a></td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#ada43f4f8e721527cca4082bf0a6a3f40">_statusMessage</a></td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a980cd22bd442a6b3a01e66e9117d4c35">_versionMajor</a></td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a36161a0628e2bd17d5cd1bc2da8a1448">_versionMinor</a></td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a92e27ef64abcdcbf18519efe65434807">getBody</a>() const noexcept=0</td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a0d6c5c02bf8b4ec509b118199f7dbf88">getHeader</a>() noexcept=0</td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a5b8b70f012a623dd79dcbd6a49ec4704">getHttpVersion</a>() const noexcept=0</td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#a8d11d9c54e4dc591d6787ac344113800">getStatusCode</a>() const noexcept=0</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#a1713f22e0e6d6ea2a4e54b8818a4ab40">getStatusMessage</a>() const noexcept=0</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#a12c1c080067de6727b98adbcce1ed79d">setBody</a>(const std::string &amp;newBody) noexcept=0</td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html#aa777191d2f0c8cfc3579c8dfc1b455d4">setHttpVersion</a>(uint8_t major, uint8_t minor) noexcept=0</td><td class="entry"><a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#af53d325be33189af4790651b61111818">setStatusCode</a>(StatusCode newCode) noexcept=0</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#ad119abffde3ba955cc952d04676f5c57">setStatusMessage</a>(const std::string &amp;newMessage) noexcept=0</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">StatusCode</a> enum name</td><td class="entry"><a class="el" href="structZiApi_1_1HttpResponse.html">ZiApi::HttpResponse</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

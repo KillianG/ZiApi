@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type',['Type',['../classZiApi_1_1FieldValue.html#ab1c22868954a17fa7a1f486d91830dd7',1,'ZiApi::FieldValue::Type()'],['../classZiApi_1_1ZiLogger.html#a2344ef7fcc5f37cac04a3efc8f993424',1,'ZiApi::ZiLogger::Type()']]]
+  ['severity',['Severity',['../classZiApi_1_1ZiLogger.html#a483a2cb1e6000a67acba1c903f780225',1,'ZiApi::ZiLogger']]],
+  ['statuscode',['StatusCode',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90',1,'ZiApi::HttpResponse']]]
 ];

@@ -1,0 +1,46 @@
+\hypertarget{structZiApi_1_1FieldValue}{}\section{Zi\+Api\+::Field\+Value Struct Reference}
+\label{structZiApi_1_1FieldValue}\index{ZiApi::FieldValue@{ZiApi::FieldValue}}
+
+
+Contains a generic type.  
+
+
+
+
+{\ttfamily \#include $<$Field\+Value.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}\label{structZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}} 
+using \mbox{\hyperlink{structZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}} = std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{structZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Defines a list of Field\+Values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}\label{structZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}} 
+using \mbox{\hyperlink{structZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{structZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Defines a map of Field\+Values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}\label{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}} 
+using \mbox{\hyperlink{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} = std\+::variant$<$ int, bool, double, std\+::string, \mbox{\hyperlink{structZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}}, \mbox{\hyperlink{structZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} $>$
+\begin{DoxyCompactList}\small\item\em Defines the possibles types of \mbox{\hyperlink{structZiApi_1_1FieldValue}{Field\+Value}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}\label{structZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}} 
+virtual const \mbox{\hyperlink{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \& \mbox{\hyperlink{structZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}{get\+Value}} () const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the contained value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}\label{structZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}} 
+virtual \mbox{\hyperlink{structZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \&) noexcept=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}\label{structZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}} 
+\mbox{\hyperlink{structZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} {\bfseries \+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains a generic type. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Field\+Value.\+hpp\end{DoxyCompactItemize}

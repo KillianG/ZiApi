@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: ZiApi::HttpResponse Struct Reference</title>
+<title>ZiApi: ZiApi::HttpResponse Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">ZiApi
    </div>
+   <div id="projectbrief">Epitech 2021 Zia api</div>
   </td>
  </tr>
  </tbody>
@@ -67,77 +68,275 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="structZiApi_1_1HttpResponse-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ZiApi::HttpResponse Struct Reference</div>  </div>
+<div class="title">ZiApi::HttpResponse Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Http response container.  
+ <a href="structZiApi_1_1HttpResponse.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="HttpResponse_8hpp_source.html">HttpResponse.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ZiApi::HttpResponse:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="structZiApi_1_1HttpResponse.png" usemap="#ZiApi::HttpResponse_map" alt=""/>
+  <map id="ZiApi::HttpResponse_map" name="ZiApi::HttpResponse_map">
+<area href="classZiApi_1_1HttpMessage.html" alt="ZiApi::HttpMessage" shape="rect" coords="0,0,126,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa304ae6c6c8d12f651eafc75fb203d90"><td class="memItemLeft" align="right" valign="top"><a id="aa304ae6c6c8d12f651eafc75fb203d90"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>StatusCode</b> { <br />
-&#160;&#160;<b>UndefinedStatusCode</b> = 0, 
-<b>Continue</b> = 100, 
-<b>SwitchingProtocols</b> = 101, 
-<b>OK</b> = 200, 
+<tr class="memitem:aa304ae6c6c8d12f651eafc75fb203d90"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">StatusCode</a> { <br />
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a3d97b1f575601de68b25d277c8901117">StatusCode::UndefinedStatusCode</a> = 0, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90aa0bfb8e59e6c13fc8d990781f77694fe">StatusCode::Continue</a> = 100, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a548c5a637eddf65132b21411aeafc6a1">StatusCode::SwitchingProtocols</a> = 101, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90ae0aa021e21dddbd6d8cecec71e9cf564">StatusCode::OK</a> = 200, 
 <br />
-&#160;&#160;<b>Created</b> = 201, 
-<b>Accepted</b> = 202, 
-<b>NonAuthoritativeInformation</b> = 203, 
-<b>NoContent</b> = 204, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a0eceeb45861f9585dd7a97a3e36f85c6">StatusCode::Created</a> = 201, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a382ab522931673c11e398ead1b7b1678">StatusCode::Accepted</a> = 202, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a2d0ea43e788b779c0aec92366b711c2f">StatusCode::NonAuthoritativeInformation</a> = 203, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90acd447f1ec89f564ebac583d60087df12">StatusCode::NoContent</a> = 204, 
 <br />
-&#160;&#160;<b>ResetContent</b> = 205, 
-<b>PartialContent</b> = 206, 
-<b>MultipleChoices</b> = 300, 
-<b>MovedPermanently</b> = 301, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a4e9202c31896211f63be5b7345a897ed">StatusCode::ResetContent</a> = 205, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a750de7eda10d780b3bbaefb57128c24b">StatusCode::PartialContent</a> = 206, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90aa589749d075c3423333bdc93e3b4e774">StatusCode::MultipleChoices</a> = 300, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a32638c25f4c913fce6214c2c4afff9dc">StatusCode::MovedPermanently</a> = 301, 
 <br />
-&#160;&#160;<b>Found</b> = 302, 
-<b>SeeOther</b> = 303, 
-<b>NotModified</b> = 304, 
-<b>UseProxy</b> = 305, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a5d695cc28c6a7ea955162fbdd0ae42b9">StatusCode::Found</a> = 302, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a7843649eb3841f496a79303fd815029e">StatusCode::SeeOther</a> = 303, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90ac169e6d9a1b9442001384de8dcf49ab9">StatusCode::NotModified</a> = 304, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a0a272f25fd5e8a06065ef8ee41a88bea">StatusCode::UseProxy</a> = 305, 
 <br />
-&#160;&#160;<b>TemporaryRedirect</b> = 307, 
-<b>BadRequest</b> = 400, 
-<b>Unauthorized</b> = 401, 
-<b>PaymentRequired</b> = 402, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a92e592d90b9548016776a6fb68dccded">StatusCode::Unused</a> = 306, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a1b73a351faf2b550d06fae9cc6e0a894">StatusCode::TemporaryRedirect</a> = 307, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a9edf8fbf00a57d95a0af4923c9a1ec6f">StatusCode::BadRequest</a> = 400, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90ae06d1ba70f1331e9f9a113cc2f887d3f">StatusCode::Unauthorized</a> = 401, 
 <br />
-&#160;&#160;<b>Forbidden</b> = 403, 
-<b>NotFound</b> = 404, 
-<b>MethodNotAllowed</b> = 405, 
-<b>NotAcceptable</b> = 406, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a4c99006c75b53fe48865cdfa0ac065ba">StatusCode::PaymentRequired</a> = 402, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a722969577a96ca3953e84e3d949dee81">StatusCode::Forbidden</a> = 403, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a38c300f4fc9ce8a77aad4a30de05cad8">StatusCode::NotFound</a> = 404, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a8ba68fee5542f5fd071aed140c39bd8e">StatusCode::MethodNotAllowed</a> = 405, 
 <br />
-&#160;&#160;<b>ProxyAuthenticationRequired</b> = 407, 
-<b>RequestTimeOut</b> = 408, 
-<b>Conflict</b> = 409, 
-<b>Gone</b> = 410, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90af83a928e6a3f3b502ffadd2a414ce48c">StatusCode::NotAcceptable</a> = 406, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a59a2898a8bf9da75a5855e76110f06f2">StatusCode::ProxyAuthenticationRequired</a> = 407, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90af9098a9c319f11b44af3e260892063a6">StatusCode::RequestTimeOut</a> = 408, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90af1d4ac54357cc0932f385d56814ba7e4">StatusCode::Conflict</a> = 409, 
 <br />
-&#160;&#160;<b>LengthRequired</b> = 411, 
-<b>PreconditionFailed</b> = 412, 
-<b>RequestEntityTooLarge</b> = 413, 
-<b>RequestURITooLarge</b> = 414, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a0b497b33b1a05057bc1634e607170bf6">StatusCode::Gone</a> = 410, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a8282fb93cb1cf45b135ea191668ca583">StatusCode::LengthRequired</a> = 411, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a3542a02d18f11f46d53990d91752a6d4">StatusCode::PreconditionFailed</a> = 412, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a1d2dd18ee1a925e5887cbc2f9202e779">StatusCode::RequestEntityTooLarge</a> = 413, 
 <br />
-&#160;&#160;<b>UnsupportedMediaType</b> = 415, 
-<b>RequestedRangeNotSatisfiable</b> = 416, 
-<b>ExpectationFailed</b> = 417, 
-<b>InternalServerError</b> = 500, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a4896a92527b74e68134933dcb77a7017">StatusCode::RequestURITooLarge</a> = 414, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90aa3219a6843adbb23de79b4df9c307f5d">StatusCode::UnsupportedMediaType</a> = 415, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a7779e53fc887ac0429f4ebde5fc0b59f">StatusCode::RequestedRangeNotSatisfiable</a> = 416, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a6af78095a2be4a230ba87f03dd131830">StatusCode::ExpectationFailed</a> = 417, 
 <br />
-&#160;&#160;<b>NotImplemented</b> = 501, 
-<b>BadGateway</b> = 502, 
-<b>ServiceUnavailable</b> = 503, 
-<b>GatewayTimeOut</b> = 504, 
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90aecbf01325f1c744e9d7bb586ac2eb5ed">StatusCode::InternalServerError</a> = 500, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a997ca4ce119685f40f03a9a8a6c5346e">StatusCode::NotImplemented</a> = 501, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a0e7c9ad08be0653518bf456c9994ace5">StatusCode::BadGateway</a> = 502, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a2a4581043d849bcb0e4747970ef1489b">StatusCode::ServiceUnavailable</a> = 503, 
 <br />
-&#160;&#160;<b>HTTPVersionNotSupported</b> = 505
+&#160;&#160;<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a259322bcdf0d2e4f5c3fe2a736e6184c">StatusCode::GatewayTimeOut</a> = 504, 
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a036c4283fc4ecb1686f44462f75208e5">StatusCode::HTTPVersionNotSupported</a> = 505
 <br />
  }</td></tr>
 <tr class="separator:aa304ae6c6c8d12f651eafc75fb203d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a5fbba1f273ec865183cb4aa60661fdc7"><td class="memItemLeft" align="right" valign="top"><a id="a5fbba1f273ec865183cb4aa60661fdc7"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, HttpResponse::StatusCode code)</td></tr>
-<tr class="separator:a5fbba1f273ec865183cb4aa60661fdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af53d325be33189af4790651b61111818"><td class="memItemLeft" align="right" valign="top"><a id="af53d325be33189af4790651b61111818"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#af53d325be33189af4790651b61111818">setStatusCode</a> (<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">StatusCode</a> newCode) noexcept=0</td></tr>
+<tr class="memdesc:af53d325be33189af4790651b61111818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the response's status code. <br /></td></tr>
+<tr class="separator:af53d325be33189af4790651b61111818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d11d9c54e4dc591d6787ac344113800"><td class="memItemLeft" align="right" valign="top"><a id="a8d11d9c54e4dc591d6787ac344113800"></a>
+virtual <a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#a8d11d9c54e4dc591d6787ac344113800">getStatusCode</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a8d11d9c54e4dc591d6787ac344113800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the response's status code. <br /></td></tr>
+<tr class="separator:a8d11d9c54e4dc591d6787ac344113800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad119abffde3ba955cc952d04676f5c57"><td class="memItemLeft" align="right" valign="top"><a id="ad119abffde3ba955cc952d04676f5c57"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#ad119abffde3ba955cc952d04676f5c57">setStatusMessage</a> (const std::string &amp;newMessage) noexcept=0</td></tr>
+<tr class="memdesc:ad119abffde3ba955cc952d04676f5c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the response's status message. <br /></td></tr>
+<tr class="separator:ad119abffde3ba955cc952d04676f5c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1713f22e0e6d6ea2a4e54b8818a4ab40"><td class="memItemLeft" align="right" valign="top"><a id="a1713f22e0e6d6ea2a4e54b8818a4ab40"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#a1713f22e0e6d6ea2a4e54b8818a4ab40">getStatusMessage</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a1713f22e0e6d6ea2a4e54b8818a4ab40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the response's status message. <br /></td></tr>
+<tr class="separator:a1713f22e0e6d6ea2a4e54b8818a4ab40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZiApi_1_1HttpMessage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZiApi_1_1HttpMessage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td></tr>
+<tr class="memitem:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a0d6c5c02bf8b4ec509b118199f7dbf88"></a>
+virtual const HttpHeader &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a0d6c5c02bf8b4ec509b118199f7dbf88">getHeader</a> () noexcept=0</td></tr>
+<tr class="memdesc:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's header. <br /></td></tr>
+<tr class="separator:a0d6c5c02bf8b4ec509b118199f7dbf88 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a12c1c080067de6727b98adbcce1ed79d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a12c1c080067de6727b98adbcce1ed79d">setBody</a> (const std::string &amp;newBody) noexcept=0</td></tr>
+<tr class="memdesc:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the message's body. <br /></td></tr>
+<tr class="separator:a12c1c080067de6727b98adbcce1ed79d inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a92e27ef64abcdcbf18519efe65434807"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a92e27ef64abcdcbf18519efe65434807">getBody</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's body. <br /></td></tr>
+<tr class="separator:a92e27ef64abcdcbf18519efe65434807 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="aa777191d2f0c8cfc3579c8dfc1b455d4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#aa777191d2f0c8cfc3579c8dfc1b455d4">setHttpVersion</a> (uint8_t major, uint8_t minor) noexcept=0</td></tr>
+<tr class="memdesc:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the message's Http version. <br /></td></tr>
+<tr class="separator:aa777191d2f0c8cfc3579c8dfc1b455d4 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a5b8b70f012a623dd79dcbd6a49ec4704">getHttpVersion</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the message's Http version.  <a href="classZiApi_1_1HttpMessage.html#a5b8b70f012a623dd79dcbd6a49ec4704">More...</a><br /></td></tr>
+<tr class="separator:a5b8b70f012a623dd79dcbd6a49ec4704 inherit pub_methods_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a0e4b24ee46576f8603a1d148ee5243c0"><td class="memItemLeft" align="right" valign="top"><a id="a0e4b24ee46576f8603a1d148ee5243c0"></a>
+<a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#a0e4b24ee46576f8603a1d148ee5243c0">_statusCode</a></td></tr>
+<tr class="memdesc:a0e4b24ee46576f8603a1d148ee5243c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response's status-code. <br /></td></tr>
+<tr class="separator:a0e4b24ee46576f8603a1d148ee5243c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada43f4f8e721527cca4082bf0a6a3f40"><td class="memItemLeft" align="right" valign="top"><a id="ada43f4f8e721527cca4082bf0a6a3f40"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZiApi_1_1HttpResponse.html#ada43f4f8e721527cca4082bf0a6a3f40">_statusMessage</a></td></tr>
+<tr class="memdesc:ada43f4f8e721527cca4082bf0a6a3f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response's status-message. <br /></td></tr>
+<tr class="separator:ada43f4f8e721527cca4082bf0a6a3f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classZiApi_1_1HttpMessage"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classZiApi_1_1HttpMessage')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classZiApi_1_1HttpMessage.html">ZiApi::HttpMessage</a></td></tr>
+<tr class="memitem:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a980cd22bd442a6b3a01e66e9117d4c35"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a980cd22bd442a6b3a01e66e9117d4c35">_versionMajor</a></td></tr>
+<tr class="memdesc:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's major version. <br /></td></tr>
+<tr class="separator:a980cd22bd442a6b3a01e66e9117d4c35 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a36161a0628e2bd17d5cd1bc2da8a1448"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a36161a0628e2bd17d5cd1bc2da8a1448">_versionMinor</a></td></tr>
+<tr class="memdesc:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's minor version. <br /></td></tr>
+<tr class="separator:a36161a0628e2bd17d5cd1bc2da8a1448 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a649867b80ecf41e6c32170ebe206be26"></a>
+HttpHeader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a649867b80ecf41e6c32170ebe206be26">_header</a></td></tr>
+<tr class="memdesc:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's header. <br /></td></tr>
+<tr class="separator:a649867b80ecf41e6c32170ebe206be26 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memItemLeft" align="right" valign="top"><a id="a3fa98de77c767e106b0579d43ea62c33"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1HttpMessage.html#a3fa98de77c767e106b0579d43ea62c33">_body</a></td></tr>
+<tr class="memdesc:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message's content. <br /></td></tr>
+<tr class="separator:a3fa98de77c767e106b0579d43ea62c33 inherit pro_attribs_classZiApi_1_1HttpMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Http response container. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classZiApi_1_1HttpMessage.html">HttpMessage</a>, <a class="el" href="structZiApi_1_1HttpRequest.html" title="Http request container.">HttpRequest</a> </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aa304ae6c6c8d12f651eafc75fb203d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa304ae6c6c8d12f651eafc75fb203d90">&#9670;&nbsp;</a></span>StatusCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90">ZiApi::HttpResponse::StatusCode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Status list </p><dl class="section note"><dt>Note</dt><dd><b>1xx</b> Informational : It means the request has been received and the process is continuing </dd>
+<dd>
+<b>2xx</b> Success : It means the action was successfully received, understood, and accepted </dd>
+<dd>
+<b>3xx</b> Redirection : It means further action must be taken in order to complete the request </dd>
+<dd>
+<b>4xx</b> Client Error : It means the request contains incorrect syntax or cannot be fulfilled </dd>
+<dd>
+<b>5xx</b> Server Error : It means the server failed to fulfill an apparently valid request </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a3d97b1f575601de68b25d277c8901117"></a>UndefinedStatusCode&#160;</td><td class="fielddoc"><p><b>0</b> May throw if it used </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90aa0bfb8e59e6c13fc8d990781f77694fe"></a>Continue&#160;</td><td class="fielddoc"><p><b>100</b> Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a548c5a637eddf65132b21411aeafc6a1"></a>SwitchingProtocols&#160;</td><td class="fielddoc"><p><b>101</b> The server switches protocol </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90ae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p><b>200</b> The request is OK </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a0eceeb45861f9585dd7a97a3e36f85c6"></a>Created&#160;</td><td class="fielddoc"><p><b>201</b> The request is complete, and a new resource is created </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a382ab522931673c11e398ead1b7b1678"></a>Accepted&#160;</td><td class="fielddoc"><p><b>202</b> The request is accepted for processing, but the processing is not complete </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a2d0ea43e788b779c0aec92366b711c2f"></a>NonAuthoritativeInformation&#160;</td><td class="fielddoc"><p><b>203</b> The information in the entity header is from a local or third-party copy, not from the original server </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90acd447f1ec89f564ebac583d60087df12"></a>NoContent&#160;</td><td class="fielddoc"><p><b>204</b> A status code and a header are given in the response, but there is no entity-body in the reply </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a4e9202c31896211f63be5b7345a897ed"></a>ResetContent&#160;</td><td class="fielddoc"><p><b>205</b> The browser should clear the form used for this transaction for additional input </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a750de7eda10d780b3bbaefb57128c24b"></a>PartialContent&#160;</td><td class="fielddoc"><p><b>206</b> The server is returning partial data of the size requested. Used in response to a request specifying a Range header. The server must specify the range included in the response with the Content-Range header </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90aa589749d075c3423333bdc93e3b4e774"></a>MultipleChoices&#160;</td><td class="fielddoc"><p><b>300</b> A link list. The user can select a link and go to that location. Maximum five addresses </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a32638c25f4c913fce6214c2c4afff9dc"></a>MovedPermanently&#160;</td><td class="fielddoc"><p><b>301</b> The requested page has moved to a new url </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a5d695cc28c6a7ea955162fbdd0ae42b9"></a>Found&#160;</td><td class="fielddoc"><p><b>302</b> The requested page has moved temporarily to a new url </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a7843649eb3841f496a79303fd815029e"></a>SeeOther&#160;</td><td class="fielddoc"><p><b>303</b> The requested page can be found under a different url </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90ac169e6d9a1b9442001384de8dcf49ab9"></a>NotModified&#160;</td><td class="fielddoc"><p><b>304</b> This is the response code to an If-Modified-Since or If-None-Match header, where the URL has not been modified since the specified date </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a0a272f25fd5e8a06065ef8ee41a88bea"></a>UseProxy&#160;</td><td class="fielddoc"><p><b>305</b> The requested URL must be accessed through the proxy mentioned in the Location header </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a92e592d90b9548016776a6fb68dccded"></a>Unused&#160;</td><td class="fielddoc"><p><b>306</b> This code was used in a previous version. It is no longer used, but the code is reserved </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a1b73a351faf2b550d06fae9cc6e0a894"></a>TemporaryRedirect&#160;</td><td class="fielddoc"><p><b>307</b> The requested page has moved temporarily to a new url </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a9edf8fbf00a57d95a0af4923c9a1ec6f"></a>BadRequest&#160;</td><td class="fielddoc"><p><b>400</b> The server did not understand the request </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90ae06d1ba70f1331e9f9a113cc2f887d3f"></a>Unauthorized&#160;</td><td class="fielddoc"><p><b>401</b> The requested page needs a username and a password </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a4c99006c75b53fe48865cdfa0ac065ba"></a>PaymentRequired&#160;</td><td class="fielddoc"><p><b>402</b> You can not use this code yet </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a722969577a96ca3953e84e3d949dee81"></a>Forbidden&#160;</td><td class="fielddoc"><p><b>403</b> Access is forbidden to the requested page </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a38c300f4fc9ce8a77aad4a30de05cad8"></a>NotFound&#160;</td><td class="fielddoc"><p><b>404</b> The server can not find the requested page </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a8ba68fee5542f5fd071aed140c39bd8e"></a>MethodNotAllowed&#160;</td><td class="fielddoc"><p><b>405</b> The method specified in the request is not allowed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90af83a928e6a3f3b502ffadd2a414ce48c"></a>NotAcceptable&#160;</td><td class="fielddoc"><p><b>406</b> The server can only generate a response that is not accepted by the client </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a59a2898a8bf9da75a5855e76110f06f2"></a>ProxyAuthenticationRequired&#160;</td><td class="fielddoc"><p><b>407</b> You must authenticate with a proxy server before this request can be served </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90af9098a9c319f11b44af3e260892063a6"></a>RequestTimeOut&#160;</td><td class="fielddoc"><p><b>408</b> The request took longer than the server was prepared to wait </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90af1d4ac54357cc0932f385d56814ba7e4"></a>Conflict&#160;</td><td class="fielddoc"><p><b>409</b> The request could not be completed because of a conflict </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a0b497b33b1a05057bc1634e607170bf6"></a>Gone&#160;</td><td class="fielddoc"><p><b>410</b> The requested page is no longer available </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a8282fb93cb1cf45b135ea191668ca583"></a>LengthRequired&#160;</td><td class="fielddoc"><p><b>411</b> The "Content-Length" is not defined. The server will not accept the request without it </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a3542a02d18f11f46d53990d91752a6d4"></a>PreconditionFailed&#160;</td><td class="fielddoc"><p><b>412</b> The pre condition given in the request evaluated to false by the server </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a1d2dd18ee1a925e5887cbc2f9202e779"></a>RequestEntityTooLarge&#160;</td><td class="fielddoc"><p><b>413</b> The server will not accept the request, because the request entity is too large </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a4896a92527b74e68134933dcb77a7017"></a>RequestURITooLarge&#160;</td><td class="fielddoc"><p><b>414</b> The server will not accept the request, because the url is too long. Occurs when you convert a "post" request to a "get" request with a long query information </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90aa3219a6843adbb23de79b4df9c307f5d"></a>UnsupportedMediaType&#160;</td><td class="fielddoc"><p><b>415</b> The server will not accept the request, because the mediatype is not supported </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a7779e53fc887ac0429f4ebde5fc0b59f"></a>RequestedRangeNotSatisfiable&#160;</td><td class="fielddoc"><p><b>416</b> The requested byte range is not available and is out of bounds </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a6af78095a2be4a230ba87f03dd131830"></a>ExpectationFailed&#160;</td><td class="fielddoc"><p><b>417</b> The expectation given in an Expect request-header field could not be met by this server </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90aecbf01325f1c744e9d7bb586ac2eb5ed"></a>InternalServerError&#160;</td><td class="fielddoc"><p><b>500</b> The request was not completed. The server met an unexpected condition </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a997ca4ce119685f40f03a9a8a6c5346e"></a>NotImplemented&#160;</td><td class="fielddoc"><p><b>501</b> The request was not completed. The server did not support the functionality required </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a0e7c9ad08be0653518bf456c9994ace5"></a>BadGateway&#160;</td><td class="fielddoc"><p><b>502</b> The request was not completed. The server received an invalid response from the upstream server </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a2a4581043d849bcb0e4747970ef1489b"></a>ServiceUnavailable&#160;</td><td class="fielddoc"><p><b>503</b> The request was not completed. The server is temporarily overloading or down </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a259322bcdf0d2e4f5c3fe2a736e6184c"></a>GatewayTimeOut&#160;</td><td class="fielddoc"><p><b>504</b> The gateway has timed out </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa304ae6c6c8d12f651eafc75fb203d90a036c4283fc4ecb1686f44462f75208e5"></a>HTTPVersionNotSupported&#160;</td><td class="fielddoc"><p><b>505</b> The server does not support the "http protocol" version </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="HttpResponse_8hpp_source.html">HttpResponse.hpp</a></li>
 </ul>

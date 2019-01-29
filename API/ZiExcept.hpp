@@ -11,7 +11,15 @@
 
 namespace ZiApi {
     /**
-     * @brief ZiApi Exception
+     * @brief ZiApi exception
+     *
+     * Usage example:
+     * @code
+     *
+     * throw ZiApi::ZiExcept("Error Message");          //[ERROR] Error Message
+     *                                                  //terminate called after throwing an instance of 'ZiApi::ZiExcept'
+     *                                                  //what():  Error Message
+     * @endcode
      */
     class ZiExcept : public std::exception {
     public:

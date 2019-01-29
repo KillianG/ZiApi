@@ -2,7 +2,7 @@
 \label{classZiApi_1_1ZiExcept}\index{ZiApi::ZiExcept@{ZiApi::ZiExcept}}
 
 
-Zi\+Api Exception.  
+Zi\+Api exception.  
 
 
 
@@ -27,7 +27,15 @@ const char $\ast$ {\bfseries what} () const noexcept override
 
 
 \subsection{Detailed Description}
-Zi\+Api Exception. 
+Zi\+Api exception. 
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{throw} \mbox{\hyperlink{classZiApi_1_1ZiExcept}{ZiApi::ZiExcept}}(\textcolor{stringliteral}{"Error Message"});          \textcolor{comment}{//[ERROR] Error Message}}
+\DoxyCodeLine{                                                 \textcolor{comment}{//terminate called after throwing an instance of 'ZiApi::ZiExcept'}}
+\DoxyCodeLine{                                                 \textcolor{comment}{//what():  Error Message}}
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

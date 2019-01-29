@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['getarray',['getArray',['../classZiApi_1_1FieldValue.html#a52df6ed05138b911d3f79ae46775265f',1,'ZiApi::FieldValue']]],
-  ['getbool',['getBool',['../classZiApi_1_1FieldValue.html#a962df28f86dfae01f48ab3edd40186be',1,'ZiApi::FieldValue']]],
-  ['getdouble',['getDouble',['../classZiApi_1_1FieldValue.html#a642c5b48a2fc94a1ed5a866e95b9e135',1,'ZiApi::FieldValue']]],
-  ['getint',['getInt',['../classZiApi_1_1FieldValue.html#a4e978dc7d150ac4be07cebe86687ffa5',1,'ZiApi::FieldValue']]],
-  ['getlist',['getList',['../classZiApi_1_1FieldValue.html#a4d0a72887b483f6fe4d314b84dd7c09c',1,'ZiApi::FieldValue']]],
-  ['getstring',['getString',['../classZiApi_1_1FieldValue.html#af6616f19675061921a42a937675aedd0',1,'ZiApi::FieldValue']]],
-  ['getvaluetype',['getValueType',['../classZiApi_1_1FieldValue.html#ae0c786dd8f01b4eeb2fd228cebd9b134',1,'ZiApi::FieldValue']]]
+  ['fatal',['FATAL',['../classZiApi_1_1ZiLogger.html#a2344ef7fcc5f37cac04a3efc8f993424a19da7170bea36556dde582519795f3fc',1,'ZiApi::ZiLogger']]],
+  ['fieldvalue',['FieldValue',['../classZiApi_1_1FieldValue.html',1,'ZiApi']]],
+  ['file',['FILE',['../classZiApi_1_1ZiLogger.html#a0c544845c83a82d59454407e154634c2a9fc5887c030f7a3e19821ebec457e719',1,'ZiApi::ZiLogger']]],
+  ['forbidden',['Forbidden',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a722969577a96ca3953e84e3d949dee81',1,'ZiApi::HttpResponse']]],
+  ['found',['Found',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a5d695cc28c6a7ea955162fbdd0ae42b9',1,'ZiApi::HttpResponse']]]
 ];
