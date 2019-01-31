@@ -21,26 +21,3 @@ add_subdirectory(ZiApi/)
 
 ​![](./docs/Http_namespace.png)
 ![](./docs/ZiApi_namespace.png)
-
-```html
-<div id="list">
-  <p><iframe src="LICENSE" frameborder="0" height="400"
-      width="95%"></iframe></p>
-</div>
-```
-
-<p>Hello world!</p>
-
-~~~html
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>This is a title</title>
-  </head>
-  <body>
-    <p>Hello world!</p>
-  </body>
-</html>
-```
-~~~
