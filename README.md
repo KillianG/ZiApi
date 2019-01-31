@@ -29,6 +29,8 @@ add_subdirectory(ZiApi/)
 </div>
 ```
 
+<p>Hello world!</p>
+
 ~~~html
 ```html
 <!DOCTYPE html>
@@ -39,10 +41,6 @@ add_subdirectory(ZiApi/)
   <body>
     <p>Hello world!</p>
   </body>
-  <div id="list">
-    <p><iframe src="LICENSE" frameborder="0" height="400"
-        width="95%"></iframe></p>
-  </div>
 </html>
 ```
 ~~~
