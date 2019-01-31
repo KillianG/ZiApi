@@ -6,11 +6,20 @@
 
 #include <memory>
 #include "Config.hpp"
+#include "Network.hpp"
 #include "ModuleManager.hpp"
 
-#include "Network.hpp"
-
 namespace ZiApi {
+    /**
+     * @brief Server's core
+     *
+     * MyConfig.hpp : @include MyConfig.hpp
+     * MyNetwork.hpp : @include MyNetwork.hpp
+     * MyModuleManager.hpp : @include MyModuleManager.hpp
+     * MyCore.hpp : @include MyCore.hpp
+     * Output : @include MyServer.output
+     * MyServer.cpp : @example MyServer.cpp
+     */
     class Core {
     public:
         Core(std::shared_ptr<Config> &&config, std::shared_ptr<Network> &&network, std::shared_ptr<ModuleManager> &&moduleMgr)

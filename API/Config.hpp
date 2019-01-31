@@ -14,6 +14,8 @@ namespace ZiApi {
      *
      * @note The server must be fully configurable by means of a configuration file
      * @note It must be possible to reload the configuration file without restarting nor recompiling the server
+     *
+     * @include MyConfig.hpp
      */
     class Config {
     public:

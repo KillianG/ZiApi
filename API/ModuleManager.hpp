@@ -13,6 +13,8 @@ namespace ZiApi {
 
     /**
      * @brief Server's module manager
+     *
+     * @include MyModuleManager.hpp
      */
     class ModuleManager {
     public:
@@ -23,9 +25,9 @@ namespace ZiApi {
         virtual bool isLoaded(const std::string &moduleName) = 0;
 
         /**
-         * @brief
+         * @brief Add the module to the processing list
          */
-        virtual bool addToPipeline(size_t importance, const std::string &name) = 0;
+        virtual bool addToPipeline(size_t importance, const std::string &moduleName) = 0;
 
         /**
          * @brief Calls all modules's handle function

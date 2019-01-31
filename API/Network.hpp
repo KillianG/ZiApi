@@ -16,6 +16,8 @@ namespace ZiApi {
     public:
         /**
          * @brief Launchs the server's sockets
+         *
+         * @include MyNetwork.hpp
          */
         virtual void run() = 0;
 

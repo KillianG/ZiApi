@@ -14,6 +14,8 @@ namespace ZiApi {
 
     /**
      * @brief Server's Module
+     *
+     * @include MyModule.hpp
      */
     class Module {
     public:

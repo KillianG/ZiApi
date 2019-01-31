@@ -82,9 +82,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0556864740b66ea8085ab8a03a260267"><td class="memItemLeft" align="right" valign="top"><a id="a0556864740b66ea8085ab8a03a260267"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1Network.html#a0556864740b66ea8085ab8a03a260267">run</a> ()=0</td></tr>
-<tr class="memdesc:a0556864740b66ea8085ab8a03a260267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launchs the server's sockets. <br /></td></tr>
+<tr class="memitem:a0556864740b66ea8085ab8a03a260267"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1Network.html#a0556864740b66ea8085ab8a03a260267">run</a> ()=0</td></tr>
+<tr class="memdesc:a0556864740b66ea8085ab8a03a260267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launchs the server's sockets.  <a href="#a0556864740b66ea8085ab8a03a260267">More...</a><br /></td></tr>
 <tr class="separator:a0556864740b66ea8085ab8a03a260267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965edba3c55b9c268af44af7f204be66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1Network.html#a965edba3c55b9c268af44af7f204be66">pollRequest</a> ()=0</td></tr>
 <tr class="memdesc:a965edba3c55b9c268af44af7f204be66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a request is received.  <a href="#a965edba3c55b9c268af44af7f204be66">More...</a><br /></td></tr>
@@ -102,7 +101,38 @@ std::function&lt; void(<a class="el" href="classHttp_1_1Request.html">Http::Requ
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Server's sockets handler. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyServer_8cpp-example.html#_a2">MyServer.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0556864740b66ea8085ab8a03a260267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0556864740b66ea8085ab8a03a260267">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZiApi::Network::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launchs the server's sockets. </p>
+<div class="fragment"><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// Created by nhyarlathotep on 31/01/19.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="preprocessor">#pragma once</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#include &quot;Network.hpp&quot;</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &quot;MyHttpRequest.hpp&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;MyHttpResponse.hpp&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>MyNetwork : <span class="keyword">public</span> <a class="code" href="classZiApi_1_1Network.html">ZiApi::Network</a> {</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keywordtype">void</span> <a class="code" href="classZiApi_1_1Network.html#a0556864740b66ea8085ab8a03a260267">run</a>()<span class="keyword"> override </span>{</div><div class="line">        MyHttpResponse res;</div><div class="line">        MyHttpRequest request;</div><div class="line">        <a class="code" href="classZiApi_1_1Network.html#a9849d858fc05af620e717f643f4071f6">_pipelineRunCallBack</a>(request, res);                                                                 <span class="comment">//Run the processing list</span></div><div class="line"></div><div class="line">        std::cout &lt;&lt; static_cast&lt;int&gt;(res.getStatusCode()) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; res.getStatusMessage() &lt;&lt; std::endl;   <span class="comment">//200 OK</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keywordtype">void</span> <a class="code" href="classZiApi_1_1Network.html#a965edba3c55b9c268af44af7f204be66">pollRequest</a>()<span class="keyword"> override </span>{}</div><div class="line">};</div></div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyServer_8cpp-example.html#a3">MyServer.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a965edba3c55b9c268af44af7f204be66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a965edba3c55b9c268af44af7f204be66">&#9670;&nbsp;</a></span>pollRequest()</h2>
 
@@ -127,7 +157,9 @@ std::function&lt; void(<a class="el" href="classHttp_1_1Request.html">Http::Requ
 </div><div class="memdoc">
 
 <p>Called when a request is received. </p>
-<p>Runs the _pipelineRunCallBack to execute the module's processing list </p><div class="fragment"><div class="line"><a class="code" href="classHttp_1_1Request.html">Http::Request</a> request;</div><div class="line"><a class="code" href="classHttp_1_1Response.html">Http::Response</a> response;</div><div class="line"></div><div class="line"><a class="code" href="classZiApi_1_1Network.html#a9849d858fc05af620e717f643f4071f6">_pipelineRunCallBack</a>(request, response); <span class="comment">//The request and response will be set by the modules</span></div><div class="line"></div><div class="line">send(response, ...);                     <span class="comment">//Send the response to the client (it is up to you)</span></div></div><!-- fragment --> 
+<p>Runs the _pipelineRunCallBack to execute the module's processing list </p><div class="fragment"><div class="line"><a class="code" href="classHttp_1_1Request.html">Http::Request</a> request;</div><div class="line"><a class="code" href="classHttp_1_1Response.html">Http::Response</a> response;</div><div class="line"></div><div class="line"><a class="code" href="classZiApi_1_1Network.html#a9849d858fc05af620e717f643f4071f6">_pipelineRunCallBack</a>(request, response); <span class="comment">//The request and response will be set by the modules</span></div><div class="line"></div><div class="line">send(response, ...);                     <span class="comment">//Send the response to the client (it is up to you)</span></div></div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyServer_8cpp-example.html#a5">MyServer.cpp</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="a781d6d87558f714e93d89e098039ee27"></a>

@@ -99,7 +99,9 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Server's config. </p>
 <dl class="section note"><dt>Note</dt><dd>The server must be fully configurable by means of a configuration file </dd>
 <dd>
-It must be possible to reload the configuration file without restarting nor recompiling the server </dd></dl>
+It must be possible to reload the configuration file without restarting nor recompiling the server</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// Created by nhyarlathotep on 31/01/19.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="preprocessor">#pragma once</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &quot;Config.hpp&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>MyConfig : <span class="keyword">public</span> <a class="code" href="classZiApi_1_1Config.html">ZiApi::Config</a> {</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keywordtype">void</span> <a class="code" href="classZiApi_1_1Config.html#adea7c918bc9802e935a76bc525d5c898">loadConfig</a>(<span class="keyword">const</span> std::string &amp;path)<span class="keyword"> override </span>{ <span class="comment">/*It is up to you*/</span> }</div><div class="line"></div><div class="line">    <span class="keyword">const</span> <a class="code" href="classZiApi_1_1FieldValue.html#aa05c96baba965d0ad1cd54c7878f4450">ZiApi::FieldValue::ValueVariant</a> &amp;operator[](<span class="keyword">const</span> std::string &amp;key)<span class="keyword"> const override </span>{</div><div class="line">        <span class="keywordflow">return</span> <a class="code" href="classZiApi_1_1Config.html#abd7591f92a4590b36e93e0a5ada2373c">_configData</a>.at(key)-&gt;getValue();</div><div class="line">    }</div><div class="line">};</div></div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyServer_8cpp-example.html#_a0">MyServer.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adea7c918bc9802e935a76bc525d5c898"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adea7c918bc9802e935a76bc525d5c898">&#9670;&nbsp;</a></span>loadConfig()</h2>
@@ -127,6 +129,8 @@ It must be possible to reload the configuration file without restarting nor reco
 
 <p>Load the config from a file. </p>
 <dl class="section warning"><dt>Warning</dt><dd>If it the configuration file is corrupt or missing: you must set default values </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyServer_8cpp-example.html#a1">MyServer.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
