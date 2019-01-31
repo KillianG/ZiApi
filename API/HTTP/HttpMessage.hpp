@@ -4,36 +4,47 @@
 
 #pragma once
 
-#include "HttpHeader.hpp"
+#include <map>
+#include <memory>
+#include "FieldValue.hpp"
 
 namespace ZiApi {
     class HttpMessage {
     public:
         /**
+         * @brief Defines an Http header
+         *
+         * @note In the rfc2616 section 4.2 an Http header is like :
+         * @note message-header = field-name ":" [ field-value ]
+         * @sa FieldValue
+         */
+        using HttpHeader = std::map<std::string, std::shared_ptr<FieldValue>>;
+
+        /**
          * @brief Gets the message's header
          */
-        virtual HttpHeader &getHeader() noexcept = 0;
+        virtual HttpHeader &getHeader() = 0;
 
         /**
          * @brief Sets the message's body
          */
-        virtual void setBody(const std::string &newBody) noexcept = 0;
+        virtual void setBody(const std::string &newBody) = 0;
 
         /**
          * @brief Gets the message's body
          */
-        virtual const std::string &getBody() const noexcept = 0;
+        virtual const std::string &getBody() const = 0;
 
         /**
          * @brief Sets the message's Http version
          */
-        virtual void setHttpVersion(uint8_t major, uint8_t minor) noexcept = 0;
+        virtual void setHttpVersion(uint8_t major, uint8_t minor) = 0;
 
         /**
          * @brief Gets the message's Http version
          * @return @code "HTTP/major.minor" @endcode
          */
-        virtual std::string getHttpVersion() const noexcept = 0;
+        virtual std::string getHttpVersion() const = 0;
 
     protected:
         uint8_t _versionMajor;  ///< Message's major version

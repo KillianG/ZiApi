@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['temporaryredirect',['TemporaryRedirect',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a1b73a351faf2b550d06fae9cc6e0a894',1,'ZiApi::HttpResponse']]],
-  ['trace',['TRACE',['../classZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1ba2d3e4144aa384b18849ab9a8abad74d6',1,'ZiApi::HttpRequest']]],
-  ['type',['Type',['../classZiApi_1_1ZiLogger.html#a2344ef7fcc5f37cac04a3efc8f993424',1,'ZiApi::ZiLogger']]]
+  ['unauthorized',['Unauthorized',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90ae06d1ba70f1331e9f9a113cc2f887d3f',1,'ZiApi::HttpResponse']]],
+  ['undefinedstatuscode',['UndefinedStatusCode',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a3d97b1f575601de68b25d277c8901117',1,'ZiApi::HttpResponse']]],
+  ['unsupportedmediatype',['UnsupportedMediaType',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90aa3219a6843adbb23de79b4df9c307f5d',1,'ZiApi::HttpResponse']]],
+  ['unused',['Unused',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a92e592d90b9548016776a6fb68dccded',1,'ZiApi::HttpResponse']]],
+  ['useless',['USELESS',['../classZiApi_1_1ZiLogger.html#a483a2cb1e6000a67acba1c903f780225aa85f1b757c08be14396a953d5faa53d8',1,'ZiApi::ZiLogger']]],
+  ['useproxy',['UseProxy',['../classZiApi_1_1HttpResponse.html#aa304ae6c6c8d12f651eafc75fb203d90a0a272f25fd5e8a06065ef8ee41a88bea',1,'ZiApi::HttpResponse']]]
 ];

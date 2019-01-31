@@ -1,6 +1,7 @@
 var searchData=
 [
   ['head',['HEAD',['../classZiApi_1_1HttpRequest.html#a8592cff867cbbc5cc43bd3a4d6053a1bae15e216fc1c639f787b1231ecdfa1bf8',1,'ZiApi::HttpRequest']]],
+  ['httpheader',['HttpHeader',['../classZiApi_1_1HttpMessage.html#ae086e821289425f1c653800caf8d39d0',1,'ZiApi::HttpMessage']]],
   ['httpmessage',['HttpMessage',['../classZiApi_1_1HttpMessage.html',1,'ZiApi']]],
   ['httprequest',['HttpRequest',['../classZiApi_1_1HttpRequest.html',1,'ZiApi']]],
   ['httpresponse',['HttpResponse',['../classZiApi_1_1HttpResponse.html',1,'ZiApi']]],

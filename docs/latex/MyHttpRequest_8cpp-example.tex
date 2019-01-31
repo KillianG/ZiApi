@@ -1,0 +1,121 @@
+\hypertarget{MyHttpRequest_8cpp-example}{}\section{My\+Http\+Request.\+cpp}
+Http request container\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classZiApi_1_1HttpMessage}{Zi\+Api\+::\+Http\+Message}}, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Zi\+Api\+::\+Http\+Response}}
+\end{DoxySeeAlso}
+My\+Http\+Request.\+hpp \+: 
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{// Created by nhyarlathotep on 31/01/19.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "HttpRequest.hpp"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }MyHttpRequest : \textcolor{keyword}{public} \mbox{\hyperlink{classZiApi_1_1HttpRequest}{ZiApi::HttpRequest}} \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    HttpHeader \&\mbox{\hyperlink{classZiApi_1_1HttpMessage_a11722ae2e44c74054dae3b1b7ba09ed6}{getHeader}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a649867b80ecf41e6c32170ebe206be26}{\_header}}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a50e845db4407d87e8e13596736e18268}{setBody}}(\textcolor{keyword}{const} std::string \&newBody)\textcolor{keyword}{ override }\{ \_body = newBody; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classZiApi_1_1HttpMessage_a1edc64ae450fef137305b136ea7ac32d}{getBody}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a3fa98de77c767e106b0579d43ea62c33}{\_body}}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a46d8a1d48317d727e04f7619dcced43b}{setHttpVersion}}(uint8\_t major, uint8\_t minor)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{        \_versionMajor = major;}
+\DoxyCodeLine{        \_versionMinor = minor;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::string \mbox{\hyperlink{classZiApi_1_1HttpMessage_ab390b27a677152727c88efab33a50060}{getHttpVersion}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{"HTTP/"} + std::to\_string(\_versionMajor) + \textcolor{stringliteral}{"."} + std::to\_string(\_versionMinor);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ae6bc0b8f15892b06a220977e3720ac78}{setUri}}(\textcolor{keyword}{const} std::string \&newUri)\textcolor{keyword}{ override }\{ \_uri = newUri; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classZiApi_1_1HttpRequest_aec2e50e7ed6a71736a33980daaf7b3d0}{getUri}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpRequest_a30de96436841e7f49ce9d9f6a69f751e}{\_uri}}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac406db366ea3b2b2e1042e957060779b}{setMethod}}(MethodType newMethod)\textcolor{keyword}{ override }\{ \_method = newMethod; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MethodType \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac802257ee42161de40ab1bacc31d71aa}{getMethod}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ad4e4fe2662f4699ad6715fc11bf454df}{\_method}}; \}}
+\DoxyCodeLine{\};}
+\end{DoxyCodeInclude}
+ My\+Field\+Value.\+hpp \+: 
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{// Created by nhyarlathotep on 31/01/19.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "FieldValue.hpp"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }MyValue : \textcolor{keyword}{public} \mbox{\hyperlink{classZiApi_1_1FieldValue}{ZiApi::FieldValue}} \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keywordtype}{int} value) \{ \_value = value; \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keywordtype}{double} value) \{ \_value = value; \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keyword}{const} std::string \&value) \{ \_value = value; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(ValueList \&\&value) \{ \_value = value; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{const} ValueVariant \&\mbox{\hyperlink{classZiApi_1_1FieldValue_abfc23c5c8eca45110475c291ce4fcd6a}{getValue}}() \textcolor{keyword}{const} noexcept \textcolor{keyword}{override} \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1FieldValue_a597ab052783a2fe3e6cb87a8a6276f38}{\_value}}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    FieldValue \&\mbox{\hyperlink{classZiApi_1_1FieldValue_ae8b2b66a78907d11d5745af783561efa}{operator=}}(\textcolor{keyword}{const} ValueVariant \&valueVariant)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{        \_value = valueVariant;}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\end{DoxyCodeInclude}
+ Output \+: 
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{Accept : [ text/html application/xhtml+xml application/xml ]}
+\DoxyCodeLine{Connection : keep-alive}
+\DoxyCodeLine{Host : 127.0.0.1:4242}
+\end{DoxyCodeInclude}
+ My\+Http\+Request.\+cpp \+:
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{// Created by nhyarlathotep on 31/01/19.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "MyFieldValue.hpp"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "MyHttpRequest.hpp"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main() \{}
+\DoxyCodeLine{    MyHttpRequest request;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{auto} \&header = request.getHeader();                                     \textcolor{comment}{//Get the request's header}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    header[\textcolor{stringliteral}{"Host"}] = std::make\_shared<MyValue>(\textcolor{stringliteral}{"127.0.0.1:4242"});}
+\DoxyCodeLine{    header.emplace(std::make\_pair(\textcolor{stringliteral}{"Connection"}, std::make\_shared<MyValue>(\textcolor{stringliteral}{"keep-alive"})));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    MyValue::ValueList list;}
+\DoxyCodeLine{    list.push\_back(std::make\_shared<MyValue>(\textcolor{stringliteral}{"text/html"}));}
+\DoxyCodeLine{    list.push\_back(std::make\_shared<MyValue>(\textcolor{stringliteral}{"application/xhtml+xml"}));}
+\DoxyCodeLine{    list.push\_back(std::make\_shared<MyValue>(\textcolor{stringliteral}{"application/xml"}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    header[\textcolor{stringliteral}{"Accept"}] = std::make\_shared<MyValue>(std::move(list));          \textcolor{comment}{//Set the field "Accept" with a list}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&it : header) \{                                               \textcolor{comment}{//Displays fields}}
+\DoxyCodeLine{        \textcolor{keyword}{const} \textcolor{keyword}{auto} \&tmp = it.second->getValue();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (std::holds\_alternative<std::string>(tmp))}
+\DoxyCodeLine{            std::cout << it.first << \textcolor{stringliteral}{" : "} << std::get<std::string>(tmp) << std::endl;}
+\DoxyCodeLine{        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (std::holds\_alternative<MyValue::ValueList>(tmp)) \{}
+\DoxyCodeLine{            std::cout << it.first << \textcolor{stringliteral}{" : ["};}
+\DoxyCodeLine{            \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&field : std::get<MyValue::ValueList>(tmp)) \{}
+\DoxyCodeLine{                std::cout << \textcolor{stringliteral}{" "} << std::get<std::string>(field->getValue());}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            std::cout << \textcolor{stringliteral}{" ]"} << std::endl;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    request.setMethod(\mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1ba7528035a93ee69cedb1dbddb2f0bfcc8}{ZiApi::HttpRequest::MethodType::GET}});                 \textcolor{comment}{//Sets the request's method}}
+\DoxyCodeLine{    request.setUri(\textcolor{stringliteral}{"/home/index.html"});                                     \textcolor{comment}{//Sets the request's uri}}
+\DoxyCodeLine{    request.setHttpVersion(1, 1);                                           \textcolor{comment}{//Sets the request's versions}}
+\DoxyCodeLine{\}}
+\end{DoxyCodeInclude}
+ 

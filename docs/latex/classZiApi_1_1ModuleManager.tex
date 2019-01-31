@@ -1,0 +1,34 @@
+\hypertarget{classZiApi_1_1ModuleManager}{}\section{Zi\+Api\+::Module\+Manager Class Reference}
+\label{classZiApi_1_1ModuleManager}\index{ZiApi::ModuleManager@{ZiApi::ModuleManager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a073ad69fd2dd2d4f07ed6c82fdf212e2}\label{classZiApi_1_1ModuleManager_a073ad69fd2dd2d4f07ed6c82fdf212e2}} 
+virtual bool {\bfseries load} (const std\+::string \&module\+Path, \mbox{\hyperlink{classZiApi_1_1Core}{Core}} \&core)=0
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a85b509cc930443012d901be5d4a2ad30}\label{classZiApi_1_1ModuleManager_a85b509cc930443012d901be5d4a2ad30}} 
+virtual bool {\bfseries un\+Load} (const std\+::string \&module\+Name)=0
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a15de426ee9f5739296a79b39a5f4abc8}\label{classZiApi_1_1ModuleManager_a15de426ee9f5739296a79b39a5f4abc8}} 
+virtual bool {\bfseries is\+Loaded} (const std\+::string \&module\+Name)=0
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a204f11d5cbdb9cd18890eb370aebe019}\label{classZiApi_1_1ModuleManager_a204f11d5cbdb9cd18890eb370aebe019}} 
+virtual bool {\bfseries add\+To\+Pipeline} (size\+\_\+t order, const std\+::string \&name)=0
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_aa45c0a9694ec4d3dfd2b2ab77bb623c4}\label{classZiApi_1_1ModuleManager_aa45c0a9694ec4d3dfd2b2ab77bb623c4}} 
+virtual bool {\bfseries run\+Pipeline} (\mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} \&request, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} \&response)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a9419290c9405733c97e8bdea9095b0f0}\label{classZiApi_1_1ModuleManager_a9419290c9405733c97e8bdea9095b0f0}} 
+std\+::map$<$ size\+\_\+t, std\+::string $>$ {\bfseries \+\_\+pipeline}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1ModuleManager_a14887a7947963cbd29390a1951895af5}\label{classZiApi_1_1ModuleManager_a14887a7947963cbd29390a1951895af5}} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Module}{Module}} $>$ $>$ {\bfseries \+\_\+modules}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Module\+Manager.\+hpp\end{DoxyCompactItemize}

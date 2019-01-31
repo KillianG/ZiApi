@@ -1,0 +1,34 @@
+\hypertarget{MyFieldValue_8hpp-example}{}\section{My\+Field\+Value.\+hpp}
+Contains a generic type\begin{DoxySeeAlso}{See also}
+\href{https://en.cppreference.com/w/cpp/utility/variant}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/utility/variant}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{// Created by nhyarlathotep on 31/01/19.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "FieldValue.hpp"}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }MyValue : \textcolor{keyword}{public} \mbox{\hyperlink{classZiApi_1_1FieldValue}{ZiApi::FieldValue}} \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keywordtype}{int} value) \{ \_value = value; \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keywordtype}{double} value) \{ \_value = value; \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(\textcolor{keyword}{const} std::string \&value) \{ \_value = value; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{explicit} MyValue(ValueList \&\&value) \{ \_value = value; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{const} ValueVariant \&\mbox{\hyperlink{classZiApi_1_1FieldValue_abfc23c5c8eca45110475c291ce4fcd6a}{getValue}}() \textcolor{keyword}{const} noexcept \textcolor{keyword}{override} \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1FieldValue_a597ab052783a2fe3e6cb87a8a6276f38}{\_value}}; \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    FieldValue \&\mbox{\hyperlink{classZiApi_1_1FieldValue_ae8b2b66a78907d11d5745af783561efa}{operator=}}(\textcolor{keyword}{const} ValueVariant \&valueVariant)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{        \_value = valueVariant;}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\end{DoxyCodeInclude}
+ 

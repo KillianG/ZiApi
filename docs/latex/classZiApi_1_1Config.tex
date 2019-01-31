@@ -1,0 +1,71 @@
+\hypertarget{classZiApi_1_1Config}{}\section{Zi\+Api\+::Config Class Reference}
+\label{classZiApi_1_1Config}\index{ZiApi::Config@{ZiApi::Config}}
+
+
+Server\textquotesingle{}s config.  
+
+
+
+
+{\ttfamily \#include $<$Config.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classZiApi_1_1Config_adea7c918bc9802e935a76bc525d5c898}{load\+Config}} (const std\+::string \&path)=0
+\begin{DoxyCompactList}\small\item\em Load the config from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZiApi_1_1Config_a35e95b2fbf4adc334eb0b9df0966eda6}\label{classZiApi_1_1Config_a35e95b2fbf4adc334eb0b9df0966eda6}} 
+virtual const \mbox{\hyperlink{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}{Field\+Value\+::\+Value\+Variant}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&key) const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$ \mbox{\hyperlink{classZiApi_1_1Config_a8f6f6b90cf9a3f5952b707a6f0da17a8}{\+\_\+config\+Data}}
+\begin{DoxyCompactList}\small\item\em The Configuration\textquotesingle{}s file data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server\textquotesingle{}s config. 
+
+\begin{DoxyNote}{Note}
+The server must be fully configurable by means of a configuration file 
+
+It must be possible to reload the configuration file without restarting nor recompiling the server 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classZiApi_1_1Config_adea7c918bc9802e935a76bc525d5c898}\label{classZiApi_1_1Config_adea7c918bc9802e935a76bc525d5c898}} 
+\index{ZiApi::Config@{ZiApi::Config}!loadConfig@{loadConfig}}
+\index{loadConfig@{loadConfig}!ZiApi::Config@{ZiApi::Config}}
+\subsubsection{\texorpdfstring{loadConfig()}{loadConfig()}}
+{\footnotesize\ttfamily virtual void Zi\+Api\+::\+Config\+::load\+Config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load the config from a file. 
+
+\begin{DoxyWarning}{Warning}
+If it the configuration file is corrupt or missing\+: you must set default values 
+\end{DoxyWarning}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classZiApi_1_1Config_a8f6f6b90cf9a3f5952b707a6f0da17a8}\label{classZiApi_1_1Config_a8f6f6b90cf9a3f5952b707a6f0da17a8}} 
+\index{ZiApi::Config@{ZiApi::Config}!\_configData@{\_configData}}
+\index{\_configData@{\_configData}!ZiApi::Config@{ZiApi::Config}}
+\subsubsection{\texorpdfstring{\_configData}{\_configData}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}}$>$ $>$ Zi\+Api\+::\+Config\+::\+\_\+config\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The Configuration\textquotesingle{}s file data. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Config.\+hpp\end{DoxyCompactItemize}

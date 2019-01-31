@@ -1,45 +1,39 @@
 \hypertarget{classZiApi_1_1FieldValue}{}\section{Zi\+Api\+::Field\+Value Class Reference}
 \label{classZiApi_1_1FieldValue}\index{ZiApi::FieldValue@{ZiApi::FieldValue}}
-
-
-Contains a generic type.  
-
-
-
-
-{\ttfamily \#include $<$Field\+Value.\+hpp$>$}
-
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}\label{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}} 
-using \mbox{\hyperlink{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}} = std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_a7ce9d872b19e8f9818f51398e49ca2a0}\label{classZiApi_1_1FieldValue_a7ce9d872b19e8f9818f51398e49ca2a0}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_a7ce9d872b19e8f9818f51398e49ca2a0}{Value\+List}} = std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
 \begin{DoxyCompactList}\small\item\em Defines a list of Field\+Values. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}\label{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}} 
-using \mbox{\hyperlink{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_ad8dd32464e75289185e2d8260cb3672d}\label{classZiApi_1_1FieldValue_ad8dd32464e75289185e2d8260cb3672d}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_ad8dd32464e75289185e2d8260cb3672d}{Value\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} $>$ $>$
 \begin{DoxyCompactList}\small\item\em Defines a map of Field\+Values. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}\label{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}} 
-using \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} = std\+::variant$<$ int, bool, double, std\+::string, \mbox{\hyperlink{classZiApi_1_1FieldValue_a9ab71bf0ac13af93bbf9f4d7018f0909}{Value\+List}}, \mbox{\hyperlink{classZiApi_1_1FieldValue_a95c5ffaae9c08c1a6129847205258d8a}{Value\+Map}} $>$
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}\label{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}} 
+using \mbox{\hyperlink{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}{Value\+Variant}} = std\+::variant$<$ int, bool, double, std\+::string, \mbox{\hyperlink{classZiApi_1_1FieldValue_a7ce9d872b19e8f9818f51398e49ca2a0}{Value\+List}}, \mbox{\hyperlink{classZiApi_1_1FieldValue_ad8dd32464e75289185e2d8260cb3672d}{Value\+Map}} $>$
 \begin{DoxyCompactList}\small\item\em Defines the possibles types of \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}\label{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}} 
-virtual const \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_ae142783211fc0a6dc13e8820c48bb57c}{get\+Value}} () const noexcept=0
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_abfc23c5c8eca45110475c291ce4fcd6a}\label{classZiApi_1_1FieldValue_abfc23c5c8eca45110475c291ce4fcd6a}} 
+virtual const \mbox{\hyperlink{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}{Value\+Variant}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_abfc23c5c8eca45110475c291ce4fcd6a}{get\+Value}} () const noexcept=0
 \begin{DoxyCompactList}\small\item\em Gets the contained value. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}\label{classZiApi_1_1FieldValue_a78c42c7b9b8e87fb62ca5c1631837a30}} 
-virtual \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} \&) noexcept=0
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_ae8b2b66a78907d11d5745af783561efa}\label{classZiApi_1_1FieldValue_ae8b2b66a78907d11d5745af783561efa}} 
+virtual \mbox{\hyperlink{classZiApi_1_1FieldValue}{Field\+Value}} \& \mbox{\hyperlink{classZiApi_1_1FieldValue_ae8b2b66a78907d11d5745af783561efa}{operator=}} (const \mbox{\hyperlink{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}{Value\+Variant}} \&)=0
+\begin{DoxyCompactList}\small\item\em Set the contained value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}\label{classZiApi_1_1FieldValue_af89df27595513c982d191d0a84b8f12c}} 
-\mbox{\hyperlink{classZiApi_1_1FieldValue_ad15b3d7fad80efab396843e70a5b1db2}{Value\+Varient}} {\bfseries \+\_\+value}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classZiApi_1_1FieldValue_a597ab052783a2fe3e6cb87a8a6276f38}\label{classZiApi_1_1FieldValue_a597ab052783a2fe3e6cb87a8a6276f38}} 
+\mbox{\hyperlink{classZiApi_1_1FieldValue_aa05c96baba965d0ad1cd54c7878f4450}{Value\+Variant}} \mbox{\hyperlink{classZiApi_1_1FieldValue_a597ab052783a2fe3e6cb87a8a6276f38}{\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em The contained value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Contains a generic type. 
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{MyFieldValue_8cpp-example}{My\+Field\+Value.\+cpp}}, and \mbox{\hyperlink{MyHttpRequest_8cpp-example}{My\+Http\+Request.\+cpp}}.\end{Desc}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

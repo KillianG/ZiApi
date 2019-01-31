@@ -75,45 +75,43 @@ $(function() {
 <div class="title">ZiApi::FieldValue Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Contains a generic type.  
- <a href="classZiApi_1_1FieldValue.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="FieldValue_8hpp_source.html">FieldValue.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9ab71bf0ac13af93bbf9f4d7018f0909"><td class="memItemLeft" align="right" valign="top"><a id="a9ab71bf0ac13af93bbf9f4d7018f0909"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#a9ab71bf0ac13af93bbf9f4d7018f0909">ValueList</a> = std::vector&lt; std::reference_wrapper&lt; <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &gt; &gt;</td></tr>
-<tr class="memdesc:a9ab71bf0ac13af93bbf9f4d7018f0909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of FieldValues. <br /></td></tr>
-<tr class="separator:a9ab71bf0ac13af93bbf9f4d7018f0909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c5ffaae9c08c1a6129847205258d8a"><td class="memItemLeft" align="right" valign="top"><a id="a95c5ffaae9c08c1a6129847205258d8a"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#a95c5ffaae9c08c1a6129847205258d8a">ValueMap</a> = std::unordered_map&lt; std::string, std::reference_wrapper&lt; <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &gt; &gt;</td></tr>
-<tr class="memdesc:a95c5ffaae9c08c1a6129847205258d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a map of FieldValues. <br /></td></tr>
-<tr class="separator:a95c5ffaae9c08c1a6129847205258d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad15b3d7fad80efab396843e70a5b1db2"><td class="memItemLeft" align="right" valign="top"><a id="ad15b3d7fad80efab396843e70a5b1db2"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#ad15b3d7fad80efab396843e70a5b1db2">ValueVarient</a> = std::variant&lt; int, bool, double, std::string, <a class="el" href="classZiApi_1_1FieldValue.html#a9ab71bf0ac13af93bbf9f4d7018f0909">ValueList</a>, <a class="el" href="classZiApi_1_1FieldValue.html#a95c5ffaae9c08c1a6129847205258d8a">ValueMap</a> &gt;</td></tr>
-<tr class="memdesc:ad15b3d7fad80efab396843e70a5b1db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the possibles types of <a class="el" href="classZiApi_1_1FieldValue.html" title="Contains a generic type.">FieldValue</a>. <br /></td></tr>
-<tr class="separator:ad15b3d7fad80efab396843e70a5b1db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce9d872b19e8f9818f51398e49ca2a0"><td class="memItemLeft" align="right" valign="top"><a id="a7ce9d872b19e8f9818f51398e49ca2a0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#a7ce9d872b19e8f9818f51398e49ca2a0">ValueList</a> = std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &gt; &gt;</td></tr>
+<tr class="memdesc:a7ce9d872b19e8f9818f51398e49ca2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of FieldValues. <br /></td></tr>
+<tr class="separator:a7ce9d872b19e8f9818f51398e49ca2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8dd32464e75289185e2d8260cb3672d"><td class="memItemLeft" align="right" valign="top"><a id="ad8dd32464e75289185e2d8260cb3672d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#ad8dd32464e75289185e2d8260cb3672d">ValueMap</a> = std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &gt; &gt;</td></tr>
+<tr class="memdesc:ad8dd32464e75289185e2d8260cb3672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a map of FieldValues. <br /></td></tr>
+<tr class="separator:ad8dd32464e75289185e2d8260cb3672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05c96baba965d0ad1cd54c7878f4450"><td class="memItemLeft" align="right" valign="top"><a id="aa05c96baba965d0ad1cd54c7878f4450"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#aa05c96baba965d0ad1cd54c7878f4450">ValueVariant</a> = std::variant&lt; int, bool, double, std::string, <a class="el" href="classZiApi_1_1FieldValue.html#a7ce9d872b19e8f9818f51398e49ca2a0">ValueList</a>, <a class="el" href="classZiApi_1_1FieldValue.html#ad8dd32464e75289185e2d8260cb3672d">ValueMap</a> &gt;</td></tr>
+<tr class="memdesc:aa05c96baba965d0ad1cd54c7878f4450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the possibles types of <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a>. <br /></td></tr>
+<tr class="separator:aa05c96baba965d0ad1cd54c7878f4450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae142783211fc0a6dc13e8820c48bb57c"><td class="memItemLeft" align="right" valign="top"><a id="ae142783211fc0a6dc13e8820c48bb57c"></a>
-virtual const <a class="el" href="classZiApi_1_1FieldValue.html#ad15b3d7fad80efab396843e70a5b1db2">ValueVarient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#ae142783211fc0a6dc13e8820c48bb57c">getValue</a> () const noexcept=0</td></tr>
-<tr class="memdesc:ae142783211fc0a6dc13e8820c48bb57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the contained value. <br /></td></tr>
-<tr class="separator:ae142783211fc0a6dc13e8820c48bb57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78c42c7b9b8e87fb62ca5c1631837a30"><td class="memItemLeft" align="right" valign="top"><a id="a78c42c7b9b8e87fb62ca5c1631837a30"></a>
-virtual <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classZiApi_1_1FieldValue.html#ad15b3d7fad80efab396843e70a5b1db2">ValueVarient</a> &amp;) noexcept=0</td></tr>
-<tr class="separator:a78c42c7b9b8e87fb62ca5c1631837a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc23c5c8eca45110475c291ce4fcd6a"><td class="memItemLeft" align="right" valign="top"><a id="abfc23c5c8eca45110475c291ce4fcd6a"></a>
+virtual const <a class="el" href="classZiApi_1_1FieldValue.html#aa05c96baba965d0ad1cd54c7878f4450">ValueVariant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#abfc23c5c8eca45110475c291ce4fcd6a">getValue</a> () const noexcept=0</td></tr>
+<tr class="memdesc:abfc23c5c8eca45110475c291ce4fcd6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the contained value. <br /></td></tr>
+<tr class="separator:abfc23c5c8eca45110475c291ce4fcd6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b2b66a78907d11d5745af783561efa"><td class="memItemLeft" align="right" valign="top"><a id="ae8b2b66a78907d11d5745af783561efa"></a>
+virtual <a class="el" href="classZiApi_1_1FieldValue.html">FieldValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#ae8b2b66a78907d11d5745af783561efa">operator=</a> (const <a class="el" href="classZiApi_1_1FieldValue.html#aa05c96baba965d0ad1cd54c7878f4450">ValueVariant</a> &amp;)=0</td></tr>
+<tr class="memdesc:ae8b2b66a78907d11d5745af783561efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the contained value. <br /></td></tr>
+<tr class="separator:ae8b2b66a78907d11d5745af783561efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af89df27595513c982d191d0a84b8f12c"><td class="memItemLeft" align="right" valign="top"><a id="af89df27595513c982d191d0a84b8f12c"></a>
-<a class="el" href="classZiApi_1_1FieldValue.html#ad15b3d7fad80efab396843e70a5b1db2">ValueVarient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_value</b></td></tr>
-<tr class="separator:af89df27595513c982d191d0a84b8f12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597ab052783a2fe3e6cb87a8a6276f38"><td class="memItemLeft" align="right" valign="top"><a id="a597ab052783a2fe3e6cb87a8a6276f38"></a>
+<a class="el" href="classZiApi_1_1FieldValue.html#aa05c96baba965d0ad1cd54c7878f4450">ValueVariant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZiApi_1_1FieldValue.html#a597ab052783a2fe3e6cb87a8a6276f38">_value</a></td></tr>
+<tr class="memdesc:a597ab052783a2fe3e6cb87a8a6276f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">The contained value. <br /></td></tr>
+<tr class="separator:a597ab052783a2fe3e6cb87a8a6276f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains a generic type. </p>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MyFieldValue_8cpp-example.html#_a0">MyFieldValue.cpp</a>, and <a class="el" href="MyHttpRequest_8cpp-example.html#_a14">MyHttpRequest.cpp</a>.</dd>
+</dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="FieldValue_8hpp_source.html">FieldValue.hpp</a></li>
 </ul>

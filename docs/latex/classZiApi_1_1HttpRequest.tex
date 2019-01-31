@@ -1,14 +1,5 @@
 \hypertarget{classZiApi_1_1HttpRequest}{}\section{Zi\+Api\+::Http\+Request Class Reference}
 \label{classZiApi_1_1HttpRequest}\index{ZiApi::HttpRequest@{ZiApi::HttpRequest}}
-
-
-Http request container.  
-
-
-
-
-{\ttfamily \#include $<$Http\+Request.\+hpp$>$}
-
 Inheritance diagram for Zi\+Api\+::Http\+Request\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,17 +24,17 @@ enum \mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1HttpRequest_a0a6e036d520b4c43a7350f465c429b20}\label{classZiApi_1_1HttpRequest_a0a6e036d520b4c43a7350f465c429b20}} 
-virtual void \mbox{\hyperlink{classZiApi_1_1HttpRequest_a0a6e036d520b4c43a7350f465c429b20}{set\+Uri}} (const std\+::string \&new\+Uri) noexcept=0
+\mbox{\Hypertarget{classZiApi_1_1HttpRequest_ae6bc0b8f15892b06a220977e3720ac78}\label{classZiApi_1_1HttpRequest_ae6bc0b8f15892b06a220977e3720ac78}} 
+virtual void \mbox{\hyperlink{classZiApi_1_1HttpRequest_ae6bc0b8f15892b06a220977e3720ac78}{set\+Uri}} (const std\+::string \&new\+Uri)=0
 \begin{DoxyCompactList}\small\item\em Sets the request\textquotesingle{}s uri. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1HttpRequest_aa2830d65539c10f3441d2988eff2f3b8}\label{classZiApi_1_1HttpRequest_aa2830d65539c10f3441d2988eff2f3b8}} 
-virtual const std\+::string \& \mbox{\hyperlink{classZiApi_1_1HttpRequest_aa2830d65539c10f3441d2988eff2f3b8}{get\+Uri}} () const noexcept=0
+\mbox{\Hypertarget{classZiApi_1_1HttpRequest_aec2e50e7ed6a71736a33980daaf7b3d0}\label{classZiApi_1_1HttpRequest_aec2e50e7ed6a71736a33980daaf7b3d0}} 
+virtual const std\+::string \& \mbox{\hyperlink{classZiApi_1_1HttpRequest_aec2e50e7ed6a71736a33980daaf7b3d0}{get\+Uri}} () const =0
 \begin{DoxyCompactList}\small\item\em Gets the request\textquotesingle{}s uri. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1HttpRequest_a45f2f16405c9572dcd3acf70eb1a9dd1}\label{classZiApi_1_1HttpRequest_a45f2f16405c9572dcd3acf70eb1a9dd1}} 
-virtual void \mbox{\hyperlink{classZiApi_1_1HttpRequest_a45f2f16405c9572dcd3acf70eb1a9dd1}{set\+Method}} (\mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1b}{Method\+Type}} new\+Method) noexcept=0
+\mbox{\Hypertarget{classZiApi_1_1HttpRequest_ac406db366ea3b2b2e1042e957060779b}\label{classZiApi_1_1HttpRequest_ac406db366ea3b2b2e1042e957060779b}} 
+virtual void \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac406db366ea3b2b2e1042e957060779b}{set\+Method}} (\mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1b}{Method\+Type}} new\+Method)=0
 \begin{DoxyCompactList}\small\item\em Sets the request\textquotesingle{}s method. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classZiApi_1_1HttpRequest_a783653b01833477dd2ce7a9d6ba306c6}\label{classZiApi_1_1HttpRequest_a783653b01833477dd2ce7a9d6ba306c6}} 
-virtual \mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1b}{Method\+Type}} \mbox{\hyperlink{classZiApi_1_1HttpRequest_a783653b01833477dd2ce7a9d6ba306c6}{get\+Method}} () const noexcept=0
+\mbox{\Hypertarget{classZiApi_1_1HttpRequest_ac802257ee42161de40ab1bacc31d71aa}\label{classZiApi_1_1HttpRequest_ac802257ee42161de40ab1bacc31d71aa}} 
+virtual \mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1b}{Method\+Type}} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac802257ee42161de40ab1bacc31d71aa}{get\+Method}} () const =0
 \begin{DoxyCompactList}\small\item\em Gets the request\textquotesingle{}s method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -57,11 +48,9 @@ std\+::string \mbox{\hyperlink{classZiApi_1_1HttpRequest_a30de96436841e7f49ce9d9
 
 
 \subsection{Detailed Description}
-Http request container. 
-
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classZiApi_1_1HttpMessage}{Http\+Message}}, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} 
-\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{MyHttpRequest_8cpp-example}{My\+Http\+Request.\+cpp}}.\end{Desc}
 
 
 \subsection{Member Enumeration Documentation}

@@ -12,7 +12,12 @@ namespace ZiApi {
     /**
      * @brief Http request container
      *
-     * @sa HttpMessage, HttpResponse
+     * @sa ZiApi::HttpMessage, ZiApi::HttpResponse
+     *
+     * MyHttpRequest.hpp : @include MyHttpRequest.hpp
+     * MyFieldValue.hpp : @include MyFieldValue.hpp
+     * Output : @include MyHttpRequest.output
+     * MyHttpRequest.cpp : @example MyHttpRequest.cpp
      */
     class HttpRequest : public HttpMessage {
     public:
@@ -33,22 +38,22 @@ namespace ZiApi {
         /**
          * @brief Sets the request's uri
          */
-        virtual void setUri(const std::string &newUri) noexcept = 0;
+        virtual void setUri(const std::string &newUri) = 0;
 
         /**
          * @brief Gets the request's uri
          */
-        virtual const std::string &getUri() const noexcept = 0;
+        virtual const std::string &getUri() const = 0;
 
         /**
          * @brief Sets the request's method
          */
-        virtual void setMethod(MethodType newMethod) noexcept = 0;
+        virtual void setMethod(MethodType newMethod) = 0;
 
         /**
          * @brief Gets the request's method
          */
-        virtual MethodType getMethod() const noexcept = 0;
+        virtual MethodType getMethod() const = 0;
 
     protected:
         std::string _uri;   ///< Request's uri

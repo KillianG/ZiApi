@@ -1,0 +1,3 @@
+Accept : [ text/html application/xhtml+xml application/xml ]
+Connection : keep-alive
+Host : 127.0.0.1:4242

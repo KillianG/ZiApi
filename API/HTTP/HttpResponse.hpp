@@ -73,22 +73,22 @@ namespace ZiApi {
         /**
          * @brief Sets the response's status code
          */
-        virtual void setStatusCode(StatusCode newCode) noexcept = 0;
+        virtual void setStatusCode(StatusCode newCode) = 0;
 
         /**
          * @brief Gets the response's status code
          */
-        virtual StatusCode getStatusCode() const noexcept = 0;
+        virtual StatusCode getStatusCode() const = 0;
 
         /**
          * @brief Sets the response's status message
          */
-        virtual void setStatusMessage(const std::string &newMessage) noexcept = 0;
+        virtual void setStatusMessage(const std::string &newMessage) = 0;
 
         /**
          * @brief Gets the response's status message
          */
-        virtual const std::string &getStatusMessage() const noexcept = 0;
+        virtual const std::string &getStatusMessage() const = 0;
 
     protected:
         StatusCode _statusCode;                     ///< Response's status-code

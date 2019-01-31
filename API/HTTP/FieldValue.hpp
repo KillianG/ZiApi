@@ -5,39 +5,48 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 #include <variant>
-#include <functional>
 #include <unordered_map>
 
 namespace ZiApi {
     /**
      * @brief Contains a generic type
+     *
+     * @sa https://en.cppreference.com/w/cpp/utility/variant
+     *
+     * MyFieldValue.hpp : @include MyFieldValue.hpp
+     * Output : @include MyFieldValue.output
+     * MyFieldValue.cpp : @example MyFieldValue.cpp
      */
     class FieldValue {
     public:
         /**
          * @brief Defines a list of FieldValues
          */
-        using ValueList = std::vector<std::reference_wrapper<FieldValue>>;
+        using ValueList = std::vector<std::shared_ptr<FieldValue>>;
 
         /**
          * @brief Defines a map of FieldValues
          */
-        using ValueMap = std::unordered_map<std::string, std::reference_wrapper<FieldValue>>;
+        using ValueMap = std::unordered_map<std::string, std::shared_ptr<FieldValue>>;
 
         /**
          * @brief Defines the possibles types of FieldValue
          */
-        using ValueVarient = std::variant<int, bool, double, std::string, ValueList, ValueMap>;
+        using ValueVariant = std::variant<int, bool, double, std::string, ValueList, ValueMap>;
 
         /**
-         * @brief Gets  the contained value
+         * @brief Gets the contained value
          */
-        virtual const ValueVarient &getValue() const noexcept = 0;
+        virtual const ValueVariant &getValue() const noexcept = 0;
 
-        virtual FieldValue &operator=(const ValueVarient &) noexcept = 0;
+        /**
+         * @brief Set the contained value
+         */
+        virtual FieldValue &operator=(const ValueVariant &) = 0;
 
     protected:
-        ValueVarient _value;
+        ValueVariant _value;        ///<The contained value
     };
 }

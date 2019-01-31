@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keycaseinsensitive',['KeyCaseInsensitive',['../structZiApi_1_1KeyCaseInsensitive.html',1,'ZiApi']]]
+  ['module',['Module',['../classZiApi_1_1Module.html',1,'ZiApi']]],
+  ['modulemanager',['ModuleManager',['../classZiApi_1_1ModuleManager.html',1,'ZiApi']]]
 ];

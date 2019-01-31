@@ -1,0 +1,50 @@
+\hypertarget{classZiApi_1_1Network}{}\section{Zi\+Api\+::Network Class Reference}
+\label{classZiApi_1_1Network}\index{ZiApi::Network@{ZiApi::Network}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Network_a0556864740b66ea8085ab8a03a260267}\label{classZiApi_1_1Network_a0556864740b66ea8085ab8a03a260267}} 
+virtual void {\bfseries run} ()=0
+\item 
+virtual void \mbox{\hyperlink{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}{set\+Handler}} (std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} $>$)$>$ \&\&callback)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}\label{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}} 
+virtual void {\bfseries poll\+Request} ()=0
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Network_ad247b4d8a4c1f6a051f110a23fe334b1}\label{classZiApi_1_1Network_ad247b4d8a4c1f6a051f110a23fe334b1}} 
+virtual bool {\bfseries send} (\mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} \&request, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} \&response)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Network_a5e14335fe363a06db7af63ad9cee63a7}\label{classZiApi_1_1Network_a5e14335fe363a06db7af63ad9cee63a7}} 
+std\+::function$<$ void(\mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} \&request, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} \&response)$>$ {\bfseries \+\_\+pipeline\+Callback}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}\label{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}} 
+\index{ZiApi::Network@{ZiApi::Network}!setHandler@{setHandler}}
+\index{setHandler@{setHandler}!ZiApi::Network@{ZiApi::Network}}
+\subsubsection{\texorpdfstring{setHandler()}{setHandler()}}
+{\footnotesize\ttfamily virtual void Zi\+Api\+::\+Network\+::set\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} $>$)$>$ \&\&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{network.setHandler([\&moduleMgr] (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&request) \{}
+\DoxyCodeLine{     moduleMgr.runPipeline(request);}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core.\+hpp\end{DoxyCompactItemize}
