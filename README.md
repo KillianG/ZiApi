@@ -14,9 +14,18 @@ Only if your request would contain confidential information, please [send us an 
 git clone git@github.com:KillianG/ZiApi.git
 ```
 **How to use ZiApi in your project :**
+
 ```cmake
 add_subdirectory(ZiApi/)
 ```
 
 ​![](./docs/Http_namespace.png)
 ![](./docs/ZiApi_namespace.png)
+
+```html
+<div id="list">
+  <p><iframe src="LICENSE" frameborder="0" height="400"
+      width="95%"></iframe></p>
+</div>
+```
+
