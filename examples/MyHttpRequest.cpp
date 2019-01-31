@@ -34,7 +34,7 @@ int main() {
         }
     }
 
-    request.setMethod(ZiApi::HttpRequest::MethodType::GET);                 //Sets the request's method
+    request.setMethod(Http::Request::MethodType::GET);                      //Sets the request's method
     request.setUri("/home/index.html");                                     //Sets the request's uri
     request.setHttpVersion(1, 1);                                           //Sets the request's versions
 }

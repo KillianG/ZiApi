@@ -1,6 +1,6 @@
 \hypertarget{MyHttpRequest_8cpp-example}{}\section{My\+Http\+Request.\+cpp}
 Http request container\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classZiApi_1_1HttpMessage}{Zi\+Api\+::\+Http\+Message}}, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Zi\+Api\+::\+Http\+Response}}
+\mbox{\hyperlink{classHttp_1_1Message}{Http\+::\+Message}}, \mbox{\hyperlink{classHttp_1_1Response}{Http\+::\+Response}}
 \end{DoxySeeAlso}
 My\+Http\+Request.\+hpp \+: 
 \begin{DoxyCodeInclude}{0}
@@ -10,32 +10,32 @@ My\+Http\+Request.\+hpp \+:
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{preprocessor}{\#include "HttpRequest.hpp"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "Request.hpp"}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keyword}{class }MyHttpRequest : \textcolor{keyword}{public} \mbox{\hyperlink{classZiApi_1_1HttpRequest}{ZiApi::HttpRequest}} \{}
+\DoxyCodeLine{\textcolor{keyword}{class }MyHttpRequest : \textcolor{keyword}{public} \mbox{\hyperlink{classHttp_1_1Request}{Http::Request}} \{}
 \DoxyCodeLine{\textcolor{keyword}{public}:}
-\DoxyCodeLine{    HttpHeader \&\mbox{\hyperlink{classZiApi_1_1HttpMessage_a11722ae2e44c74054dae3b1b7ba09ed6}{getHeader}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a649867b80ecf41e6c32170ebe206be26}{\_header}}; \}}
+\DoxyCodeLine{    HttpHeader \&\mbox{\hyperlink{classHttp_1_1Message_a48162fd73c27101d23db203f5d6cac42}{getHeader}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHttp_1_1Message_aac494cd412c7f7a862bf77b34910249f}{\_header}}; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a50e845db4407d87e8e13596736e18268}{setBody}}(\textcolor{keyword}{const} std::string \&newBody)\textcolor{keyword}{ override }\{ \_body = newBody; \}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classHttp_1_1Message_a1bd3ac73847b9ac567271acebe9372b7}{setBody}}(\textcolor{keyword}{const} std::string \&newBody)\textcolor{keyword}{ override }\{ \_body = newBody; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classZiApi_1_1HttpMessage_a1edc64ae450fef137305b136ea7ac32d}{getBody}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a3fa98de77c767e106b0579d43ea62c33}{\_body}}; \}}
+\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classHttp_1_1Message_a6399d1873434c29f9d0c44945211a21c}{getBody}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHttp_1_1Message_a1d40a1145a48d37d6b1a70db5931ac27}{\_body}}; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpMessage_a46d8a1d48317d727e04f7619dcced43b}{setHttpVersion}}(uint8\_t major, uint8\_t minor)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classHttp_1_1Message_ae60d01f46493bd2cb3302a26870c7cd4}{setHttpVersion}}(uint8\_t major, uint8\_t minor)\textcolor{keyword}{ override }\{}
 \DoxyCodeLine{        \_versionMajor = major;}
 \DoxyCodeLine{        \_versionMinor = minor;}
 \DoxyCodeLine{    \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    std::string \mbox{\hyperlink{classZiApi_1_1HttpMessage_ab390b27a677152727c88efab33a50060}{getHttpVersion}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{    std::string \mbox{\hyperlink{classHttp_1_1Message_aa0b031cb3fdab637c26a391efcb0f81e}{getHttpVersion}}()\textcolor{keyword}{ const override }\{}
 \DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{"HTTP/"} + std::to\_string(\_versionMajor) + \textcolor{stringliteral}{"."} + std::to\_string(\_versionMinor);}
 \DoxyCodeLine{    \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ae6bc0b8f15892b06a220977e3720ac78}{setUri}}(\textcolor{keyword}{const} std::string \&newUri)\textcolor{keyword}{ override }\{ \_uri = newUri; \}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classHttp_1_1Request_a45955974223ac5126b9ffb88617ec527}{setUri}}(\textcolor{keyword}{const} std::string \&newUri)\textcolor{keyword}{ override }\{ \_uri = newUri; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classZiApi_1_1HttpRequest_aec2e50e7ed6a71736a33980daaf7b3d0}{getUri}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpRequest_a30de96436841e7f49ce9d9f6a69f751e}{\_uri}}; \}}
+\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classHttp_1_1Request_a383bbdb1435da689b7e1c9bc8852f956}{getUri}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHttp_1_1Request_a3e62c38f894bb8e39ad03ac78531f556}{\_uri}}; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac406db366ea3b2b2e1042e957060779b}{setMethod}}(MethodType newMethod)\textcolor{keyword}{ override }\{ \_method = newMethod; \}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{classHttp_1_1Request_a370711bf60f8eb16be6daf565f4eb987}{setMethod}}(MethodType newMethod)\textcolor{keyword}{ override }\{ \_method = newMethod; \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    MethodType \mbox{\hyperlink{classZiApi_1_1HttpRequest_ac802257ee42161de40ab1bacc31d71aa}{getMethod}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classZiApi_1_1HttpRequest_ad4e4fe2662f4699ad6715fc11bf454df}{\_method}}; \}}
+\DoxyCodeLine{    MethodType \mbox{\hyperlink{classHttp_1_1Request_a865c48e3203e60efbb2c814df96a0fbc}{getMethod}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHttp_1_1Request_af625e2d310f771616d078a7f173097a5}{\_method}}; \}}
 \DoxyCodeLine{\};}
 \end{DoxyCodeInclude}
  My\+Field\+Value.\+hpp \+: 
@@ -113,7 +113,7 @@ My\+Http\+Request.\+hpp \+:
 \DoxyCodeLine{        \}}
 \DoxyCodeLine{    \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{    request.setMethod(\mbox{\hyperlink{classZiApi_1_1HttpRequest_a8592cff867cbbc5cc43bd3a4d6053a1ba7528035a93ee69cedb1dbddb2f0bfcc8}{ZiApi::HttpRequest::MethodType::GET}});                 \textcolor{comment}{//Sets the request's method}}
+\DoxyCodeLine{    request.setMethod(\mbox{\hyperlink{classHttp_1_1Request_acb00e56805e8f946c7240b898d823c4da7528035a93ee69cedb1dbddb2f0bfcc8}{Http::Request::MethodType::GET}});                      \textcolor{comment}{//Sets the request's method}}
 \DoxyCodeLine{    request.setUri(\textcolor{stringliteral}{"/home/index.html"});                                     \textcolor{comment}{//Sets the request's uri}}
 \DoxyCodeLine{    request.setHttpVersion(1, 1);                                           \textcolor{comment}{//Sets the request's versions}}
 \DoxyCodeLine{\}}

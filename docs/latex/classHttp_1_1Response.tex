@@ -1,0 +1,302 @@
+\hypertarget{classHttp_1_1Response}{}\section{Http\+::Response Class Reference}
+\label{classHttp_1_1Response}\index{Http::Response@{Http::Response}}
+
+
+Http response container.  
+
+
+
+
+{\ttfamily \#include $<$Response.\+hpp$>$}
+
+Inheritance diagram for Http\+::Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHttp_1_1Response}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}{Status\+Code}} \{ \newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3d97b1f575601de68b25d277c8901117}{Status\+Code\+::\+Undefined\+Status\+Code}} = 0, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa0bfb8e59e6c13fc8d990781f77694fe}{Status\+Code\+::\+Continue}} = 100, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda548c5a637eddf65132b21411aeafc6a1}{Status\+Code\+::\+Switching\+Protocols}} = 101, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae0aa021e21dddbd6d8cecec71e9cf564}{Status\+Code\+::\+OK}} = 200, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0eceeb45861f9585dd7a97a3e36f85c6}{Status\+Code\+::\+Created}} = 201, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda382ab522931673c11e398ead1b7b1678}{Status\+Code\+::\+Accepted}} = 202, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2d0ea43e788b779c0aec92366b711c2f}{Status\+Code\+::\+Non\+Authoritative\+Information}} = 203, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddacd447f1ec89f564ebac583d60087df12}{Status\+Code\+::\+No\+Content}} = 204, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4e9202c31896211f63be5b7345a897ed}{Status\+Code\+::\+Reset\+Content}} = 205, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda750de7eda10d780b3bbaefb57128c24b}{Status\+Code\+::\+Partial\+Content}} = 206, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa589749d075c3423333bdc93e3b4e774}{Status\+Code\+::\+Multiple\+Choices}} = 300, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda32638c25f4c913fce6214c2c4afff9dc}{Status\+Code\+::\+Moved\+Permanently}} = 301, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda5d695cc28c6a7ea955162fbdd0ae42b9}{Status\+Code\+::\+Found}} = 302, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7843649eb3841f496a79303fd815029e}{Status\+Code\+::\+See\+Other}} = 303, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddac169e6d9a1b9442001384de8dcf49ab9}{Status\+Code\+::\+Not\+Modified}} = 304, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0a272f25fd5e8a06065ef8ee41a88bea}{Status\+Code\+::\+Use\+Proxy}} = 305, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda92e592d90b9548016776a6fb68dccded}{Status\+Code\+::\+Unused}} = 306, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1b73a351faf2b550d06fae9cc6e0a894}{Status\+Code\+::\+Temporary\+Redirect}} = 307, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda9edf8fbf00a57d95a0af4923c9a1ec6f}{Status\+Code\+::\+Bad\+Request}} = 400, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae06d1ba70f1331e9f9a113cc2f887d3f}{Status\+Code\+::\+Unauthorized}} = 401, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4c99006c75b53fe48865cdfa0ac065ba}{Status\+Code\+::\+Payment\+Required}} = 402, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda722969577a96ca3953e84e3d949dee81}{Status\+Code\+::\+Forbidden}} = 403, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda38c300f4fc9ce8a77aad4a30de05cad8}{Status\+Code\+::\+Not\+Found}} = 404, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8ba68fee5542f5fd071aed140c39bd8e}{Status\+Code\+::\+Method\+Not\+Allowed}} = 405, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf83a928e6a3f3b502ffadd2a414ce48c}{Status\+Code\+::\+Not\+Acceptable}} = 406, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda59a2898a8bf9da75a5855e76110f06f2}{Status\+Code\+::\+Proxy\+Authentication\+Required}} = 407, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf9098a9c319f11b44af3e260892063a6}{Status\+Code\+::\+Request\+Time\+Out}} = 408, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf1d4ac54357cc0932f385d56814ba7e4}{Status\+Code\+::\+Conflict}} = 409, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0b497b33b1a05057bc1634e607170bf6}{Status\+Code\+::\+Gone}} = 410, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8282fb93cb1cf45b135ea191668ca583}{Status\+Code\+::\+Length\+Required}} = 411, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3542a02d18f11f46d53990d91752a6d4}{Status\+Code\+::\+Precondition\+Failed}} = 412, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1d2dd18ee1a925e5887cbc2f9202e779}{Status\+Code\+::\+Request\+Entity\+Too\+Large}} = 413, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4896a92527b74e68134933dcb77a7017}{Status\+Code\+::\+Request\+U\+R\+I\+Too\+Large}} = 414, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa3219a6843adbb23de79b4df9c307f5d}{Status\+Code\+::\+Unsupported\+Media\+Type}} = 415, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7779e53fc887ac0429f4ebde5fc0b59f}{Status\+Code\+::\+Requested\+Range\+Not\+Satisfiable}} = 416, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda6af78095a2be4a230ba87f03dd131830}{Status\+Code\+::\+Expectation\+Failed}} = 417, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaecbf01325f1c744e9d7bb586ac2eb5ed}{Status\+Code\+::\+Internal\+Server\+Error}} = 500, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda997ca4ce119685f40f03a9a8a6c5346e}{Status\+Code\+::\+Not\+Implemented}} = 501, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0e7c9ad08be0653518bf456c9994ace5}{Status\+Code\+::\+Bad\+Gateway}} = 502, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2a4581043d849bcb0e4747970ef1489b}{Status\+Code\+::\+Service\+Unavailable}} = 503, 
+\newline
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda259322bcdf0d2e4f5c3fe2a736e6184c}{Status\+Code\+::\+Gateway\+Time\+Out}} = 504, 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda036c4283fc4ecb1686f44462f75208e5}{Status\+Code\+::\+H\+T\+T\+P\+Version\+Not\+Supported}} = 505
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHttp_1_1Response_aba798a6f5de153ef50e2c5a37acbcf4d}\label{classHttp_1_1Response_aba798a6f5de153ef50e2c5a37acbcf4d}} 
+virtual void \mbox{\hyperlink{classHttp_1_1Response_aba798a6f5de153ef50e2c5a37acbcf4d}{set\+Status\+Code}} (\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}{Status\+Code}} new\+Code)=0
+\begin{DoxyCompactList}\small\item\em Sets the response\textquotesingle{}s status code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Response_a9c3512fc031378def0e650d65d01647a}\label{classHttp_1_1Response_a9c3512fc031378def0e650d65d01647a}} 
+virtual \mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}{Status\+Code}} \mbox{\hyperlink{classHttp_1_1Response_a9c3512fc031378def0e650d65d01647a}{get\+Status\+Code}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the response\textquotesingle{}s status code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Response_aaf01903975e69c8835f828046a579bd1}\label{classHttp_1_1Response_aaf01903975e69c8835f828046a579bd1}} 
+virtual void \mbox{\hyperlink{classHttp_1_1Response_aaf01903975e69c8835f828046a579bd1}{set\+Status\+Message}} (const std\+::string \&new\+Message)=0
+\begin{DoxyCompactList}\small\item\em Sets the response\textquotesingle{}s status message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Response_a368c38ce5ca6a4799c04fb735c629b1f}\label{classHttp_1_1Response_a368c38ce5ca6a4799c04fb735c629b1f}} 
+virtual const std\+::string \& \mbox{\hyperlink{classHttp_1_1Response_a368c38ce5ca6a4799c04fb735c629b1f}{get\+Status\+Message}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the response\textquotesingle{}s status message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHttp_1_1Response_ad928afe87b6e75096ad340280c0dcf98}\label{classHttp_1_1Response_ad928afe87b6e75096ad340280c0dcf98}} 
+\mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}{Status\+Code}} \mbox{\hyperlink{classHttp_1_1Response_ad928afe87b6e75096ad340280c0dcf98}{\+\_\+status\+Code}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Response}{Response}}\textquotesingle{}s status-\/code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Response_a242dd229765ff7bb27ffd2a92e056c1d}\label{classHttp_1_1Response_a242dd229765ff7bb27ffd2a92e056c1d}} 
+std\+::string \mbox{\hyperlink{classHttp_1_1Response_a242dd229765ff7bb27ffd2a92e056c1d}{\+\_\+status\+Message}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Response}{Response}}\textquotesingle{}s status-\/message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Http response container. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classHttp_1_1Message}{Message}}, \mbox{\hyperlink{classHttp_1_1Request}{Request}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}} 
+\index{Http::Response@{Http::Response}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!Http::Response@{Http::Response}}
+\subsubsection{\texorpdfstring{StatusCode}{StatusCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dd}{Http\+::\+Response\+::\+Status\+Code}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Status list \begin{DoxyNote}{Note}
+{\bfseries{1xx}} Informational \+: It means the request has been received and the process is continuing 
+
+{\bfseries{2xx}} Success \+: It means the action was successfully received, understood, and accepted 
+
+{\bfseries{3xx}} Redirection \+: It means further action must be taken in order to complete the request 
+
+{\bfseries{4xx}} Client Error \+: It means the request contains incorrect syntax or cannot be fulfilled 
+
+{\bfseries{5xx}} Server Error \+: It means the server failed to fulfill an apparently valid request 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UndefinedStatusCode@{UndefinedStatusCode}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!UndefinedStatusCode@{UndefinedStatusCode}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3d97b1f575601de68b25d277c8901117}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3d97b1f575601de68b25d277c8901117}} 
+Undefined\+Status\+Code&{\bfseries{0}} May throw if it used \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Continue@{Continue}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Continue@{Continue}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa0bfb8e59e6c13fc8d990781f77694fe}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa0bfb8e59e6c13fc8d990781f77694fe}} 
+Continue&{\bfseries{100}} Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchingProtocols@{SwitchingProtocols}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!SwitchingProtocols@{SwitchingProtocols}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda548c5a637eddf65132b21411aeafc6a1}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda548c5a637eddf65132b21411aeafc6a1}} 
+Switching\+Protocols&{\bfseries{101}} The server switches protocol \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!OK@{OK}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae0aa021e21dddbd6d8cecec71e9cf564}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae0aa021e21dddbd6d8cecec71e9cf564}} 
+OK&{\bfseries{200}} The request is OK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Created@{Created}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Created@{Created}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0eceeb45861f9585dd7a97a3e36f85c6}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0eceeb45861f9585dd7a97a3e36f85c6}} 
+Created&{\bfseries{201}} The request is complete, and a new resource is created \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Accepted@{Accepted}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Accepted@{Accepted}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda382ab522931673c11e398ead1b7b1678}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda382ab522931673c11e398ead1b7b1678}} 
+Accepted&{\bfseries{202}} The request is accepted for processing, but the processing is not complete \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NonAuthoritativeInformation@{NonAuthoritativeInformation}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NonAuthoritativeInformation@{NonAuthoritativeInformation}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2d0ea43e788b779c0aec92366b711c2f}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2d0ea43e788b779c0aec92366b711c2f}} 
+Non\+Authoritative\+Information&{\bfseries{203}} The information in the entity header is from a local or third-\/party copy, not from the original server \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoContent@{NoContent}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NoContent@{NoContent}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddacd447f1ec89f564ebac583d60087df12}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddacd447f1ec89f564ebac583d60087df12}} 
+No\+Content&{\bfseries{204}} A status code and a header are given in the response, but there is no entity-\/body in the reply \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ResetContent@{ResetContent}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!ResetContent@{ResetContent}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4e9202c31896211f63be5b7345a897ed}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4e9202c31896211f63be5b7345a897ed}} 
+Reset\+Content&{\bfseries{205}} The browser should clear the form used for this transaction for additional input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PartialContent@{PartialContent}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!PartialContent@{PartialContent}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda750de7eda10d780b3bbaefb57128c24b}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda750de7eda10d780b3bbaefb57128c24b}} 
+Partial\+Content&{\bfseries{206}} The server is returning partial data of the size requested. Used in response to a request specifying a Range header. The server must specify the range included in the response with the Content-\/\+Range header \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultipleChoices@{MultipleChoices}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!MultipleChoices@{MultipleChoices}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa589749d075c3423333bdc93e3b4e774}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa589749d075c3423333bdc93e3b4e774}} 
+Multiple\+Choices&{\bfseries{300}} A link list. The user can select a link and go to that location. Maximum five addresses \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MovedPermanently@{MovedPermanently}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!MovedPermanently@{MovedPermanently}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda32638c25f4c913fce6214c2c4afff9dc}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda32638c25f4c913fce6214c2c4afff9dc}} 
+Moved\+Permanently&{\bfseries{301}} The requested page has moved to a new url \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Found@{Found}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Found@{Found}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda5d695cc28c6a7ea955162fbdd0ae42b9}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda5d695cc28c6a7ea955162fbdd0ae42b9}} 
+Found&{\bfseries{302}} The requested page has moved temporarily to a new url \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SeeOther@{SeeOther}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!SeeOther@{SeeOther}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7843649eb3841f496a79303fd815029e}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7843649eb3841f496a79303fd815029e}} 
+See\+Other&{\bfseries{303}} The requested page can be found under a different url \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotModified@{NotModified}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NotModified@{NotModified}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddac169e6d9a1b9442001384de8dcf49ab9}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddac169e6d9a1b9442001384de8dcf49ab9}} 
+Not\+Modified&{\bfseries{304}} This is the response code to an If-\/\+Modified-\/\+Since or If-\/\+None-\/\+Match header, where the U\+RL has not been modified since the specified date \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UseProxy@{UseProxy}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!UseProxy@{UseProxy}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0a272f25fd5e8a06065ef8ee41a88bea}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0a272f25fd5e8a06065ef8ee41a88bea}} 
+Use\+Proxy&{\bfseries{305}} The requested U\+RL must be accessed through the proxy mentioned in the Location header \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unused@{Unused}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Unused@{Unused}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda92e592d90b9548016776a6fb68dccded}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda92e592d90b9548016776a6fb68dccded}} 
+Unused&{\bfseries{306}} This code was used in a previous version. It is no longer used, but the code is reserved \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TemporaryRedirect@{TemporaryRedirect}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!TemporaryRedirect@{TemporaryRedirect}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1b73a351faf2b550d06fae9cc6e0a894}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1b73a351faf2b550d06fae9cc6e0a894}} 
+Temporary\+Redirect&{\bfseries{307}} The requested page has moved temporarily to a new url \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BadRequest@{BadRequest}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!BadRequest@{BadRequest}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda9edf8fbf00a57d95a0af4923c9a1ec6f}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda9edf8fbf00a57d95a0af4923c9a1ec6f}} 
+Bad\+Request&{\bfseries{400}} The server did not understand the request \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unauthorized@{Unauthorized}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Unauthorized@{Unauthorized}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae06d1ba70f1331e9f9a113cc2f887d3f}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddae06d1ba70f1331e9f9a113cc2f887d3f}} 
+Unauthorized&{\bfseries{401}} The requested page needs a username and a password \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PaymentRequired@{PaymentRequired}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!PaymentRequired@{PaymentRequired}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4c99006c75b53fe48865cdfa0ac065ba}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4c99006c75b53fe48865cdfa0ac065ba}} 
+Payment\+Required&{\bfseries{402}} You can not use this code yet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Forbidden@{Forbidden}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Forbidden@{Forbidden}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda722969577a96ca3953e84e3d949dee81}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda722969577a96ca3953e84e3d949dee81}} 
+Forbidden&{\bfseries{403}} Access is forbidden to the requested page \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotFound@{NotFound}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NotFound@{NotFound}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda38c300f4fc9ce8a77aad4a30de05cad8}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda38c300f4fc9ce8a77aad4a30de05cad8}} 
+Not\+Found&{\bfseries{404}} The server can not find the requested page \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MethodNotAllowed@{MethodNotAllowed}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!MethodNotAllowed@{MethodNotAllowed}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8ba68fee5542f5fd071aed140c39bd8e}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8ba68fee5542f5fd071aed140c39bd8e}} 
+Method\+Not\+Allowed&{\bfseries{405}} The method specified in the request is not allowed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotAcceptable@{NotAcceptable}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NotAcceptable@{NotAcceptable}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf83a928e6a3f3b502ffadd2a414ce48c}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf83a928e6a3f3b502ffadd2a414ce48c}} 
+Not\+Acceptable&{\bfseries{406}} The server can only generate a response that is not accepted by the client \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProxyAuthenticationRequired@{ProxyAuthenticationRequired}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!ProxyAuthenticationRequired@{ProxyAuthenticationRequired}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda59a2898a8bf9da75a5855e76110f06f2}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda59a2898a8bf9da75a5855e76110f06f2}} 
+Proxy\+Authentication\+Required&{\bfseries{407}} You must authenticate with a proxy server before this request can be served \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestTimeOut@{RequestTimeOut}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!RequestTimeOut@{RequestTimeOut}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf9098a9c319f11b44af3e260892063a6}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf9098a9c319f11b44af3e260892063a6}} 
+Request\+Time\+Out&{\bfseries{408}} The request took longer than the server was prepared to wait \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Conflict@{Conflict}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Conflict@{Conflict}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf1d4ac54357cc0932f385d56814ba7e4}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaf1d4ac54357cc0932f385d56814ba7e4}} 
+Conflict&{\bfseries{409}} The request could not be completed because of a conflict \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gone@{Gone}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!Gone@{Gone}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0b497b33b1a05057bc1634e607170bf6}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0b497b33b1a05057bc1634e607170bf6}} 
+Gone&{\bfseries{410}} The requested page is no longer available \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LengthRequired@{LengthRequired}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!LengthRequired@{LengthRequired}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8282fb93cb1cf45b135ea191668ca583}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda8282fb93cb1cf45b135ea191668ca583}} 
+Length\+Required&{\bfseries{411}} The \char`\"{}\+Content-\/\+Length\char`\"{} is not defined. The server will not accept the request without it \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreconditionFailed@{PreconditionFailed}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!PreconditionFailed@{PreconditionFailed}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3542a02d18f11f46d53990d91752a6d4}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda3542a02d18f11f46d53990d91752a6d4}} 
+Precondition\+Failed&{\bfseries{412}} The pre condition given in the request evaluated to false by the server \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestEntityTooLarge@{RequestEntityTooLarge}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!RequestEntityTooLarge@{RequestEntityTooLarge}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1d2dd18ee1a925e5887cbc2f9202e779}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda1d2dd18ee1a925e5887cbc2f9202e779}} 
+Request\+Entity\+Too\+Large&{\bfseries{413}} The server will not accept the request, because the request entity is too large \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestURITooLarge@{RequestURITooLarge}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!RequestURITooLarge@{RequestURITooLarge}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4896a92527b74e68134933dcb77a7017}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda4896a92527b74e68134933dcb77a7017}} 
+Request\+U\+R\+I\+Too\+Large&{\bfseries{414}} The server will not accept the request, because the url is too long. Occurs when you convert a \char`\"{}post\char`\"{} request to a \char`\"{}get\char`\"{} request with a long query information \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnsupportedMediaType@{UnsupportedMediaType}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!UnsupportedMediaType@{UnsupportedMediaType}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa3219a6843adbb23de79b4df9c307f5d}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaa3219a6843adbb23de79b4df9c307f5d}} 
+Unsupported\+Media\+Type&{\bfseries{415}} The server will not accept the request, because the mediatype is not supported \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestedRangeNotSatisfiable@{RequestedRangeNotSatisfiable}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!RequestedRangeNotSatisfiable@{RequestedRangeNotSatisfiable}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7779e53fc887ac0429f4ebde5fc0b59f}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda7779e53fc887ac0429f4ebde5fc0b59f}} 
+Requested\+Range\+Not\+Satisfiable&{\bfseries{416}} The requested byte range is not available and is out of bounds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExpectationFailed@{ExpectationFailed}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!ExpectationFailed@{ExpectationFailed}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda6af78095a2be4a230ba87f03dd131830}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda6af78095a2be4a230ba87f03dd131830}} 
+Expectation\+Failed&{\bfseries{417}} The expectation given in an Expect request-\/header field could not be met by this server \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InternalServerError@{InternalServerError}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!InternalServerError@{InternalServerError}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaecbf01325f1c744e9d7bb586ac2eb5ed}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6ddaecbf01325f1c744e9d7bb586ac2eb5ed}} 
+Internal\+Server\+Error&{\bfseries{500}} The request was not completed. The server met an unexpected condition \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotImplemented@{NotImplemented}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!NotImplemented@{NotImplemented}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda997ca4ce119685f40f03a9a8a6c5346e}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda997ca4ce119685f40f03a9a8a6c5346e}} 
+Not\+Implemented&{\bfseries{501}} The request was not completed. The server did not support the functionality required \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BadGateway@{BadGateway}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!BadGateway@{BadGateway}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0e7c9ad08be0653518bf456c9994ace5}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda0e7c9ad08be0653518bf456c9994ace5}} 
+Bad\+Gateway&{\bfseries{502}} The request was not completed. The server received an invalid response from the upstream server \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ServiceUnavailable@{ServiceUnavailable}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!ServiceUnavailable@{ServiceUnavailable}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2a4581043d849bcb0e4747970ef1489b}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda2a4581043d849bcb0e4747970ef1489b}} 
+Service\+Unavailable&{\bfseries{503}} The request was not completed. The server is temporarily overloading or down \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GatewayTimeOut@{GatewayTimeOut}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!GatewayTimeOut@{GatewayTimeOut}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda259322bcdf0d2e4f5c3fe2a736e6184c}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda259322bcdf0d2e4f5c3fe2a736e6184c}} 
+Gateway\+Time\+Out&{\bfseries{504}} The gateway has timed out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HTTPVersionNotSupported@{HTTPVersionNotSupported}!Http::Response@{Http::Response}}\index{Http::Response@{Http::Response}!HTTPVersionNotSupported@{HTTPVersionNotSupported}}}\mbox{\Hypertarget{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda036c4283fc4ecb1686f44462f75208e5}\label{classHttp_1_1Response_a5761160e095c8bbecf2ed847efa1f6dda036c4283fc4ecb1686f44462f75208e5}} 
+H\+T\+T\+P\+Version\+Not\+Supported&{\bfseries{505}} The server does not support the \char`\"{}http protocol\char`\"{} version \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Response.\+hpp\end{DoxyCompactItemize}

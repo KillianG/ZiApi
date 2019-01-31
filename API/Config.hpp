@@ -28,8 +28,8 @@ namespace ZiApi {
     protected:
         /**
          * @brief The Configuration's file data
-         * @sa FieldValue
+         * @sa FieldValue::ValueMap
          */
-        std::unordered_map<std::string, std::shared_ptr<FieldValue>> _configData;
+        FieldValue::ValueMap _configData;
     };
 }

@@ -7,15 +7,15 @@
 #pragma once
 
 #include <string>
-#include "HttpMessage.hpp"
+#include "Message.hpp"
 
-namespace ZiApi {
+namespace Http {
     /**
      * @brief Http response container
      *
-     * @sa HttpMessage, HttpRequest
+     * @sa Message, Request
      */
-    class HttpResponse : public HttpMessage {
+    class Response : public Message {
     public:
         /**
          * Status list

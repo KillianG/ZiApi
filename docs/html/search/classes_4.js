@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['network',['Network',['../classZiApi_1_1Network.html',1,'ZiApi']]]
+  ['request',['Request',['../classHttp_1_1Request.html',1,'Http']]],
+  ['response',['Response',['../classHttp_1_1Response.html',1,'Http']]]
 ];

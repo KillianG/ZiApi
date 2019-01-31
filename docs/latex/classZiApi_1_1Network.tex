@@ -1,50 +1,70 @@
 \hypertarget{classZiApi_1_1Network}{}\section{Zi\+Api\+::Network Class Reference}
 \label{classZiApi_1_1Network}\index{ZiApi::Network@{ZiApi::Network}}
+
+
+Server\textquotesingle{}s sockets handler.  
+
+
+
+
+{\ttfamily \#include $<$Network.\+hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classZiApi_1_1Network_a0556864740b66ea8085ab8a03a260267}\label{classZiApi_1_1Network_a0556864740b66ea8085ab8a03a260267}} 
-virtual void {\bfseries run} ()=0
-\item 
-virtual void \mbox{\hyperlink{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}{set\+Handler}} (std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} $>$)$>$ \&\&callback)=0
-\end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}\label{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}} 
-virtual void {\bfseries poll\+Request} ()=0
-\item 
-\mbox{\Hypertarget{classZiApi_1_1Network_ad247b4d8a4c1f6a051f110a23fe334b1}\label{classZiApi_1_1Network_ad247b4d8a4c1f6a051f110a23fe334b1}} 
-virtual bool {\bfseries send} (\mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} \&request, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} \&response)=0
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classZiApi_1_1Network_a0556864740b66ea8085ab8a03a260267}{run}} ()=0
+\begin{DoxyCompactList}\small\item\em Launchs the server\textquotesingle{}s sockets. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}{poll\+Request}} ()=0
+\begin{DoxyCompactList}\small\item\em Called when a request is received. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZiApi_1_1Network_a781d6d87558f714e93d89e098039ee27}{set\+Pipeline\+Handler}} (std\+::function$<$ void(\mbox{\hyperlink{classHttp_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classHttp_1_1Response}{Http\+::\+Response}} \&response)$>$ \&\&callback)
+\begin{DoxyCompactList}\small\item\em Sets Module\+Manager\+::run\+Pipeline(...) as callback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1Network_a5e14335fe363a06db7af63ad9cee63a7}\label{classZiApi_1_1Network_a5e14335fe363a06db7af63ad9cee63a7}} 
-std\+::function$<$ void(\mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} \&request, \mbox{\hyperlink{classZiApi_1_1HttpResponse}{Http\+Response}} \&response)$>$ {\bfseries \+\_\+pipeline\+Callback}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classZiApi_1_1Network_a9849d858fc05af620e717f643f4071f6}\label{classZiApi_1_1Network_a9849d858fc05af620e717f643f4071f6}} 
+std\+::function$<$ void(\mbox{\hyperlink{classHttp_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classHttp_1_1Response}{Http\+::\+Response}} \&response)$>$ \mbox{\hyperlink{classZiApi_1_1Network_a9849d858fc05af620e717f643f4071f6}{\+\_\+pipeline\+Run\+Call\+Back}}
+\begin{DoxyCompactList}\small\item\em Callback on the module\textquotesingle{}s processing list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Server\textquotesingle{}s sockets handler. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}\label{classZiApi_1_1Network_ab7ff3c88d60b8c7665a30886fd4cf473}} 
-\index{ZiApi::Network@{ZiApi::Network}!setHandler@{setHandler}}
-\index{setHandler@{setHandler}!ZiApi::Network@{ZiApi::Network}}
-\subsubsection{\texorpdfstring{setHandler()}{setHandler()}}
-{\footnotesize\ttfamily virtual void Zi\+Api\+::\+Network\+::set\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1HttpRequest}{Http\+Request}} $>$)$>$ \&\&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\mbox{\Hypertarget{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}\label{classZiApi_1_1Network_a965edba3c55b9c268af44af7f204be66}} 
+\index{ZiApi::Network@{ZiApi::Network}!pollRequest@{pollRequest}}
+\index{pollRequest@{pollRequest}!ZiApi::Network@{ZiApi::Network}}
+\subsubsection{\texorpdfstring{pollRequest()}{pollRequest()}}
+{\footnotesize\ttfamily virtual void Zi\+Api\+::\+Network\+::poll\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
-\begin{DoxyParams}{Parameters}
-{\em callback} & 
-\begin{DoxyCode}{1}
-\DoxyCodeLine{network.setHandler([\&moduleMgr] (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&request) \{}
-\DoxyCodeLine{     moduleMgr.runPipeline(request);}
-\DoxyCodeLine{\}}
+
+Called when a request is received. 
+
+Runs the \+\_\+pipeline\+Run\+Call\+Back to execute the module\textquotesingle{}s processing list 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classHttp_1_1Request}{Http::Request}} request;}
+\DoxyCodeLine{\mbox{\hyperlink{classHttp_1_1Response}{Http::Response}} response;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classZiApi_1_1Network_a9849d858fc05af620e717f643f4071f6}{\_pipelineRunCallBack}}(request, response); \textcolor{comment}{//The request and response will be set by the modules}}
+\DoxyCodeLine{}
+\DoxyCodeLine{send(response, ...);                     \textcolor{comment}{//Send the response to the client (it is up to you)}}
 \end{DoxyCode}
- \\
-\hline
-\end{DoxyParams}
+ \mbox{\Hypertarget{classZiApi_1_1Network_a781d6d87558f714e93d89e098039ee27}\label{classZiApi_1_1Network_a781d6d87558f714e93d89e098039ee27}} 
+\index{ZiApi::Network@{ZiApi::Network}!setPipelineHandler@{setPipelineHandler}}
+\index{setPipelineHandler@{setPipelineHandler}!ZiApi::Network@{ZiApi::Network}}
+\subsubsection{\texorpdfstring{setPipelineHandler()}{setPipelineHandler()}}
+{\footnotesize\ttfamily void Zi\+Api\+::\+Network\+::set\+Pipeline\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classHttp_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classHttp_1_1Response}{Http\+::\+Response}} \&response)$>$ \&\&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets Module\+Manager\+::run\+Pipeline(...) as callback function. 
+
+\begin{DoxyWarning}{Warning}
+It is already set by the \mbox{\hyperlink{classZiApi_1_1Core}{Core}} on construction 
+\end{DoxyWarning}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Core.\+hpp\end{DoxyCompactItemize}
+Network.\+hpp\end{DoxyCompactItemize}

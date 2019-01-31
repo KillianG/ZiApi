@@ -3,17 +3,29 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classZiApi_1_1Core_af3cd8eba1b1d05633383da50539564ba}\label{classZiApi_1_1Core_af3cd8eba1b1d05633383da50539564ba}} 
+{\bfseries Core} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Config}{Config}} $>$ \&\&config, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Network}{Network}} $>$ \&\&network, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1ModuleManager}{Module\+Manager}} $>$ \&\&module\+Mgr)
+\item 
 \mbox{\Hypertarget{classZiApi_1_1Core_afa47f4a4077e0669330daf82538b2240}\label{classZiApi_1_1Core_afa47f4a4077e0669330daf82538b2240}} 
 virtual void {\bfseries run} (int ac, char $\ast$$\ast$av)=0
 \item 
-\mbox{\Hypertarget{classZiApi_1_1Core_a413a22c6b6db34ae2d92bf780578938c}\label{classZiApi_1_1Core_a413a22c6b6db34ae2d92bf780578938c}} 
-virtual const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Config}{Config}} $>$ \& {\bfseries get\+Config} () const =0
+\mbox{\Hypertarget{classZiApi_1_1Core_a294afe7eef866644bb80c933a9521cb2}\label{classZiApi_1_1Core_a294afe7eef866644bb80c933a9521cb2}} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Config}{Config}} $>$ \& {\bfseries get\+Config} () const =0
 \item 
-\mbox{\Hypertarget{classZiApi_1_1Core_aa5c7afdd2b54e12df4d4394dcd26a1e8}\label{classZiApi_1_1Core_aa5c7afdd2b54e12df4d4394dcd26a1e8}} 
-virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Network}{Network}} $>$ \& {\bfseries get\+Network} ()=0
+\mbox{\Hypertarget{classZiApi_1_1Core_ac31eb1b93966ccc7f0261f493e2b111f}\label{classZiApi_1_1Core_ac31eb1b93966ccc7f0261f493e2b111f}} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1ModuleManager}{Module\+Manager}} $>$ \& {\bfseries get\+Module\+Mgr} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classZiApi_1_1Core_a902b29075c127a656d27505ff9c58cb6}\label{classZiApi_1_1Core_a902b29075c127a656d27505ff9c58cb6}} 
-virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1ModuleManager}{Module\+Manager}} $>$ \& {\bfseries get\+Module\+Mgr} ()=0
+\mbox{\Hypertarget{classZiApi_1_1Core_a70b3267e291d675435d3f8ef1fcb5785}\label{classZiApi_1_1Core_a70b3267e291d675435d3f8ef1fcb5785}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Config}{Zi\+Api\+::\+Config}} $>$ {\bfseries \+\_\+config}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Core_aebe00cf2e04b04297540d4ec643c9c5b}\label{classZiApi_1_1Core_aebe00cf2e04b04297540d4ec643c9c5b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1Network}{Zi\+Api\+::\+Network}} $>$ {\bfseries \+\_\+network\+Mgr}
+\item 
+\mbox{\Hypertarget{classZiApi_1_1Core_afc36290d5a37be55fc1334d052d66e57}\label{classZiApi_1_1Core_afc36290d5a37be55fc1334d052d66e57}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1ModuleManager}{Zi\+Api\+::\+Module\+Manager}} $>$ {\bfseries \+\_\+module\+Mgr}
 \end{DoxyCompactItemize}
 
 

@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classZiApi_1_1Core-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZiApi::Core Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -76,18 +77,30 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af3cd8eba1b1d05633383da50539564ba"><td class="memItemLeft" align="right" valign="top"><a id="af3cd8eba1b1d05633383da50539564ba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Core</b> (std::shared_ptr&lt; <a class="el" href="classZiApi_1_1Config.html">Config</a> &gt; &amp;&amp;config, std::shared_ptr&lt; <a class="el" href="classZiApi_1_1Network.html">Network</a> &gt; &amp;&amp;network, std::shared_ptr&lt; <a class="el" href="classZiApi_1_1ModuleManager.html">ModuleManager</a> &gt; &amp;&amp;moduleMgr)</td></tr>
+<tr class="separator:af3cd8eba1b1d05633383da50539564ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa47f4a4077e0669330daf82538b2240"><td class="memItemLeft" align="right" valign="top"><a id="afa47f4a4077e0669330daf82538b2240"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (int ac, char **av)=0</td></tr>
 <tr class="separator:afa47f4a4077e0669330daf82538b2240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a413a22c6b6db34ae2d92bf780578938c"><td class="memItemLeft" align="right" valign="top"><a id="a413a22c6b6db34ae2d92bf780578938c"></a>
-virtual const std::unique_ptr&lt; <a class="el" href="classZiApi_1_1Config.html">Config</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getConfig</b> () const =0</td></tr>
-<tr class="separator:a413a22c6b6db34ae2d92bf780578938c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c7afdd2b54e12df4d4394dcd26a1e8"><td class="memItemLeft" align="right" valign="top"><a id="aa5c7afdd2b54e12df4d4394dcd26a1e8"></a>
-virtual std::unique_ptr&lt; <a class="el" href="classZiApi_1_1Network.html">Network</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getNetwork</b> ()=0</td></tr>
-<tr class="separator:aa5c7afdd2b54e12df4d4394dcd26a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902b29075c127a656d27505ff9c58cb6"><td class="memItemLeft" align="right" valign="top"><a id="a902b29075c127a656d27505ff9c58cb6"></a>
-virtual std::unique_ptr&lt; <a class="el" href="classZiApi_1_1ModuleManager.html">ModuleManager</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getModuleMgr</b> ()=0</td></tr>
-<tr class="separator:a902b29075c127a656d27505ff9c58cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294afe7eef866644bb80c933a9521cb2"><td class="memItemLeft" align="right" valign="top"><a id="a294afe7eef866644bb80c933a9521cb2"></a>
+virtual const std::shared_ptr&lt; <a class="el" href="classZiApi_1_1Config.html">Config</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getConfig</b> () const =0</td></tr>
+<tr class="separator:a294afe7eef866644bb80c933a9521cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31eb1b93966ccc7f0261f493e2b111f"><td class="memItemLeft" align="right" valign="top"><a id="ac31eb1b93966ccc7f0261f493e2b111f"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classZiApi_1_1ModuleManager.html">ModuleManager</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getModuleMgr</b> ()=0</td></tr>
+<tr class="separator:ac31eb1b93966ccc7f0261f493e2b111f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a70b3267e291d675435d3f8ef1fcb5785"><td class="memItemLeft" align="right" valign="top"><a id="a70b3267e291d675435d3f8ef1fcb5785"></a>
+std::shared_ptr&lt; <a class="el" href="classZiApi_1_1Config.html">ZiApi::Config</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_config</b></td></tr>
+<tr class="separator:a70b3267e291d675435d3f8ef1fcb5785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe00cf2e04b04297540d4ec643c9c5b"><td class="memItemLeft" align="right" valign="top"><a id="aebe00cf2e04b04297540d4ec643c9c5b"></a>
+std::shared_ptr&lt; <a class="el" href="classZiApi_1_1Network.html">ZiApi::Network</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_networkMgr</b></td></tr>
+<tr class="separator:aebe00cf2e04b04297540d4ec643c9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc36290d5a37be55fc1334d052d66e57"><td class="memItemLeft" align="right" valign="top"><a id="afc36290d5a37be55fc1334d052d66e57"></a>
+std::shared_ptr&lt; <a class="el" href="classZiApi_1_1ModuleManager.html">ZiApi::ModuleManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_moduleMgr</b></td></tr>
+<tr class="separator:afc36290d5a37be55fc1334d052d66e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Core_8hpp_source.html">Core.hpp</a></li>

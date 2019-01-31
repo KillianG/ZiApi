@@ -1,0 +1,94 @@
+\hypertarget{classHttp_1_1Message}{}\section{Http\+::Message Class Reference}
+\label{classHttp_1_1Message}\index{Http::Message@{Http::Message}}
+Inheritance diagram for Http\+::Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHttp_1_1Message}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}{Http\+Header}} = std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classZiApi_1_1FieldValue}{Zi\+Api\+::\+Field\+Value}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Defines an Http header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a48162fd73c27101d23db203f5d6cac42}\label{classHttp_1_1Message_a48162fd73c27101d23db203f5d6cac42}} 
+virtual \mbox{\hyperlink{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}{Http\+Header}} \& \mbox{\hyperlink{classHttp_1_1Message_a48162fd73c27101d23db203f5d6cac42}{get\+Header}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a1bd3ac73847b9ac567271acebe9372b7}\label{classHttp_1_1Message_a1bd3ac73847b9ac567271acebe9372b7}} 
+virtual void \mbox{\hyperlink{classHttp_1_1Message_a1bd3ac73847b9ac567271acebe9372b7}{set\+Body}} (const std\+::string \&new\+Body)=0
+\begin{DoxyCompactList}\small\item\em Sets the message\textquotesingle{}s body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a6399d1873434c29f9d0c44945211a21c}\label{classHttp_1_1Message_a6399d1873434c29f9d0c44945211a21c}} 
+virtual const std\+::string \& \mbox{\hyperlink{classHttp_1_1Message_a6399d1873434c29f9d0c44945211a21c}{get\+Body}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_ae60d01f46493bd2cb3302a26870c7cd4}\label{classHttp_1_1Message_ae60d01f46493bd2cb3302a26870c7cd4}} 
+virtual void \mbox{\hyperlink{classHttp_1_1Message_ae60d01f46493bd2cb3302a26870c7cd4}{set\+Http\+Version}} (uint8\+\_\+t major, uint8\+\_\+t minor)=0
+\begin{DoxyCompactList}\small\item\em Sets the message\textquotesingle{}s Http version. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classHttp_1_1Message_aa0b031cb3fdab637c26a391efcb0f81e}{get\+Http\+Version}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the message\textquotesingle{}s Http version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a47d4a63c2b1a236e29d11642ba2b80d3}\label{classHttp_1_1Message_a47d4a63c2b1a236e29d11642ba2b80d3}} 
+uint8\+\_\+t \mbox{\hyperlink{classHttp_1_1Message_a47d4a63c2b1a236e29d11642ba2b80d3}{\+\_\+version\+Major}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Message}{Message}}\textquotesingle{}s major version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a1375154fe596793af8c20720f7b13b06}\label{classHttp_1_1Message_a1375154fe596793af8c20720f7b13b06}} 
+uint8\+\_\+t \mbox{\hyperlink{classHttp_1_1Message_a1375154fe596793af8c20720f7b13b06}{\+\_\+version\+Minor}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Message}{Message}}\textquotesingle{}s minor version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_aac494cd412c7f7a862bf77b34910249f}\label{classHttp_1_1Message_aac494cd412c7f7a862bf77b34910249f}} 
+\mbox{\hyperlink{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}{Http\+Header}} \mbox{\hyperlink{classHttp_1_1Message_aac494cd412c7f7a862bf77b34910249f}{\+\_\+header}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Message}{Message}}\textquotesingle{}s header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHttp_1_1Message_a1d40a1145a48d37d6b1a70db5931ac27}\label{classHttp_1_1Message_a1d40a1145a48d37d6b1a70db5931ac27}} 
+std\+::string \mbox{\hyperlink{classHttp_1_1Message_a1d40a1145a48d37d6b1a70db5931ac27}{\+\_\+body}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHttp_1_1Message}{Message}}\textquotesingle{}s content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}\label{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}} 
+\index{Http::Message@{Http::Message}!HttpHeader@{HttpHeader}}
+\index{HttpHeader@{HttpHeader}!Http::Message@{Http::Message}}
+\subsubsection{\texorpdfstring{HttpHeader}{HttpHeader}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classHttp_1_1Message_ae02720de7f072d0607fd217af6250989}{Http\+::\+Message\+::\+Http\+Header}} =  std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classZiApi_1_1FieldValue}{Zi\+Api\+::\+Field\+Value}}$>$ $>$}
+
+
+
+Defines an Http header. 
+
+\begin{DoxyNote}{Note}
+In the rfc2616 section 4.\+2 an Http header is like \+: 
+
+message-\/header = field-\/name \char`\"{}\+:\char`\"{} \mbox{[} field-\/value \mbox{]} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classZiApi_1_1FieldValue}{Zi\+Api\+::\+Field\+Value}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHttp_1_1Message_aa0b031cb3fdab637c26a391efcb0f81e}\label{classHttp_1_1Message_aa0b031cb3fdab637c26a391efcb0f81e}} 
+\index{Http::Message@{Http::Message}!getHttpVersion@{getHttpVersion}}
+\index{getHttpVersion@{getHttpVersion}!Http::Message@{Http::Message}}
+\subsubsection{\texorpdfstring{getHttpVersion()}{getHttpVersion()}}
+{\footnotesize\ttfamily virtual std\+::string Http\+::\+Message\+::get\+Http\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the message\textquotesingle{}s Http version. 
+
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"HTTP/major.minor"} }
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{MyHttpRequest_8cpp-example}{My\+Http\+Request.\+cpp}}.\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Message.\+hpp\end{DoxyCompactItemize}

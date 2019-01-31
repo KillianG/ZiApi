@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['httpheader',['HttpHeader',['../classZiApi_1_1HttpMessage.html#ae086e821289425f1c653800caf8d39d0',1,'ZiApi::HttpMessage']]]
+  ['httpheader',['HttpHeader',['../classHttp_1_1Message.html#ae02720de7f072d0607fd217af6250989',1,'Http::Message']]]
 ];

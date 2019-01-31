@@ -6,20 +6,20 @@
 
 #pragma once
 
-#include "HttpMessage.hpp"
+#include "Message.hpp"
 
-namespace ZiApi {
+namespace Http {
     /**
      * @brief Http request container
      *
-     * @sa ZiApi::HttpMessage, ZiApi::HttpResponse
+     * @sa Http::Message, Http::Response
      *
      * MyHttpRequest.hpp : @include MyHttpRequest.hpp
      * MyFieldValue.hpp : @include MyFieldValue.hpp
      * Output : @include MyHttpRequest.output
      * MyHttpRequest.cpp : @example MyHttpRequest.cpp
      */
-    class HttpRequest : public HttpMessage {
+    class Request : public Message {
     public:
         /**
          * Methods list

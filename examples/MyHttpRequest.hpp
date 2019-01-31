@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "HttpRequest.hpp"
+#include "Request.hpp"
 
-class MyHttpRequest : public ZiApi::HttpRequest {
+class MyHttpRequest : public Http::Request {
 public:
     HttpHeader &getHeader() override { return _header; }
 

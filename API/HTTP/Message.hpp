@@ -8,17 +8,17 @@
 #include <memory>
 #include "FieldValue.hpp"
 
-namespace ZiApi {
-    class HttpMessage {
+namespace Http {
+    class Message {
     public:
         /**
          * @brief Defines an Http header
          *
          * @note In the rfc2616 section 4.2 an Http header is like :
          * @note message-header = field-name ":" [ field-value ]
-         * @sa FieldValue
+         * @sa ZiApi::FieldValue
          */
-        using HttpHeader = std::map<std::string, std::shared_ptr<FieldValue>>;
+        using HttpHeader = std::map<std::string, std::shared_ptr<ZiApi::FieldValue>>;
 
         /**
          * @brief Gets the message's header

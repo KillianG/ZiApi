@@ -11,6 +11,9 @@
 namespace ZiApi {
     class Core;
 
+    /**
+     * @brief Server's module manager
+     */
     class ModuleManager {
     public:
         virtual bool load(const std::string &modulePath, Core &core) = 0;
@@ -19,12 +22,19 @@ namespace ZiApi {
 
         virtual bool isLoaded(const std::string &moduleName) = 0;
 
-        virtual bool addToPipeline(size_t order, const std::string &name) = 0;
+        /**
+         * @brief
+         */
+        virtual bool addToPipeline(size_t importance, const std::string &name) = 0;
 
-        virtual bool runPipeline(HttpRequest &request, HttpResponse &response) = 0;
+        /**
+         * @brief Calls all modules's handle function
+         * @note Breaks the loop if the handle returns true
+         */
+        virtual bool runPipeline(Http::Request &request, Http::Response &response) = 0;
 
     protected:
-        std::map<size_t, std::string> _pipeline;
-        std::unordered_map<std::string, std::unique_ptr<Module>> _modules;
+        std::map<size_t, std::string> _pipeline;                            ///<Module's processing list ordered by a size_t
+        std::unordered_map<std::string, std::unique_ptr<Module>> _modules;  ///<Loaded module list
     };
 }
