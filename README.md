@@ -113,9 +113,13 @@ int main() {
 You can use the macro `LOG(logType, sev)` to display in which file and line the log was printed. You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
 
 ### Architecture
+
 **Http namespace :**
+
 [![Http](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/HTTP.png)](https://github.com/KillianG/ZiApi/blob/master/docs/HTTP.png)
+
 **ZiApi namespace :**
+
 [![ZiApi](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/ZiApi.png)](https://github.com/KillianG/ZiApi/blob/master/docs/ZiApi.png)
 
 You can find the uml [here](https://github.com/KillianG/ZiApi/blob/master/docs/Zia.mdj)
