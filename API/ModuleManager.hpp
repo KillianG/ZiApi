@@ -25,9 +25,14 @@ namespace ZiApi {
         virtual bool isLoaded(const std::string &moduleName) = 0;
 
         /**
-         * @brief Add the module to the processing list
+         * @brief Adds the module to the processing list
          */
         virtual bool addToPipeline(size_t importance, const std::string &moduleName) = 0;
+
+        /**
+         * @brief Removes the module from the processing list
+         */
+        virtual bool removeFromPipeline(const std::string &moduleName) = 0;
 
         /**
          * @brief Calls all modules's handle function

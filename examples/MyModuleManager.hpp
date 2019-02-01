@@ -17,17 +17,22 @@ public:
     }
 
     bool unLoad(const std::string &moduleName) override {
-        /*It is up to you*/
+        /*It's up to you*/
         return false;
     }
 
     bool isLoaded(const std::string &moduleName) override {
-        /*It is up to you*/
+        /*It's up to you*/
         return false;
     }
 
     bool addToPipeline(size_t importance, const std::string &name) override {
         return _pipeline.emplace(std::make_pair(importance, name)).second;              //Emplace the module in the processing list
+    }
+
+    bool removeFromPipeline(const std::string &moduleName) override {
+        /*It's up to you*/
+        return false;
     }
 
     bool runPipeline(Http::Request &request, Http::Response &response) override {

@@ -14,36 +14,8 @@
 
 namespace ZiApi {
     /**
-     * @brief ZiApi logger
-     *
-     * Usage example:
-     * @code
-     * using LogType = ZiApi::ZiLogger::Type;
-     * using LogSeverity = ZiApi::ZiLogger::Severity;
-     *
-     * ZiApi::ZiLogger::setMinSeverity(LogSeverity::NORMAL);                                                    //sets the severity at normal
-     * ZiApi::ZiLogger::setCurrentStream(ZiApi::ZiLogger::OutputStream::COUT);                                  //sets the logger output on the standard output
-     *
-     * Log(LogType::INFO, LogSeverity::NORMAL) << "Program started" << ZiApi::ZiLogger::endl;                   //[INFO] ~/main.cpp:7 : Program started
-     *
-     * ...
-     *
-     * LogType::DEBUG << "init resources" << ZiApi::ZiLogger::endl;                                             //[DEBUG] init resources
-     * ZiApi::ZiLogger::setMinSeverity(LogSeverity::IMPORTANT);                                                 //sets the severity at important
-     *
-     * ...
-     *
-     * LogType::INFO << LogSeverity::NORMAL << "Open assets folder" << ZiApi::ZiLogger::endl;                   //not showed because normal < important
-     *
-     * ...
-     *
-     * Log(LogType::ERROR, LogSeverity::VITAL) << "File: \"logo.png\" not found" << ZiApi::ZiLogger::endl;      //[ERROR] ~/main.cpp:30 : File: "logo.png" not found
-     *
-     * ...
-     *
-     * LogType::WARNING << LogSeverity::NORMAL << "Enter error handler "
-     * << LogSeverity::IMPORTANT << ": " << 3  << " warnings generated"<< ZiApi::ZiLogger::endl;                //[WARNING] : 3 warnings generated
-     * @endcode
+     * Output : @include LoggerTest.output
+     * LoggerTest.cpp : @example LoggerTest.cpp
      */
     class ZiLogger {
     public:

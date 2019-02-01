@@ -1,0 +1,4 @@
+[INFO] LoggerTest.cpp:13 : Program started
+[DEBUG] init resources
+[ERROR] LoggerTest.cpp:17 : File: "logo.png" not found
+[WARNING] : 3 warnings generated

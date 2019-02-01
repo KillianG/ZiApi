@@ -18,13 +18,12 @@ API for Zia Epitech 2021
   - [Request](#request)
   - [Logger](#logger)
 - [Links](#links)
-- [License](#license)
-- [Contributors](#Contributors)
+- [License](#license)[Contributors](#Contributors)
 
 ## Contact
 If you have questions regarding the library, I would like to invite you to [open an issue at GitHub](https://github.com/KillianG/ZiApi/issues/new). Please describe your request, problem, or question as detailed as possible. Opening an issue at GitHub allows other users and contributors to this library to collaborate. If you have a look at the [closed issues](https://github.com/KillianG/ZiApi/issues?q=is%3Aissue+is%3Aclosed), you will see that we react quite timely in most cases.
 
-Only if your request would contain confidential information, please [send us an email](mailto:nathan@lebon.epitech.eu).
+Only if your request would contain confidential information, please [send us an email](mailto:nathan.lebon@epitech.eu).
 
 ## Integration
 **How to add ZiApi to your project :**
@@ -32,8 +31,9 @@ Only if your request would contain confidential information, please [send us an 
 git clone git@github.com:KillianG/ZiApi.git
 ```
 ### CMake
-It is necessary to compiles with  C++17 flags.
+It is **necessary** to compiles with  C++17 flags.
 ```cmake
+set(CMAKE_CXX_STANDARD 17)
 include_directories(ZiApi/API ZiApi/API/HTTP)
 ```
 
@@ -71,12 +71,51 @@ std::unique_ptr<ZiApi::Module> createModule(ZiApi::Core &core) {    //It will be
 }
 ```
 
+The `createModule(ZiApi::Core &core ` function must be defined. It is the entry point of your module
+
+### Request
+
+```c++
+int main() {
+    MyHttpRequest request;
+
+    auto &header = request.getHeader();                                     //Get the request's header
+    request.setMethod(Http::Request::MethodType::GET);                      //Sets the request's method
+    request.setUri("/home/index.html");                                     //Sets the request's uri
+    request.setHttpVersion(1, 1);                                           //Sets the request's versions
+    return 0;
+}
+```
+
+You can find a complete example [(MyHttpRequest.cpp)](https://github.com/KillianG/ZiApi/blob/master/examples/MyHttpRequest.cpp)
+
+### Logger
+
+```c++
+using LogType = ZiApi::ZiLogger::Type;
+using LogSeverity = ZiApi::ZiLogger::Severity;
+
+int main() {
+    ZiApi::ZiLogger::setMinSeverity(LogSeverity::NORMAL);                                                    //sets the severity at normal
+    ZiApi::ZiLogger::setCurrentStream(ZiApi::ZiLogger::OutputStream::COUT);                                  //sets the logger output on the standard output
+    LOG(LogType::INFO, LogSeverity::NORMAL) << "Program started" << ZiApi::ZiLogger::endl;                   //[INFO] LoggerTest.cpp:13 : Program started
+    LogType::DEBUG << "init resources" << ZiApi::ZiLogger::endl;                                             //[DEBUG] init resources
+    ZiApi::ZiLogger::setMinSeverity(LogSeverity::IMPORTANT);                                                 //sets the severity at important
+    LogType::INFO << LogSeverity::NORMAL << "Open assets folder" << ZiApi::ZiLogger::endl;                   //not showed because normal < important
+    LOG(LogType::ERROR, LogSeverity::VITAL) << "File: \"logo.png\" not found" << ZiApi::ZiLogger::endl;      //[ERROR] LoggerTest.cpp:17 : File: "logo.png" not found
+    LogType::WARNING << LogSeverity::NORMAL << "Enter error handler "
+    << LogSeverity::IMPORTANT << ": " << 3  << " warnings generated"<< ZiApi::ZiLogger::endl;                //[WARNING] : 3 warnings generated
+    return 0;
+}
+```
+You can use the macro `LOG(logType, sev` to display in which file and line the log was printed. You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
+
 ## Links
+
 - [**CMake**](https://cmake.org) for build automation
 - [**Doxygen**](http://www.doxygen.nl/) to generate [documentation](https://killiang.github.io/)
 - [**Cppreference**](https://en.cppreference.com/w/)
 - [**RFC 2616**](https://www.ietf.org/rfc/rfc2616.txt)
-
 
 ## License
 <img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
