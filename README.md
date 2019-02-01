@@ -73,7 +73,7 @@ std::unique_ptr<ZiApi::Module> createModule(ZiApi::Core &core) {    //It will be
 }
 ```
 
-The `createModule(ZiApi::Core &core ` function must be defined. It is the entry point of your module
+The `createModule(ZiApi::Core &core)` function must be defined. It is the entry point of your module
 
 ### Request
 
