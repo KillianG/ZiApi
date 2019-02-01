@@ -17,6 +17,8 @@ API for Zia Epitech 2021
   - [Module](#module)
   - [Request](#request)
   - [Logger](#logger)
+- [Architecture](#architecture)
+- [Documentation](#documentation)
 - [Links](#links)
 - [License](#license)[Contributors](#Contributors)
 
@@ -108,14 +110,27 @@ int main() {
     return 0;
 }
 ```
-You can use the macro `LOG(logType, sev` to display in which file and line the log was printed. You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
+You can use the macro `LOG(logType, sev)` to display in which file and line the log was printed. You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
+
+### Architecture
+**Http namespace :**
+[![Http](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/HTTP.png)](https://github.com/KillianG/ZiApi/blob/master/docs/HTTP.png)
+**ZiApi namespace :**
+[![ZiApi](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/ZiApi.png)](https://github.com/KillianG/ZiApi/blob/master/docs/ZiApi.png)
+
+You can find the uml [here](https://github.com/KillianG/ZiApi/blob/master/docs/Zia.mdj)
+
+### Documentation
+The [documentation](https://killiang.github.io/) was generated with Doxygen. You can generate it yourself with :
+```bash
+cd docs && doxygen Doxyfile && firefox html/index.html
+```
 
 ## Links
-
 - [**CMake**](https://cmake.org) for build automation
 - [**Doxygen**](http://www.doxygen.nl/) to generate [documentation](https://killiang.github.io/)
-- [**Cppreference**](https://en.cppreference.com/w/)
 - [**RFC 2616**](https://www.ietf.org/rfc/rfc2616.txt)
+- [**Cppreference**](https://en.cppreference.com/w/)
 
 ## License
 <img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">

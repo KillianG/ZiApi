@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['removefrompipeline',['removeFromPipeline',['../classZiApi_1_1ModuleManager.html#a1a419821a2af066b10c1161684bbe912',1,'ZiApi::ModuleManager']]],
   ['request',['Request',['../classHttp_1_1Request.html',1,'Http']]],
   ['requestedrangenotsatisfiable',['RequestedRangeNotSatisfiable',['../classHttp_1_1Response.html#a5761160e095c8bbecf2ed847efa1f6dda7779e53fc887ac0429f4ebde5fc0b59f',1,'Http::Response']]],
   ['requestentitytoolarge',['RequestEntityTooLarge',['../classHttp_1_1Response.html#a5761160e095c8bbecf2ed847efa1f6dda1d2dd18ee1a925e5887cbc2f9202e779',1,'Http::Response']]],
