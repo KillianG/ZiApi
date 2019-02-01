@@ -68,7 +68,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>API for Zia Epitech 2021</p>
 <img src="https://img.shields.io/github/languages/top/KillianG/ZiApi.svg?style=flat" alt="Language" class="inline"/>
- <a href="https://github.com/KillianG/ZiApi/blob/master/docs/html/index.html"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg?style=flat" alt="Documentation" class="inline"/>
+ <a href="https://killiang.github.io/"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg?style=flat" alt="Documentation" class="inline"/>
 </a> <a href="https://github.com/KillianG/ZiApi/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="GitHub license" class="inline"/>
 </a> <a href="https://github.com/KillianG/ZiApi/issues"><img src="https://img.shields.io/github/issues/KillianG/ZiApi.svg?style=flat" alt="GitHub Issues" class="inline"/>
 </a> <a href="https://github.com/KillianG/ZiApi/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/KillianG/ZiApi.svg?style=flat" alt="GitHub Issues closed" class="inline"/>
@@ -76,20 +76,44 @@ $(function() {
  <a href="https://github.com/KillianG/ZiApi"><img src="https://img.shields.io/github/stars/KillianG/ZiApi.svg?style=social" alt="GitHub Stars" class="inline"/>
 </a></p>
 <ul>
+<li><a href="#contact">Contact</a></li>
 <li><a href="#integration">Integration</a><ul>
 <li><a href="#cmake">CMake</a></li>
 </ul>
 </li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#module">Module</a></li>
+<li><a href="#request">Request</a></li>
+<li><a href="#logger">Logger</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a></li>
+<li><a href="#license">License</a></li>
 <li><a href="#Contributors">Contributors</a></li>
 </ul>
 <h2>Contact</h2>
 <p>If you have questions regarding the library, I would like to invite you to <a href="https://github.com/KillianG/ZiApi/issues/new">open an issue at GitHub</a>. Please describe your request, problem, or question as detailed as possible. Opening an issue at GitHub allows other users and contributors to this library to collaborate. If you have a look at the <a href="https://github.com/KillianG/ZiApi/issues?q=is%3Aissue+is%3Aclosed">closed issues</a>, you will see that we react quite timely in most cases.</p>
 <p>Only if your request would contain confidential information, please <a href="#" onclick="location.href='mai'+'lto:'+'nat'+'ha'+'n@l'+'eb'+'on.'+'ep'+'ite'+'ch'+'.eu'; return false;">send us an email</a>.</p>
-<h3>Integration</h3>
+<h2>Integration</h2>
 <p><b>How to add ZiApi to your project :</b> </p><div class="fragment"><div class="line">git clone git@github.com:KillianG/ZiApi.git</div></div><!-- fragment --> <h3>CMake</h3>
-<p>It is necessary to compiles with C++17 flags.</p>
-<div class="fragment"><div class="line">include_directories(ZiApi/API ZiApi/API/HTTP)</div></div><!-- fragment --><p>​<img src="./docs/Http_namespace.png" alt="" class="inline"/>
- <img src="./docs/ZiApi_namespace.png" alt="" class="inline"/>
+<p>It is necessary to compiles with C++17 flags. </p><div class="fragment"><div class="line">include_directories(ZiApi/API ZiApi/API/HTTP)</div></div><!-- fragment --><h2>Examples</h2>
+<p>Beside the examples below, you may want to check the <a href="https://killiang.github.io/">documentation</a>. All <a href="https://github.com/KillianG/ZiApi/tree/master/examples">example files</a> can be compiled and executed on their own.</p>
+<h3>Module</h3>
+<p>Assume you want to create your Module object</p>
+<div class="fragment"><div class="line"> {c++}</div><div class="line">class SSLModule : public ZiApi::Module {</div><div class="line">public:</div><div class="line">    SSLModule(ZiApi::Core &amp;core) {</div><div class="line">        _name = &quot;SSL&quot;;</div><div class="line">        int priority = 0;                                       //The module priority can be set in the config file</div><div class="line">        core.getModuleMgr()-&gt;addToPipeline(priority, _name);    //Add the module to the processing list</div><div class="line">    };</div><div class="line"></div><div class="line">    const std::string &amp;getName() const noexcept override { return _name; }</div><div class="line"></div><div class="line">    bool handle(Http::Request &amp;request, Http::Response &amp;response) override {    //Do your things here</div><div class="line">        std::cout &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; std::endl;                          //virtual bool SSLModule::handle(Http::Request&amp;, Http::Response&amp;)</div><div class="line">        response.setStatusCode(Http::Response::StatusCode::OK);</div><div class="line">        response.setStatusMessage(&quot;OK&quot;);</div><div class="line">        return true;</div><div class="line">    }</div><div class="line">};</div><div class="line"></div><div class="line">extern &quot;C&quot; {</div><div class="line">std::unique_ptr&lt;ZiApi::Module&gt; createModule(ZiApi::Core &amp;core) {    //It will be called by the dl functions</div><div class="line">    return std::make_unique&lt;SSLModule&gt;(core);                       //Gives the Core to the module if needed</div><div class="line">};</div><div class="line">}</div></div><!-- fragment --><h2>Links</h2>
+<ul>
+<li><a href="https://cmake.org"><b>CMake</b></a> for build automation</li>
+<li><a href="http://www.doxygen.nl/"><b>Doxygen</b></a> to generate <a href="https://killiang.github.io/">documentation</a></li>
+<li><a href="https://en.cppreference.com/w/"><b>Cppreference</b></a></li>
+<li><a href="https://www.ietf.org/rfc/rfc2616.txt"><b>RFC 2616</b></a></li>
+</ul>
+<h2>License</h2>
+<img src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png" align="right" alt="" class="inline"/>
+<p>The class is licensed under the <a href="http://opensource.org/licenses/MIT">MIT License</a>:</p>
+<p>Copyright &copy; 2019 Killian Gardahaut</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <h2>Contributors</h2>
 <p><a href="https://github.com/KillianG">KillianG</a></p>
 <p><a href="https://github.com/nhyarlathotep">Nhyarlathotep</a> </p>
