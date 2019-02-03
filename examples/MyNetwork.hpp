@@ -13,12 +13,16 @@
 class MyNetwork : public ZiApi::Network {
 public:
     void run() override {
+        /* It's up to you */
+        pollRequest();
+    }
+
+    void pollRequest() override {
         MyHttpResponse res;
         MyHttpRequest request;
+
         _pipelineRunCallBack(request, res);                                                                 //Run the processing list
 
         std::cout << static_cast<int>(res.getStatusCode()) << " " << res.getStatusMessage() << std::endl;   //200 OK
     }
-
-    void pollRequest() override {}
 };

@@ -11,13 +11,16 @@
 namespace ZiApi {
     /**
      * @brief Server's sockets handler
+     *
+     * @note Must be multi-threaded to handle multiple clients at the same time
+     *
+     * Usage example :
+     * @include MyNetwork.hpp
      */
     class Network {
     public:
         /**
          * @brief Launchs the server's sockets
-         *
-         * @include MyNetwork.hpp
          */
         virtual void run() = 0;
 
@@ -31,13 +34,13 @@ namespace ZiApi {
          *
          * _pipelineRunCallBack(request, response); //The request and response will be set by the modules
          *
-         * send(response, ...);                     //Send the response to the client (it is up to you)
+         * send(response, ...);                     //Send the response to the client (it's up to you)
          * @endcode
          */
         virtual void pollRequest() = 0;
 
         /**
-         * @brief Sets ModuleManager::runPipeline(...) as callback function
+         * @brief Sets ModuleManager::runPipeline as callback function
          * @warning It is already set by the Core on construction
          */
         void setPipelineHandler(std::function<void(Http::Request &request, Http::Response &response)> &&callback) { _pipelineRunCallBack = callback; };

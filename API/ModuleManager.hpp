@@ -14,6 +14,7 @@ namespace ZiApi {
     /**
      * @brief Server's module manager
      *
+     * Usage example :
      * @include MyModuleManager.hpp
      */
     class ModuleManager {
@@ -22,10 +23,14 @@ namespace ZiApi {
 
         virtual bool unLoad(const std::string &moduleName) = 0;
 
+        /**
+         * @brief Checks if the module is loaded
+         */
         virtual bool isLoaded(const std::string &moduleName) = 0;
 
         /**
          * @brief Adds the module to the processing list
+         * @param[in] importance The order(from the smallest to the biggest) of the modules in the processing list
          */
         virtual bool addToPipeline(size_t importance, const std::string &moduleName) = 0;
 
@@ -36,7 +41,7 @@ namespace ZiApi {
 
         /**
          * @brief Calls all modules's handle function
-         * @note Breaks the loop if the handle returns true
+         * @note Breaks the loop if Module::handle returns true
          */
         virtual bool runPipeline(Http::Request &request, Http::Response &response) = 0;
 

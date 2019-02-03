@@ -13,11 +13,17 @@ namespace ZiApi {
     /**
      * @brief Contains a generic type
      *
-     * @sa https://en.cppreference.com/w/cpp/utility/variant
+     * @details The contained type can be :
+     * * `int`
+     * * `bool`
+     * * `double`
+     * * `std::string`
+     * * `ValueList`
+     * * `ValueMap`
      *
-     * MyFieldValue.hpp : @include MyFieldValue.hpp
-     * Output : @include MyFieldValue.output
-     * MyFieldValue.cpp : @example MyFieldValue.cpp
+     * Usage example :
+     * @include MyFieldValue.hpp
+     * @sa https://en.cppreference.com/w/cpp/utility/variant
      */
     class FieldValue {
     public:
@@ -47,6 +53,14 @@ namespace ZiApi {
         virtual FieldValue &operator=(const ValueVariant &) = 0;
 
     protected:
-        ValueVariant _value;        ///<The contained value
+        ValueVariant _value;        ///<The contained type
     };
 }
+
+/**
+* @sa https://en.cppreference.com/w/cpp/utility/variant
+*
+* MyFieldValue.hpp : @include MyFieldValue.hpp
+* Output : @include MyFieldValue.output
+* MyFieldValue.cpp : @example MyFieldValue.cpp
+*/

@@ -11,10 +11,10 @@
 
 namespace ZiApi {
     class Core;
-
     /**
      * @brief Server's Module
      *
+     * Usage example :
      * @include MyModule.hpp
      */
     class Module {
@@ -25,15 +25,18 @@ namespace ZiApi {
         virtual const std::string &getName() const noexcept = 0;
 
         /**
-         * @brief The module compute the request and response (it is up to you)
+         * @brief The module compute the request and response (it's up to you)
          * @param[in/out] request sended by the client
          * @param[in/out] response reply sent to the client
-         * @return true breaks the chain / false continue the chain
+         * @return
+         * * `true` breaks the chain
+         *
+         * * `false` continue the chain
          */
         virtual bool handle(Http::Request &request, Http::Response &response) = 0;
 
     protected:
-        std::string _name;
+        std::string _name;          ///< The module's name
     };
 }
 

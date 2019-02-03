@@ -8,7 +8,7 @@
 
 class MyConfig : public ZiApi::Config {
 public:
-    void loadConfig(const std::string &path) override { /*It is up to you*/ }
+    void loadConfig(const std::string &path) override { /*It's up to you*/ }
 
     const ZiApi::FieldValue::ValueVariant &operator[](const std::string &key) const override {
         return _configData.at(key)->getValue();

@@ -14,8 +14,10 @@
 
 namespace ZiApi {
     /**
-     * Output : @include LoggerTest.output
-     * LoggerTest.cpp : @example LoggerTest.cpp
+     * @brief ZiApi's logger
+     *
+     * You can use the macro `LOG(logType, sev)` to display in which file and line the log was printed.
+     * You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
      */
     class ZiLogger {
     public:
@@ -57,7 +59,7 @@ namespace ZiApi {
         };
 
         /**
-         * @brief Set minimal severity
+         * @brief Sets the minimal severity
          *
          * Default is at Severity::USELESS
          * @param[in] sev New severity
@@ -65,15 +67,15 @@ namespace ZiApi {
         static inline void setMinSeverity(Severity sev) noexcept { minSeverity = sev; }
 
         /**
-         * @brief Set logFile's path
+         * @brief Sets logFile's path
          *
-         * Default is "./log.txt"
+         * Default is `./log.txt`
          * @param[in] filePath New logFile's path
          */
         static inline void setStreamFile(const std::string &filePath = "./log.txt") { fileStream.open(filePath); }
 
         /**
-         * @brief Set logs outputs
+         * @brief Sets logs outputs
          *
          * Default is OutputStream::COUT
          * @param[in] stream New output stream
@@ -167,3 +169,8 @@ namespace ZiApi {
 #else
 #define LOG(logType, sev) logType << sev
 #endif
+
+/**
+* Output : @include LoggerTest.output
+* LoggerTest.cpp : @example LoggerTest.cpp
+*/

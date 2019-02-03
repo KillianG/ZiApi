@@ -13,12 +13,10 @@ namespace ZiApi {
     /**
      * @brief Server's core
      *
-     * MyConfig.hpp : @include MyConfig.hpp
-     * MyNetwork.hpp : @include MyNetwork.hpp
-     * MyModuleManager.hpp : @include MyModuleManager.hpp
-     * MyCore.hpp : @include MyCore.hpp
-     * Output : @include MyServer.output
-     * MyServer.cpp : @example MyServer.cpp
+     * @note The Core will automatly binds the Network and the ModuleManager
+     *
+     * Usage example :
+     * @include MyCore.hpp
      */
     class Core {
     public:
@@ -41,3 +39,12 @@ namespace ZiApi {
         std::shared_ptr<ZiApi::ModuleManager> _moduleMgr;
     };
 }
+
+/**
+* MyConfig.hpp : @include MyConfig.hpp
+* MyNetwork.hpp : @include MyNetwork.hpp
+* MyModuleManager.hpp : @include MyModuleManager.hpp
+* MyCore.hpp : @include MyCore.hpp
+* Output : @include MyServer.output
+* MyServer.cpp : @example MyServer.cpp *
+*/

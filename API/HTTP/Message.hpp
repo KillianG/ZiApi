@@ -9,13 +9,16 @@
 #include "FieldValue.hpp"
 
 namespace Http {
+    /**
+     * @brief Http basic container
+     */
     class Message {
     public:
         /**
          * @brief Defines an Http header
          *
-         * @note In the rfc2616 section 4.2 an Http header is like :
-         * @note message-header = field-name ":" [ field-value ]
+         * @note In the `rfc2616` an http header is like :
+         * @note message-header = `field-name` ":" `field-value`
          * @sa ZiApi::FieldValue
          */
         using HttpHeader = std::map<std::string, std::shared_ptr<ZiApi::FieldValue>>;
@@ -42,7 +45,7 @@ namespace Http {
 
         /**
          * @brief Gets the message's Http version
-         * @return @code "HTTP/major.minor" @endcode
+         * @return HTTP/`major`.`minor`
          */
         virtual std::string getHttpVersion() const = 0;
 

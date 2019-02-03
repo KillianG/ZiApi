@@ -5,6 +5,7 @@ var searchData=
   ['_5fheader',['_header',['../classHttp_1_1Message.html#aac494cd412c7f7a862bf77b34910249f',1,'Http::Message']]],
   ['_5fmethod',['_method',['../classHttp_1_1Request.html#af625e2d310f771616d078a7f173097a5',1,'Http::Request']]],
   ['_5fmodules',['_modules',['../classZiApi_1_1ModuleManager.html#a14887a7947963cbd29390a1951895af5',1,'ZiApi::ModuleManager']]],
+  ['_5fname',['_name',['../classZiApi_1_1Module.html#a2b53b4057d16cabf14027f5fe777a147',1,'ZiApi::Module']]],
   ['_5fpipeline',['_pipeline',['../classZiApi_1_1ModuleManager.html#a9419290c9405733c97e8bdea9095b0f0',1,'ZiApi::ModuleManager']]],
   ['_5fpipelineruncallback',['_pipelineRunCallBack',['../classZiApi_1_1Network.html#a9849d858fc05af620e717f643f4071f6',1,'ZiApi::Network']]],
   ['_5fstatuscode',['_statusCode',['../classHttp_1_1Response.html#ad928afe87b6e75096ad340280c0dcf98',1,'Http::Response']]],

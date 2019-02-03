@@ -13,17 +13,19 @@ namespace Http {
     /**
      * @brief Http response container
      *
+     * Usage example:
+     * @include MyHttpResponse.hpp
      * @sa Message, Request
      */
     class Response : public Message {
     public:
         /**
          * Status list
-         * @note @b 1xx Informational : It means the request has been received and the process is continuing
-         * @note @b 2xx Success : It means the action was successfully received, understood, and accepted
-         * @note @b 3xx Redirection : It means further action must be taken in order to complete the request
-         * @note @b 4xx Client Error : It means the request contains incorrect syntax or cannot be fulfilled
-         * @note @b 5xx Server Error : It means the server failed to fulfill an apparently valid request
+         * @note @b 1xx `Informational` : It means the request has been received and the process is continuing
+         * @note @b 2xx `Success` : It means the action was successfully received, understood, and accepted
+         * @note @b 3xx `Redirection` : It means further action must be taken in order to complete the request
+         * @note @b 4xx `Client Error` : It means the request contains incorrect syntax or cannot be fulfilled
+         * @note @b 5xx `Server Error` : It means the server failed to fulfill an apparently valid request
          */
         enum class StatusCode {
             UndefinedStatusCode = 0,                ///<@b 0 May throw if it used

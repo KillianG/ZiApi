@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadconfig',['loadConfig',['../classZiApi_1_1Config.html#adea7c918bc9802e935a76bc525d5c898',1,'ZiApi::Config']]]
+  ['isloaded',['isLoaded',['../classZiApi_1_1ModuleManager.html#a15de426ee9f5739296a79b39a5f4abc8',1,'ZiApi::ModuleManager']]]
 ];
