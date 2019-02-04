@@ -19,6 +19,8 @@ namespace Http {
      */
     class Response : public Message {
     public:
+        virtual ~Response() = default;
+
         /**
          * Status list
          * @note @b 1xx `Informational` : It means the request has been received and the process is continuing

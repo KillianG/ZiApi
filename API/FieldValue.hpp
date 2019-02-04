@@ -27,6 +27,8 @@ namespace ZiApi {
      */
     class FieldValue {
     public:
+        virtual ~FieldValue() = default;
+
         /**
          * @brief Defines a list of FieldValues
          */

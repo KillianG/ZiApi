@@ -19,6 +19,8 @@ namespace ZiApi {
      */
     class Network {
     public:
+        virtual ~Network() = default;
+
         /**
          * @brief Launchs the server's sockets
          */

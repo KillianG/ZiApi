@@ -19,6 +19,8 @@ namespace ZiApi {
      */
     class ModuleManager {
     public:
+        virtual ~ModuleManager() = default;
+
         virtual bool load(const std::string &modulePath, Core &core) = 0;
 
         virtual bool unLoad(const std::string &moduleName) = 0;

@@ -30,5 +30,5 @@ public:
 extern "C" {
 std::unique_ptr<ZiApi::Module> createModule(ZiApi::Core &core) {                //It will be called by the dl functions
     return std::make_unique<SSLModule>(core);                                   //Gives the Core to the module if needed
-};
+}
 }

@@ -19,6 +19,8 @@ namespace ZiApi {
      */
     class Module {
     public:
+        virtual ~Module() = default;
+
         /**
          * @brief Gets the current name
          */

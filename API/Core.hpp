@@ -27,6 +27,8 @@ namespace ZiApi {
             });
         }
 
+        virtual ~Core() = default;
+
         virtual void run(int ac, char **av) = 0;
 
         virtual const std::shared_ptr<Config> &getConfig() const = 0;

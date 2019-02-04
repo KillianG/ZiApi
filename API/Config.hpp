@@ -20,6 +20,7 @@ namespace ZiApi {
      */
     class Config {
     public:
+        virtual ~Config() = default;
         /**
          * @brief Loads the config from a file
          * @warning If the configuration file is corrupt or missing : you must set default values

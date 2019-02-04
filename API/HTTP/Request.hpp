@@ -18,6 +18,8 @@ namespace Http {
      */
     class Request : public Message {
     public:
+        virtual ~Request() = default;
+
         /**
          * Methods list
          */

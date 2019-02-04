@@ -11,14 +11,13 @@ API for Zia Epitech 2021
 [![GitHub Stars](https://img.shields.io/github/stars/KillianG/ZiApi.svg?style=social)](https://github.com/KillianG/ZiApi)
 
 - [Contact](#contact)
+- [Documentation](#documentation)
 - [Integration](#integration)
   - [CMake](#cmake)
+- [Architecture](#architecture)
 - [Examples](#examples)  
   - [Module](#module)
   - [Request](#request)
-  - [Logger](#logger)
-- [Architecture](#architecture)
-- [Documentation](#documentation)
 - [Links](#links)
 - [License](#license)[Contributors](#Contributors)
 
@@ -27,6 +26,11 @@ If you have questions regarding the library, I would like to invite you to [open
 
 Only if your request would contain confidential information, please [send us an email](mailto:nathan.lebon@epitech.eu).
 
+## Documentation
+The [documentation](https://killiang.github.io/) was generated with Doxygen. You can generate it yourself with :
+```bash
+cd docs && doxygen Doxyfile && firefox html/index.html
+```
 ## Integration
 **How to add ZiApi to your project :**
 ```bash
@@ -38,11 +42,23 @@ It is **necessary** to compiles with  C++17 flags.
 set(CMAKE_CXX_STANDARD 17)
 include_directories(ZiApi/API ZiApi/API/HTTP)
 ```
+## Architecture
+**Expected behaviour :**
+
+![Behaviour](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/Behaviour.png)
+
+**Http namespace :**
+
+![Http](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/HTTP.png)
+
+**ZiApi namespace :**
+
+![ZiApi](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/ZiApi.png)
+
+You can check the [UML](https://github.com/KillianG/ZiApi/blob/master/docs/Zia.mdj) and the [behaviour](https://github.com/KillianG/ZiApi/blob/master/docs/Behaviour.mdj)
 
 ## Examples
-
-Beside the examples below, you may want to check the [documentation](https://killiang.github.io/). 
-All [example files](https://github.com/KillianG/ZiApi/tree/master/examples) can be compiled and executed on their own.
+Beside the examples below, you may want to check the [documentation](https://killiang.github.io/). All [example files](https://github.com/KillianG/ZiApi/tree/master/examples) can be compiled and executed on their own.
 
 ### Module
 Assume you want to create your Module object
@@ -52,13 +68,14 @@ class SSLModule : public ZiApi::Module {
 public:
     SSLModule(ZiApi::Core &core) {
         _name = "SSL";
-        int priority = 0;                                       //The module priority can be set in the config file
-        core.getModuleMgr()->addToPipeline(priority, _name);    //Add the module to the processing list
+        int priority = 0;                                                       //The module priority can be set in the config file
+        core.getModuleMgr()->addToPipeline(priority, _name);                    //Add the module to the processing list
     };
 
     const std::string &getName() const noexcept override { return _name; }
 
     bool handle(Http::Request &request, Http::Response &response) override {    //Do your things here
+        /* It's up to you */
         std::cout << __PRETTY_FUNCTION__ << std::endl;                          //virtual bool SSLModule::handle(Http::Request&, Http::Response&)
         response.setStatusCode(Http::Response::StatusCode::OK);
         response.setStatusMessage("OK");
@@ -67,9 +84,9 @@ public:
 };
 
 extern "C" {
-std::unique_ptr<ZiApi::Module> createModule(ZiApi::Core &core) {    //It will be called by the dl functions
-    return std::make_unique<SSLModule>(core);                       //Gives the Core to the module if needed
-};
+std::unique_ptr<ZiApi::Module> createModule(ZiApi::Core &core) {                //It will be called by the dl functions
+    return std::make_unique<SSLModule>(core);                                   //Gives the Core to the module if needed
+}
 }
 ```
 
@@ -90,45 +107,6 @@ int main() {
 ```
 
 You can find a complete example [(MyHttpRequest.cpp)](https://github.com/KillianG/ZiApi/blob/master/examples/MyHttpRequest.cpp)
-
-### Logger
-
-```c++
-using LogType = ZiApi::ZiLogger::Type;
-using LogSeverity = ZiApi::ZiLogger::Severity;
-
-int main() {
-    ZiApi::ZiLogger::setMinSeverity(LogSeverity::NORMAL);                                                    //sets the severity at normal
-    ZiApi::ZiLogger::setCurrentStream(ZiApi::ZiLogger::OutputStream::COUT);                                  //sets the logger output on the standard output
-    LOG(LogType::INFO, LogSeverity::NORMAL) << "Program started" << ZiApi::ZiLogger::endl;                   //[INFO] LoggerTest.cpp:13 : Program started
-    LogType::DEBUG << "init resources" << ZiApi::ZiLogger::endl;                                             //[DEBUG] init resources
-    ZiApi::ZiLogger::setMinSeverity(LogSeverity::IMPORTANT);                                                 //sets the severity at important
-    LogType::INFO << LogSeverity::NORMAL << "Open assets folder" << ZiApi::ZiLogger::endl;                   //not showed because normal < important
-    LOG(LogType::ERROR, LogSeverity::VITAL) << "File: \"logo.png\" not found" << ZiApi::ZiLogger::endl;      //[ERROR] LoggerTest.cpp:17 : File: "logo.png" not found
-    LogType::WARNING << LogSeverity::NORMAL << "Enter error handler "
-    << LogSeverity::IMPORTANT << ": " << 3  << " warnings generated"<< ZiApi::ZiLogger::endl;                //[WARNING] : 3 warnings generated
-    return 0;
-}
-```
-You can use the macro `LOG(logType, sev)` to display in which file and line the log was printed. You can use it the same way as `std::cout` but you must put our own `ZiApi::ZiLogger::end` at the end
-
-### Architecture
-
-**Http namespace :**
-
-[![Http](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/HTTP.png)](https://github.com/KillianG/ZiApi/blob/master/docs/HTTP.png)
-
-**ZiApi namespace :**
-
-[![ZiApi](https://raw.githubusercontent.com/KillianG/ZiApi/master/docs/ZiApi.png)](https://github.com/KillianG/ZiApi/blob/master/docs/ZiApi.png)
-
-You can find the uml [here](https://github.com/KillianG/ZiApi/blob/master/docs/Zia.mdj)
-
-### Documentation
-The [documentation](https://killiang.github.io/) was generated with Doxygen. You can generate it yourself with :
-```bash
-cd docs && doxygen Doxyfile && firefox html/index.html
-```
 
 ## Links
 - [**CMake**](https://cmake.org) for build automation
