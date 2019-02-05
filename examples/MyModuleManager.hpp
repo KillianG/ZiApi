@@ -10,19 +10,23 @@
 class MyModuleMgr : public ZiApi::ModuleManager {
 public:
     bool load(const std::string &modulePath, ZiApi::Core &core) override {
-        auto mod = createModule(core);
+        /*
+         * It's up to you
+         * Use the dl functions to load dynamically the modules
+         */
+        auto mod = createModule(core);                                                  //Calls the extern "C" createModule
         std::cout << "Load Module ["<< mod->getName() << "]" << std::endl;              //Load Module [SSL]
         _modules[mod->getName()] = std::move(mod);
         return false;
     }
 
     bool unLoad(const std::string &moduleName) override {
-        /*It's up to you*/
+        /* It's up to you */
         return false;
     }
 
     bool isLoaded(const std::string &moduleName) override {
-        /*It's up to you*/
+        /* It's up to you */
         return false;
     }
 
@@ -31,15 +35,16 @@ public:
     }
 
     bool removeFromPipeline(const std::string &moduleName) override {
-        /*It's up to you*/
+        /* It's up to you */
         return false;
     }
 
     bool runPipeline(Http::Request &request, Http::Response &response) override {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;                                  //virtual bool SSLModule::handle(Http::Request&, Http::Response&)
+        /* The modules are arranged in order in the pipeline container */
+        std::cout << __PRETTY_FUNCTION__ << std::endl;                                  //virtual bool MyModuleMgr::runPipeline(Http::Request&, Http::Response&)
         for (auto &it : _pipeline) {
             if (_modules[it.second]->handle(request, response))                         //Calls the module handle function
-                break;
+                break;                                                                  //Breaks if the module returns true
         }
         return true;
     }

@@ -12,12 +12,12 @@
 class MyCore : public ZiApi::Core {
 public:
     MyCore() : Core(std::make_shared<MyConfig>(), std::make_shared<MyNetwork>(), std::make_shared<MyModuleMgr>()) {
-        /*It's up to you*/
+        /* It's up to you */
         _moduleMgr->load("./Path", *this);          //Load a Module
     }
 
     void run(int ac, char **av) override {
-        /*It's up to you*/
+        /* It's up to you */
         _networkMgr->run();                         //Launchs the sockets
     }
 

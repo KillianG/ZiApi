@@ -13,7 +13,9 @@
 class MyNetwork : public ZiApi::Network {
 public:
     void run() override {
-        /* It's up to you */
+        /* It's up to you
+         * Setup your sockets and waits for clients
+         */
         pollRequest();
     }
 
@@ -23,6 +25,6 @@ public:
 
         _pipelineRunCallBack(request, res);                                                                 //Run the processing list
 
-        std::cout << static_cast<int>(res.getStatusCode()) << " " << res.getStatusMessage() << std::endl;   //200 OK
+        std::cout << static_cast<int>(res.getStatusCode()) << " " << res.getStatusMessage() << std::endl;   //The modules's response is : 200 OK
     }
 };

@@ -18,6 +18,16 @@
     font-size: 50%;
 }
 
+div.contents
+{
+    box-shadow: 0px 3px 10px #777;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: white;
+    padding: 10px 20px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 * {
@@ -276,11 +286,11 @@ div.groupText {
     font-style: italic;
 }
 
-div.contents {
-    margin-top: 10px;
-    margin-left: 12px;
-    margin-right: 8px;
-}
+/*div.contents {*/
+    /*margin-top: 10px;*/
+    /*margin-left: 12px;*/
+    /*margin-right: 8px;*/
+/*}*/
 
 td.indexkey {
     background-color: #EBEFF6;
