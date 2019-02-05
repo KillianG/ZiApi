@@ -43,9 +43,9 @@ namespace ZiApi {
 
         /**
          * @brief Calls all modules's handle function
-         * @note Breaks the loop if Module::handle returns true
+         * @warning Don't forget to check the return value of the module's handle function
          */
-        virtual bool runPipeline(Http::Request &request, Http::Response &response) = 0;
+        virtual Module::ModuleStatus runPipeline(Http::Request &request, Http::Response &response) = 0;
 
     protected:
         std::map<size_t, std::string> _pipeline;                            ///<Module's processing list ordered by a size_t

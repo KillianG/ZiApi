@@ -1,4 +1,6 @@
 Load Module [SSL]
 virtual bool MyModuleMgr::runPipeline(Http::Request&, Http::Response&)
-virtual bool SSLModule::handle(Http::Request&, Http::Response&)
+virtual ZiApi::Module::ModuleStatus SSLModule::handle(Http::Request&, Http::Response&)
 200 OK
+Host : 127.0.0.1:4242
+<html><body><h1>Title</h1></body></html>

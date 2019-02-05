@@ -22,20 +22,27 @@ namespace ZiApi {
         virtual ~Module() = default;
 
         /**
+         * @brief Handle function return status
+         */
+        enum class ModuleStatus {
+            OK,         ///<The handle function is ok the process can continue
+            STOP,       ///<The process has to stop due to needs of a module
+            ERROR,      ///<There was an error during the module handle function
+            FATAL       ///The process has to stop due to a fatal error in the handle function
+        };
+
+        /**
          * @brief Gets the current name
          */
         virtual const std::string &getName() const noexcept = 0;
 
         /**
          * @brief The module compute the request and response (it's up to you)
-         * @param[in/out] request sended by the client
+         * @param[in/out] request sent by the client
          * @param[in/out] response reply sent to the client
-         * @return
-         * * `true` breaks the chain
-         *
-         * * `false` continue the chain
+         * @return The status for the processing list
          */
-        virtual bool handle(Http::Request &request, Http::Response &response) = 0;
+        virtual ModuleStatus handle(Http::Request &request, Http::Response &response) = 0;
 
     protected:
         std::string _name;          ///< The module's name

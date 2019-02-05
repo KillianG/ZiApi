@@ -31,7 +31,7 @@ public:
     }
 
     bool addToPipeline(size_t importance, const std::string &name) override {
-        return _pipeline.emplace(std::make_pair(importance, name)).second;              //Emplace the module in the processing list
+        return _pipeline.emplace(std::make_pair(importance, name)).second;                      //Emplace the module in the processing list
     }
 
     bool removeFromPipeline(const std::string &moduleName) override {
@@ -39,13 +39,14 @@ public:
         return false;
     }
 
-    bool runPipeline(Http::Request &request, Http::Response &response) override {
+    ZiApi::Module::ModuleStatus runPipeline(Http::Request &request, Http::Response &response) override {
         /* The modules are arranged in order in the pipeline container */
-        std::cout << __PRETTY_FUNCTION__ << std::endl;                                  //virtual bool MyModuleMgr::runPipeline(Http::Request&, Http::Response&)
+        std::cout << __PRETTY_FUNCTION__ << std::endl;                                          //virtual ZiApi::Module::ModuleStatus MyModuleMgr::runPipeline(Http::Request&, Http::Response&)
         for (auto &it : _pipeline) {
-            if (_modules[it.second]->handle(request, response))                         //Calls the module handle function
-                break;                                                                  //Breaks if the module returns true
+            ZiApi::Module::ModuleStatus ret = _modules[it.second]->handle(request, response);   //Calls the module handle function
+            if (ret != ZiApi::Module::ModuleStatus::OK)
+                return ret;                                                                     //Breaks if the module returns true
         }
-        return true;
+        return ZiApi::Module::ModuleStatus::OK;
     }
 };
