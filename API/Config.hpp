@@ -36,6 +36,6 @@ namespace ZiApi {
         /**
          * @brief The Configuration's file data
          */
-        FieldValue::ValueMap _configData;
+        std::unordered_map<std::string, FieldValue> _configData;
     };
 }

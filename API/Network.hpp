@@ -29,12 +29,12 @@ namespace ZiApi {
         /**
          * @brief Called when a request is received
          *
-         * Runs the _pipelineRunCallBack to execute the module's processing list
+         * Runs the Pipeline via the _runPipeline callback
          * @code
          * Http::Request request;
          * Http::Response response;
          *
-         * _pipelineRunCallBack(request, response); //The request and response will be set by the modules
+         * _runPipeline(request, response);         //Runs the pipeline. The request and response will be set by the modules
          *
          * send(response, ...);                     //Send the response to the client (it's up to you)
          * @endcode
@@ -45,9 +45,9 @@ namespace ZiApi {
          * @brief Sets ModuleManager::runPipeline as callback function
          * @warning It is already set by the Core on construction
          */
-        void setPipelineHandler(std::function<void(Http::Request &request, Http::Response &response)> &&callback) { _pipelineRunCallBack = callback; };
+        void setPipelineHandler(std::function<void(Http::Request &request, Http::Response &response)> &&callback) { _runPipeline = callback; };
 
     protected:
-        std::function<void(Http::Request &request, Http::Response &response)> _pipelineRunCallBack;     ///<Callback on the module's processing list
+        std::function<void(Http::Request &request, Http::Response &response)> _runPipeline;     ///<Callback on the module's processing list
     };
 }

@@ -5,7 +5,6 @@
 #pragma once
 
 #include <map>
-#include <memory>
 #include "FieldValue.hpp"
 
 namespace Http {
@@ -21,7 +20,7 @@ namespace Http {
          * @note message-header = `field-name` ":" `field-value`
          * @sa ZiApi::FieldValue
          */
-        using HttpHeader = std::map<std::string, std::shared_ptr<ZiApi::FieldValue>>;
+        using HttpHeader = std::map<std::string, ZiApi::FieldValue>;
 
         /**
          * @brief Gets the message's header
@@ -50,10 +49,10 @@ namespace Http {
         virtual std::string getHttpVersion() const = 0;
 
     protected:
-        uint8_t _versionMajor;  ///< Message's major version
-        uint8_t _versionMinor;  ///< Message's minor version
+        uint8_t _versionMajor;  ///<Message's major version
+        uint8_t _versionMinor;  ///<Message's minor version
 
-        HttpHeader _header;     ///< Message's header
-        std::string _body;      ///< Message's content
+        HttpHeader _header;     ///<Message's header
+        std::string _body;      ///<Message's content
     };
 }

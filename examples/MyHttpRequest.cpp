@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include "MyFieldValue.hpp"
 #include "MyHttpRequest.hpp"
 
 int main() {
@@ -11,24 +10,24 @@ int main() {
 
     auto &header = request.getHeader();                                     //Get the request's header
 
-    header["Host"] = std::make_shared<MyValue>("127.0.0.1:4242");
-    header.emplace(std::make_pair("Connection", std::make_shared<MyValue>("keep-alive")));
+    header["Host"] = std::string("127.0.0.1:4242");
+    header.emplace(std::make_pair("Connection", std::string("keep-alive")));
 
-    MyValue::ValueList list;
-    list.push_back(std::make_shared<MyValue>("text/html"));
-    list.push_back(std::make_shared<MyValue>("application/xhtml+xml"));
-    list.push_back(std::make_shared<MyValue>("application/xml"));
+    ZiApi::FieldValue::ValueList list;
+    list.emplace_back(std::string("text/html"));
+    list.emplace_back(std::string("application/xhtml+xml"));
+    list.emplace_back(std::string("application/xml"));
 
-    header["Accept"] = std::make_shared<MyValue>(std::move(list));          //Set the field "Accept" with a list
+    header["Accept"] = std::move(list);                                     //Set the field "Accept" with a list
 
     for (auto &it : header) {                                               //Displays fields
-        const auto &tmp = it.second->getValue();
+        const auto &tmp = it.second.getValue();
         if (std::holds_alternative<std::string>(tmp))
             std::cout << it.first << " : " << std::get<std::string>(tmp) << std::endl;
-        else if (std::holds_alternative<MyValue::ValueList>(tmp)) {
+        else if (std::holds_alternative<ZiApi::FieldValue::ValueList>(tmp)) {
             std::cout << it.first << " : [";
-            for (const auto &field : std::get<MyValue::ValueList>(tmp)) {
-                std::cout << " " << std::get<std::string>(field->getValue());
+            for (const auto &field : std::get<ZiApi::FieldValue::ValueList>(tmp)) {
+                std::cout << " " << std::get<std::string>(field.getValue());
             }
             std::cout << " ]" << std::endl;
         }

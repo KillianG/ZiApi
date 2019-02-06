@@ -5,7 +5,6 @@
 #pragma once
 
 #include <vector>
-#include <memory>
 #include <variant>
 #include <unordered_map>
 
@@ -19,42 +18,45 @@ namespace ZiApi {
      * * `double`
      * * `std::string`
      * * `ValueList`
-     * * `ValueMap`
+     *
+     * @warning `ZiApi::FieldValue value = "Hello";` create the object with a `bool` instead of a `std::string`
+     * @warning `ZiApi::FieldValue value = std::string("Hello");` works
      *
      * Usage example :
-     * @include MyFieldValue.hpp
+     * @include MyFieldValue.cpp
+     * Output : @include MyFieldValue.output
      * @sa https://en.cppreference.com/w/cpp/utility/variant
      */
     class FieldValue {
     public:
-        virtual ~FieldValue() = default;
-
         /**
          * @brief Defines a list of FieldValues
          */
-        using ValueList = std::vector<std::shared_ptr<FieldValue>>;
-
-        /**
-         * @brief Defines a map of FieldValues
-         */
-        using ValueMap = std::unordered_map<std::string, std::shared_ptr<FieldValue>>;
+        using ValueList = std::vector<FieldValue>;
 
         /**
          * @brief Defines the possibles types of FieldValue
          */
-        using ValueVariant = std::variant<int, bool, double, std::string, ValueList, ValueMap>;
+        using ValueVariant = std::variant<int, bool, double, std::string, ValueList>;
+
+    public:
+        FieldValue() = default;
+        FieldValue(ValueVariant value) : _value(std::move(value)) {}
 
         /**
          * @brief Gets the contained value
          */
-        virtual const ValueVariant &getValue() const noexcept = 0;
+        const ValueVariant &getValue() const noexcept { return _value; }
 
         /**
          * @brief Set the contained value
          */
-        virtual FieldValue &operator=(const ValueVariant &) = 0;
+        FieldValue &operator=(const ValueVariant &other) {
+            _value = other;
+            return *this;
+        };
 
-    protected:
+    private:
         ValueVariant _value;        ///<The contained type
     };
 }
@@ -62,7 +64,6 @@ namespace ZiApi {
 /**
 * @sa https://en.cppreference.com/w/cpp/utility/variant
 *
-* MyFieldValue.hpp : @include MyFieldValue.hpp
 * Output : @include MyFieldValue.output
 * MyFieldValue.cpp : @example MyFieldValue.cpp
 */

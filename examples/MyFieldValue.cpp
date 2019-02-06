@@ -4,11 +4,11 @@
 
 #include <string>
 #include <iostream>
-#include "MyFieldValue.hpp"
+#include "FieldValue.hpp"
 
 int main() {
-    MyValue integer(10);
-    MyValue string("Hello world");
+    ZiApi::FieldValue integer(10);
+    ZiApi::FieldValue string(std::string("Hello world"));                   //use of std::string else ZiApi::FieldValue(bool) is called
 
     integer = 42;                                                           //operator = ValueVariant is implicitly constructed
 
@@ -24,19 +24,19 @@ int main() {
         std::cout << std::get<std::string>(string.getValue()) << std::endl; //Hello world
     }
 
-    MyValue::ValueList list;
+    ZiApi::FieldValue::ValueList list;
 
-    list.push_back(std::make_shared<MyValue>(666));
-    list.push_back(std::make_shared<MyValue>("Dessert > all"));
-    list.push_back(std::make_shared<MyValue>(1.5));
+    list.emplace_back(666);                                                 //Calls ZiApi::FieldValue(int)
+    list.emplace_back(std::string("Dessert > all"));                        //Calls ZiApi::FieldValue(std::string)
+    list.emplace_back(1.5);                                                 //Calls ZiApi::FieldValue(double)
 
-    MyValue listContainer(std::move(list));                                 //Put the list in field
+    ZiApi::FieldValue listContainer(std::move(list));                       //Put the list in field
 
-    const auto &genericList = std::get<MyValue::ValueList>(listContainer.getValue());
+    const auto &genericList = std::get<ZiApi::FieldValue::ValueList>(listContainer.getValue());
 
     std::cout << "Size : "<< genericList.size() << std::endl;               //Size : 3
     for (auto &it : genericList) {
-        auto &tmp = it->getValue();
+        auto &tmp = it.getValue();
         if (std::holds_alternative<int>(tmp)) {
             std::cout << std::get<int>(tmp) << std::endl;
         } else if (std::holds_alternative<std::string>(tmp)) {

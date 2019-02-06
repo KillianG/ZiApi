@@ -95,7 +95,7 @@ namespace Http {
         virtual const std::string &getStatusMessage() const = 0;
 
     protected:
-        StatusCode _statusCode;                     ///< Response's status-code
-        std::string _statusMessage;                 ///< Response's status-message
+        StatusCode _statusCode;                     ///<Response's status-code
+        std::string _statusMessage;                 ///<Response's status-message
     };
 }

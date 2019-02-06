@@ -26,7 +26,7 @@ public:
         _pipelineRunCallBack(request, res);                                                                 //Run the processing list
 
         std::cout << static_cast<int>(res.getStatusCode()) << " " << res.getStatusMessage() << std::endl;   //The modules's response is : 200 OK
-        std::cout << "Host : "<< std::get<std::string>(res.getHeader()["Host"]->getValue()) << std::endl;   //Host : 127.0.0.1:4242
+        std::cout << "Host : "<< std::get<std::string>(res.getHeader()["Host"].getValue()) << std::endl;    //Host : 127.0.0.1:4242
         std::cout << res.getBody() << std::endl;                                                            //<html><body><h1>Title</h1></body></html>
     }
 };

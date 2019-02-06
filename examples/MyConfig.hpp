@@ -17,6 +17,6 @@ public:
     }
 
     const ZiApi::FieldValue::ValueVariant &operator[](const std::string &key) const override {
-        return _configData.at(key)->getValue();
+        return _configData.at(key).getValue();
     }
 };
