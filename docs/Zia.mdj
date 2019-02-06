@@ -1539,7 +1539,7 @@
 											"top": 987,
 											"width": 884.9775390625,
 											"height": 13,
-											"text": "+Core(config: std::shared_ptr<Config> &&, network: std::shared_ptr<Network> &&, modulMgr: std::shared_ptr<ModuleManager> &&)",
+											"text": "+Core(config: std::unique_ptr<Config> &&, network: std::unique_ptr<Network> &&, moduleMgr: std::unique_ptr<ModuleManager> &&)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2048,7 +2048,7 @@
 											"top": 806,
 											"width": 341.81494140625,
 											"height": 13,
-											"text": "#_configData: ValueMap",
+											"text": "#_configData: std::unordered_map<std::string, FieldValue>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2833,23 +2833,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFopUsZVbZDhEk=",
-											"_parent": {
-												"$ref": "AAAAAAFopTUhOYxCqEo="
-											},
-											"model": {
-												"$ref": "AAAAAAFopUsYxrY3XZU="
-											},
-											"font": "Arial;13;0",
-											"left": 869,
-											"top": 829,
-											"width": 286.6982421875,
-											"height": 13,
-											"text": "+run()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFopUsmM7aRh1M=",
 											"_parent": {
 												"$ref": "AAAAAAFopTUhOYxCqEo="
@@ -2859,7 +2842,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 869,
-											"top": 844,
+											"top": 829,
 											"width": 286.6982421875,
 											"height": 13,
 											"text": "+pollRequest()",
@@ -2876,7 +2859,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 869,
-											"top": 859,
+											"top": 844,
 											"width": 286.6982421875,
 											"height": 13,
 											"text": "+setPipelineHandler(callback: std::function)",
@@ -2887,7 +2870,7 @@
 									"left": 864,
 									"top": 824,
 									"width": 296.6982421875,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4578,7 +4561,7 @@
 												"$ref": "AAAAAAFopVy9h+HiSgw="
 											},
 											"name": "config",
-											"type": "std::shared_ptr<Config> &&"
+											"type": "std::unique_ptr<Config> &&"
 										},
 										{
 											"_type": "UMLParameter",
@@ -4587,7 +4570,7 @@
 												"$ref": "AAAAAAFopVy9h+HiSgw="
 											},
 											"name": "network",
-											"type": "std::shared_ptr<Network> &&"
+											"type": "std::unique_ptr<Network> &&"
 										},
 										{
 											"_type": "UMLParameter",
@@ -4595,8 +4578,8 @@
 											"_parent": {
 												"$ref": "AAAAAAFopVy9h+HiSgw="
 											},
-											"name": "modulMgr",
-											"type": "std::shared_ptr<ModuleManager> &&"
+											"name": "moduleMgr",
+											"type": "std::unique_ptr<ModuleManager> &&"
 										}
 									]
 								},
@@ -4687,9 +4670,7 @@
 									},
 									"name": "_configData",
 									"visibility": "protected",
-									"type": {
-										"$ref": "AAAAAAFopT8k+6SejnI="
-									}
+									"type": "std::unordered_map<std::string, FieldValue>"
 								}
 							],
 							"operations": [
@@ -4745,14 +4726,6 @@
 								}
 							],
 							"operations": [
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAFopUsYxrY3XZU=",
-									"_parent": {
-										"$ref": "AAAAAAFopTUhNIw547g="
-									},
-									"name": "run"
-								},
 								{
 									"_type": "UMLOperation",
 									"_id": "AAAAAAFopUslqLaF0gA=",
