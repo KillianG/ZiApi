@@ -11,7 +11,7 @@
 
 class MyCore : public ZiApi::Core {
 public:
-    MyCore() : Core(std::make_shared<MyConfig>(), std::make_shared<MyNetwork>(), std::make_shared<MyModuleMgr>()) {
+    MyCore() : Core(std::make_unique<MyConfig>(), std::make_unique<MyNetwork>(), std::make_unique<MyModuleMgr>()) {
         /* It's up to you */
         _moduleMgr->load("./Path", *this);          //Load a Module
     }
@@ -21,7 +21,7 @@ public:
         _networkMgr->run();                         //Launchs the sockets
     }
 
-    const std::shared_ptr<ZiApi::Config> &getConfig() const override { return _config; }
+    const std::unique_ptr<ZiApi::Config> &getConfig() const override { return _config; }
 
-    std::shared_ptr<ZiApi::ModuleManager> &getModuleMgr() override { return _moduleMgr; }
+    std::unique_ptr<ZiApi::ModuleManager> &getModuleMgr() override { return _moduleMgr; }
 };
