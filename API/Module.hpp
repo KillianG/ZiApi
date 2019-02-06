@@ -38,8 +38,8 @@ namespace ZiApi {
 
         /**
          * @brief The module compute the request and response (it's up to you)
-         * @param[in/out] request sent by the client
-         * @param[in/out] response reply sent to the client
+         * @param[in,out] request sent by the client
+         * @param[in,out] response reply sent to the client
          * @return The status for the processing list
          */
         virtual ModuleStatus handle(Http::Request &request, Http::Response &response) = 0;
