@@ -28,7 +28,7 @@ namespace ZiApi {
             OK,         ///<The handle function is ok the process can continue
             STOP,       ///<The process has to stop due to needs of a module
             ERROR,      ///<There was an error during the module handle function
-            FATAL       ///The process has to stop due to a fatal error in the handle function
+            FATAL       ///<The process has to stop due to a fatal error in the handle function
         };
 
         /**
